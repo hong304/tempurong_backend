@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-03 10:48:05 +0000
+# Generation Time: 2017-11-06 03:19:52 +0000
 # ************************************************************
 
 
@@ -47,6 +47,25 @@ CREATE TABLE `reservation` (
   `email` varchar(255) DEFAULT NULL,
   `language` varchar(255) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
+  `addition_note` text,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table room_images
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `room_images`;
+
+CREATE TABLE `room_images` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `room_id` int(11) DEFAULT NULL,
+  `cover_photo` tinyint(1) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -83,6 +102,36 @@ CREATE TABLE `room_reservation` (
 
 
 
+# Dump of table room_types
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `room_types`;
+
+CREATE TABLE `room_types` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `capacity` int(10) DEFAULT NULL,
+  `add_bed` tinyint(1) DEFAULT '0',
+  `price` int(10) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `room_types` WRITE;
+/*!40000 ALTER TABLE `room_types` DISABLE KEYS */;
+
+INSERT INTO `room_types` (`id`, `name`, `capacity`, `add_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,'sea view',4,1,NULL,NULL,NULL,NULL),
+	(2,'river view (big)',6,0,NULL,NULL,NULL,NULL),
+	(3,'river view (small)',4,1,NULL,NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 # Dump of table rooms
 # ------------------------------------------------------------
 
@@ -117,54 +166,6 @@ VALUES
 	(13,3,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `rooms` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table room_images
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `room_images`;
-
-CREATE TABLE `room_images` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `room_id` int(11) DEFAULT NULL,
-  `cover_photo` tinyint(1) DEFAULT NULL,
-  `path` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-# Dump of table room_types
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `room_types`;
-
-CREATE TABLE `room_types` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `capacity` int(10) DEFAULT NULL,
-  `add_bed` tinyint(1) DEFAULT '0',
-  `price` int(10) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-LOCK TABLES `room_types` WRITE;
-/*!40000 ALTER TABLE `room_types` DISABLE KEYS */;
-
-INSERT INTO `room_types` (`id`, `name`, `capacity`, `add_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
-VALUES
-	(1,'sea view',4,1,NULL,NULL,NULL,NULL),
-	(2,'river view (big)',6,0,NULL,NULL,NULL,NULL),
-	(3,'river view (small)',4,1,NULL,NULL,NULL,NULL);
-
-/*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
