@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-06 03:19:52 +0000
+# Generation Time: 2017-11-07 10:44:10 +0000
 # ************************************************************
 
 
@@ -20,26 +20,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table admin
+# Dump of table users
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `users`;
 
-CREATE TABLE `admin` (
+CREATE TABLE `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-# Dump of table reservation
+# Dump of table reservations
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `reservation`;
+DROP TABLE IF EXISTS `reservations`;
 
-CREATE TABLE `reservation` (
+CREATE TABLE `reservations` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `transaction_id` varchar(255) DEFAULT NULL,
   `payment_method` varchar(255) DEFAULT NULL,
@@ -54,6 +55,15 @@ CREATE TABLE `reservation` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+
+INSERT INTO `reservations` (`id`, `transaction_id`, `payment_method`, `client_name`, `email`, `language`, `amount`, `addition_note`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,'5467890','paypal','Test','test@test.com','en',465789,NULL,NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table room_images
@@ -74,12 +84,12 @@ CREATE TABLE `room_images` (
 
 
 
-# Dump of table room_reservation
+# Dump of table reservation_details
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `room_reservation`;
+DROP TABLE IF EXISTS `reservation_details`;
 
-CREATE TABLE `room_reservation` (
+CREATE TABLE `reservation_details` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `room_id` int(11) DEFAULT NULL,
   `room_type_id` int(11) DEFAULT NULL,
@@ -100,6 +110,16 @@ CREATE TABLE `room_reservation` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservation_details` WRITE;
+/*!40000 ALTER TABLE `reservation_details` DISABLE KEYS */;
+
+INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,1,1,1,250,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+	(2,2,1,1,500,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table room_types
@@ -124,9 +144,9 @@ LOCK TABLES `room_types` WRITE;
 
 INSERT INTO `room_types` (`id`, `name`, `capacity`, `add_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'sea view',4,1,NULL,NULL,NULL,NULL),
-	(2,'river view (big)',6,0,NULL,NULL,NULL,NULL),
-	(3,'river view (small)',4,1,NULL,NULL,NULL,NULL);
+	(1,'sea view',4,1,250,NULL,NULL,NULL),
+	(2,'river view (big)',6,0,274,NULL,NULL,NULL),
+	(3,'river view (small)',4,1,250,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -139,7 +159,7 @@ DROP TABLE IF EXISTS `rooms`;
 
 CREATE TABLE `rooms` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `type_id` int(11) DEFAULT NULL,
+  `room_type_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -149,7 +169,7 @@ CREATE TABLE `rooms` (
 LOCK TABLES `rooms` WRITE;
 /*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
 
-INSERT INTO `rooms` (`id`, `type_id`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `rooms` (`id`, `room_type_id`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
 	(1,1,NULL,NULL,NULL),
 	(2,1,NULL,NULL,NULL),
