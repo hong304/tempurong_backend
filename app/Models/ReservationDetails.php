@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class RoomType extends Model
+class ReservationDetails extends Model
 {
 	use SoftDeletes;
 	
@@ -23,11 +23,21 @@ class RoomType extends Model
      */
 	public function room()
 	{
-		return $this->hasMany('App\Models\Room');
+		return $this->belongsTo('App\Models\Room');
 	}
 	
-	public function reservationDetails()
+	public function images()
 	{
-		return $this->hasMany('App\Models\ReservationDetails');
+		return $this->hasMany('App\Models\RoomImage', 'room_id');
+	}
+	
+	public function roomType()
+	{
+		return $this->belongsTo('App\Models\RoomType');
+	}
+	
+	public function reservation()
+	{
+		return $this->belongsTo('App\Models\Reservation');
 	}
 }

@@ -15,4 +15,24 @@ class Room extends Model
      * ============================================================================================================================================
      */
 	protected $dates = ['deleted_at'];
+	
+	/*
+     * ============================================================================================================================================
+     * Relationships
+     * ============================================================================================================================================
+     */
+	public function images()
+	{
+		return $this->hasMany('App\Models\RoomImage');
+	}
+	
+	public function roomType()
+	{
+		return $this->belongsTo('App\Models\RoomType');
+	}
+	
+	public function reservationDetails()
+	{
+		return $this->hasMany('App\Models\ReservationDetails');
+	}
 }
