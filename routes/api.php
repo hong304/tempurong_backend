@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'guest'], function () {
 	Route::get('/room', 'RoomController@getRoom')->name('room.index');
 
+	//rome type
+    Route::get('/room-type','RoomTypeController@getRoomType');
 	//reservation
     Route::get('/reservation', 'ReservationController@getReservation')->name('reservation.index');
     Route::post('/reservation', 'ReservationController@postReservation')->name('reservation.store');
