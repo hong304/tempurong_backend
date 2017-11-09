@@ -1,7 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
+        "init": "composer install && npm install && php artisan serve --port=3000",
+        "dev": "npm install && composer install && php artisan serve --port=3000 && npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch-poll": "npm run watch -- --watch-poll",
