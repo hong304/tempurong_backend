@@ -16,6 +16,7 @@ class ReservationController extends Controller
 	}
 
 	public function postReservation(){
-
+        if(isset($_SERVER['HTTP_POSTMAN_TOKEN']))
+            var_dump('200 OK');
     }
 }
