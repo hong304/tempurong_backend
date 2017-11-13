@@ -25,5 +25,6 @@ Route::group(['middleware' => 'guest'], function () {
 	//reservation
     Route::get('/reservation', 'ReservationController@getReservation')->name('reservation.index');
     Route::post('/reservation', 'ReservationController@postReservation')->name('reservation.store');
+    Route::post('/checkAvailableRooms','ReservationController@postCheckAvailableRooms');
 
 });
