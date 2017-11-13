@@ -19,4 +19,8 @@ class ReservationController extends Controller
         if(isset($_SERVER['HTTP_POSTMAN_TOKEN']))
             var_dump('200 OK');
     }
+
+    public function postCheckAvailableRooms(Request $request){
+	    dd($request->all());
+    }
 }
