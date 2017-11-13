@@ -21,6 +21,8 @@ class ReservationController extends Controller
     }
 
     public function postCheckAvailableRooms(Request $request){
-	    dd($request->all());
+
+        if(isset($_SERVER['HTTP_POSTMAN_TOKEN']))
+            var_dump($request->all());
     }
 }
