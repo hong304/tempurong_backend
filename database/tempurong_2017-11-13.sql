@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-09 10:50:07 +0000
+# Generation Time: 2017-11-13 10:31:59 +0000
 # ************************************************************
 
 
@@ -36,8 +36,8 @@ CREATE TABLE `reservation_details` (
   `add_bed` int(11) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `refund_status` varchar(255) DEFAULT NULL,
-  `start_date` timestamp NULL DEFAULT NULL,
-  `end_date` timestamp NULL DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
   `status_time` timestamp NULL DEFAULT NULL,
   `refund_time` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -51,8 +51,15 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-	(2,2,1,1,500,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-11-30','2017-12-03',NULL,NULL,NULL,NULL,NULL),
+	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-11-30','2017-12-03',NULL,NULL,NULL,NULL,NULL),
+	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,NULL,NULL),
+	(4,4,1,3,250,4,4,0,NULL,NULL,'2017-12-03','2017-12-05',NULL,NULL,NULL,NULL,NULL),
+	(5,5,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,NULL,NULL),
+	(6,6,1,5,250,4,4,0,NULL,NULL,'2017-12-10','2017-12-13',NULL,NULL,NULL,NULL,NULL),
+	(7,3,1,5,250,4,4,0,NULL,NULL,'2017-12-10','2017-12-13',NULL,NULL,NULL,NULL,NULL),
+	(8,2,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-06',NULL,NULL,NULL,NULL,NULL),
+	(9,7,1,7,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-07',NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -83,7 +90,13 @@ LOCK TABLES `reservations` WRITE;
 
 INSERT INTO `reservations` (`id`, `transaction_id`, `payment_method`, `client_name`, `email`, `language`, `amount`, `addition_note`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'5467890','paypal','Test','test@test.com','en',465789,NULL,NULL,NULL,NULL);
+	(1,'5467890','paypal','Test','test@test.com','en',500,NULL,NULL,NULL,NULL),
+	(2,'4567890','paypal','Test2','test2@test.com','en',250,NULL,NULL,NULL,NULL),
+	(3,'7652679','paypal','Test3','test3@test.com','sc',250,NULL,NULL,NULL,NULL),
+	(4,'6578877','paypal','Test4','test4@test.com','en',250,NULL,NULL,NULL,NULL),
+	(5,'7658809','paypal','Test5','test5@test.com','en',500,NULL,NULL,NULL,NULL),
+	(6,'6876425','paypal','Test6','test6@test.com','sc',250,NULL,NULL,NULL,NULL),
+	(7,'4761909','paypal','Test7','test7@test.com','en',250,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
