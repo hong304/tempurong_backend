@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use App\Models\ReservationDetails;
-use Carbon\Carbon;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -29,35 +29,40 @@ class ReservationController extends Controller
         $checkOutDate = $request->end_date;
 
         $today = date('Y-m-d');
+        $today = '2017-12-02';
+        $room_type_id = 1;
+        $rooms = [];
 
-        $fixed_block = ReservationDetails::where('start_date', '<', '2017-12-02')->get();
-        $movement_block = ReservationDetails::where('start_date', '>=', '2017-12-02')->orderBy('start_date', 'asc')->orderBy('end_date', 'asc')->get();
-        dd($fixed_block->toArray());
+        $count_rooms = Room::select('id')->where('room_type_id', $room_type_id)->get();
+        $fixed_block = ReservationDetails::where('start_date', '<', $today)->where('end_date', '>=', $today)->where('room_type_id', $room_type_id)->get();
+        $movement_block = ReservationDetails::where('start_date', '>=', $today)->orderBy('start_date', 'asc')->orderBy('end_date', 'asc')->get();
 
 
-        $checking_room_ = [
-            ['room_id' => 1, 'date' => '2017-12-03'],
-            ['room_id' => 2, 'date' => '2017-12-02'],
-            ['room_id' => 3, 'date' => '2017-12-05'],
-            ['room_id' => 4, 'date' => '2017-12-02'],
-            ['room_id' => 5, 'date' => '2017-12-02'],
-            ['room_id' => 6, 'date' => '2017-12-02'],
-        ];
+        for ($i = 0; $i < count($count_rooms); $i++) {
+            foreach ($fixed_block as $k => $v) {
+                if ($v->room_id == $count_rooms{$i}->id) {
+                    $rooms[$count_rooms{$i}->id] = $v->end_date;
+                    break;
+                } else
+                    $rooms[$count_rooms{$i}->id] = '';
+            }
 
-        foreach($checking_room_ as $k => &$v){
-            foreach ($movement_block as $k1 => $v1){
-                if($v1->start_date >= $v['date']){
-                    $v['date'] = $v1->end_date;
-                    $v1->room_id = $v['room_id'];
+        }
+
+        foreach ($rooms as $k => &$v) {
+            foreach ($movement_block as $k1 => $v1) {
+                if ($v1->start_date >= $v) {
+                    $v = $v1->end_date;
+                    $v1->room_id = $k;
                     $fixed_block->push($v1);
                     $movement_block->forget($k1);
                 }
             }
         }
 
-        dump($checking_room_);
-        dump($fixed_block->toArray());
-        dd($movement_block->toArray());
+        foreach ($fixed_block as $v) {
+            ReservationDetails::where('id', $v->id)->update(['room_id' => $v->room_id]);
+        }
 
         $passingCheckIn = ReservationDetails::select('room_id')->where(function ($q1) use ($checkInDate, $checkOutDate) {
 
