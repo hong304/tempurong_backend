@@ -11,7 +11,7 @@ class RoomTypeController extends Controller
 	public function getRoomType()
 	{
 		$rooms = RoomType::with('room')
-						->get();
+						->orderBy('id','asc')->get();
 		
 		return response()->json($rooms);
 	}

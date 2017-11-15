@@ -106,7 +106,7 @@ class ReservationController extends Controller
         }
 
         if (isset($_SERVER['HTTP_POSTMAN_TOKEN']))
-            dd('hi');
+            dd($rooms_available);
 
         return $rooms_available;
 
