@@ -10,7 +10,7 @@ class AdminController extends Controller
     {
         try {
 
-            $result = Reservation::select('first_name','last_name','email','check_in','check_out','guests','amount','created_at','status')->all();
+            $result = Reservation::select('first_name','last_name','email','check_in','check_out','guests','amount','created_at','status')->paginate(30);
 
         } catch (\Exception $e) {
             $result = [
