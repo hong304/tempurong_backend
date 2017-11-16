@@ -14,17 +14,18 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-	return $request->user();
+    return $request->user();
 });
 
 Route::group(['middleware' => 'guest'], function () {
-	Route::get('/room', 'RoomController@getRoom')->name('room.index');
-
-	//rome type
-    Route::get('/room-type','RoomTypeController@getRoomType');
-	//reservation
+    Route::get('/room', 'RoomController@getRoom')->name('room.index');
+//Admin
+    Route::get('orderHistory', 'AdminController@getOrderHistory');
+    //rome type
+    Route::get('/room-type', 'RoomTypeController@getRoomType');
+    //reservation
     Route::get('/reservation', 'ReservationController@getReservation')->name('reservation.index');
     Route::post('/reservation', 'ReservationController@postReservation')->name('reservation.store');
-    Route::post('/checkAvailableRooms','ReservationController@postCheckAvailableRooms');
+    Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
 
 });
