@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.9)
+# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-15 02:53:49 +0000
+# Generation Time: 2017-11-20 04:27:22 +0000
 # ************************************************************
 
 
@@ -51,17 +51,18 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-14 10:48:52',NULL),
-	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-14 10:48:52',NULL),
-	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(4,2,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(5,1,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(6,2,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(7,1,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(8,2,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(10,4,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-14 10:48:53',NULL),
-	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL);
+	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(4,2,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(5,4,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(6,2,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(7,4,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(8,2,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL),
+	(12,1,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -74,31 +75,36 @@ DROP TABLE IF EXISTS `reservations`;
 
 CREATE TABLE `reservations` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
   `transaction_id` varchar(255) DEFAULT NULL,
-  `payment_method` varchar(255) DEFAULT NULL,
-  `client_name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `language` varchar(255) DEFAULT NULL,
-  `amount` int(11) DEFAULT NULL,
+  `guests` int(2) DEFAULT NULL,
+  `check_in` date DEFAULT NULL,
+  `check_out` date DEFAULT NULL,
+  `language` varchar(10) DEFAULT NULL,
   `addition_note` text,
+  `amount` int(11) DEFAULT NULL,
+  `payment_method` varchar(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
 
-INSERT INTO `reservations` (`id`, `transaction_id`, `payment_method`, `client_name`, `email`, `language`, `amount`, `addition_note`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `guests`, `check_in`, `check_out`, `language`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`)
 VALUES
-	(1,'5467890','paypal','Test','test@test.com','en',500,NULL,NULL,NULL,NULL),
-	(2,'4567890','paypal','Test2','test2@test.com','en',250,NULL,NULL,NULL,NULL),
-	(3,'7652679','paypal','Test3','test3@test.com','sc',250,NULL,NULL,NULL,NULL),
-	(4,'6578877','paypal','Test4','test4@test.com','en',250,NULL,NULL,NULL,NULL),
-	(5,'7658809','paypal','Test5','test5@test.com','en',500,NULL,NULL,NULL,NULL),
-	(6,'6876425','paypal','Test6','test6@test.com','sc',250,NULL,NULL,NULL,NULL),
-	(7,'4761909','paypal','Test7','test7@test.com','en',250,NULL,NULL,NULL,NULL);
+	(1,NULL,NULL,'5467890','test@test.com',NULL,NULL,NULL,'en',NULL,500,'paypal',NULL,NULL,NULL,NULL),
+	(2,NULL,NULL,'4567890','test2@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL),
+	(3,NULL,NULL,'7652679','test3@test.com',NULL,NULL,NULL,'sc',NULL,250,'paypal',NULL,NULL,NULL,NULL),
+	(4,NULL,NULL,'6578877','test4@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL),
+	(5,NULL,NULL,'7658809','test5@test.com',NULL,NULL,NULL,'en',NULL,500,'paypal',NULL,NULL,NULL,NULL),
+	(6,NULL,NULL,'6876425','test6@test.com',NULL,NULL,NULL,'sc',NULL,250,'paypal',NULL,NULL,NULL,NULL),
+	(7,NULL,NULL,'4761909','test7@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -133,6 +139,8 @@ CREATE TABLE `room_types` (
   `name_sc` varchar(255) DEFAULT NULL,
   `capacity` int(10) DEFAULT NULL,
   `add_bed` tinyint(1) DEFAULT '0',
+  `queen_bed` int(10) DEFAULT '0',
+  `decker` int(10) DEFAULT '0',
   `price` int(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -143,11 +151,11 @@ CREATE TABLE `room_types` (
 LOCK TABLES `room_types` WRITE;
 /*!40000 ALTER TABLE `room_types` DISABLE KEYS */;
 
-INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `capacity`, `add_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `capacity`, `add_bed`, `queen_bed`, `decker`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'sea view','海景房',4,1,250,NULL,NULL,NULL),
-	(2,'river view (big)','河景房（大）',6,0,274,NULL,NULL,NULL),
-	(3,'river view (small)','河景房（小）',4,1,250,NULL,NULL,NULL);
+	(1,'sea view','海景房',4,1,2,NULL,250,NULL,NULL,NULL),
+	(2,'river view (big)','河景房（大）',6,0,1,2,274,NULL,NULL,NULL),
+	(3,'river view (small)','河景房（小）',4,1,1,1,250,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
