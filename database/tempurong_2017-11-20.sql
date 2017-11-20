@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-20 04:27:22 +0000
+# Generation Time: 2017-11-20 05:09:00 +0000
 # ************************************************************
 
 
@@ -51,18 +51,18 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(4,2,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(5,4,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(6,2,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(7,4,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(8,2,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
-	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL),
+	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
 	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL),
-	(12,1,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-16 03:51:40',NULL);
+	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -140,7 +140,7 @@ CREATE TABLE `room_types` (
   `capacity` int(10) DEFAULT NULL,
   `add_bed` tinyint(1) DEFAULT '0',
   `queen_bed` int(10) DEFAULT '0',
-  `decker` int(10) DEFAULT '0',
+  `bunk_bed` int(10) DEFAULT '0',
   `price` int(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -151,7 +151,7 @@ CREATE TABLE `room_types` (
 LOCK TABLES `room_types` WRITE;
 /*!40000 ALTER TABLE `room_types` DISABLE KEYS */;
 
-INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `capacity`, `add_bed`, `queen_bed`, `decker`, `price`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `capacity`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
 	(1,'sea view','海景房',4,1,2,NULL,250,NULL,NULL,NULL),
 	(2,'river view (big)','河景房（大）',6,0,1,2,274,NULL,NULL,NULL),
