@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use App\Models\ReservationDetails;
 use App\Models\Room;
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -114,7 +115,7 @@ class ReservationController extends Controller
 				// count available room
 				$total_no_of_rooms_occupied = count($passingCheckIn);
 				$avail_room = $total_no_of_rooms - $total_no_of_rooms_occupied;
-
+				
 				// put available room value to array
 				$rooms_available[$room_type_id] = $avail_room;
 				
@@ -127,6 +128,17 @@ class ReservationController extends Controller
 			];
 			
 			return response()->json($result, 500);
+		}
+		
+		
+		if ($request->withRoomDetails) {
+			$room_type_details = RoomType::with('room')
+				->orderBy('id', 'asc')->get();
+			
+			foreach ($room_type_details as $key => $room_type) {
+				$room_type->available_room = $rooms_available[$key + 1];
+			}
+			return response()->json($room_type_details);
 		}
 		
 		return response()->json($rooms_available);
