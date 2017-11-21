@@ -18,8 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'guest'], function () {
+    // activity
+    Route::get('/activity', 'ActivityController@getActivity');
+
     Route::get('/room', 'RoomController@getRoom')->name('room.index');
-//Admin
+    //Admin
     Route::get('orderHistory', 'AdminController@getOrderHistory');
     //rome type
     Route::get('/room-type', 'RoomTypeController@getRoomType');

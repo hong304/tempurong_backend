@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-20 05:09:00 +0000
+# Generation Time: 2017-11-21 10:16:09 +0000
 # ************************************************************
 
 
@@ -18,6 +18,75 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table activities
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `activities`;
+
+CREATE TABLE `activities` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name_en` varchar(255) DEFAULT NULL,
+  `name_sc` varchar(255) DEFAULT NULL,
+  `duration` int(10) DEFAULT NULL,
+  `distance` int(10) DEFAULT NULL,
+  `difficulty` float DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `activities` WRITE;
+/*!40000 ALTER TABLE `activities` DISABLE KEYS */;
+
+INSERT INTO `activities` (`id`, `name_en`, `name_sc`, `duration`, `distance`, `difficulty`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,'Healing Well',NULL,30,30,3.5,NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `activities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table activity_images
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `activity_images`;
+
+CREATE TABLE `activity_images` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `activity_id` int(11) DEFAULT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `activity_images` WRITE;
+/*!40000 ALTER TABLE `activity_images` DISABLE KEYS */;
+
+INSERT INTO `activity_images` (`id`, `activity_id`, `image_path`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,1,'/static/img/demo-about-01.jpg',NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `activity_images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table migrations
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `migrations`;
+
+CREATE TABLE `migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 
 # Dump of table reservation_details
@@ -51,18 +120,18 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
-	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL),
+	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-21 09:10:53',NULL),
+	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
 	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL),
-	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-20 05:08:12',NULL);
+	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -137,10 +206,10 @@ CREATE TABLE `room_types` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name_en` varchar(255) DEFAULT NULL,
   `name_sc` varchar(255) DEFAULT NULL,
-  `capacity` int(10) DEFAULT NULL,
+  `capacity` int(2) DEFAULT NULL,
   `add_bed` tinyint(1) DEFAULT '0',
-  `queen_bed` int(10) DEFAULT '0',
-  `bunk_bed` int(10) DEFAULT '0',
+  `queen_bed` int(2) DEFAULT '0',
+  `bunk_bed` int(2) DEFAULT '0',
   `price` int(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
