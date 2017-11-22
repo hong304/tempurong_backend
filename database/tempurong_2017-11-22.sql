@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-21 10:16:09 +0000
+# Generation Time: 2017-11-22 04:44:21 +0000
 # ************************************************************
 
 
@@ -32,6 +32,7 @@ CREATE TABLE `activities` (
   `duration` int(10) DEFAULT NULL,
   `distance` int(10) DEFAULT NULL,
   `difficulty` float DEFAULT NULL,
+  `introduction` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -41,9 +42,11 @@ CREATE TABLE `activities` (
 LOCK TABLES `activities` WRITE;
 /*!40000 ALTER TABLE `activities` DISABLE KEYS */;
 
-INSERT INTO `activities` (`id`, `name_en`, `name_sc`, `duration`, `distance`, `difficulty`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `activities` (`id`, `name_en`, `name_sc`, `duration`, `distance`, `difficulty`, `introduction`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'Healing Well',NULL,30,30,3.5,NULL,NULL,NULL);
+	(1,'Spiritual Tree',NULL,5,200,NULL,'Just a 5-minute walk away, there is a towering tree that dates back over 400 years, to a time when two young lovers, one Christian and one Muslim, ran away after their relationship was forbidden by their families. Eventually they came upon the tree, and a spirit in the tree spoke to them, directing them onward. Travelers can visit the large and ancient tree, which still grows sourly fruit to this day. ',NULL,NULL,NULL),
+	(2,'Healing Well',NULL,5,200,NULL,'Over 400 years ago, there was a devastating drought in the area. Villagers were directed to dig a well in a location that was thought to have a water source underground. The villagers tasked with digging the well were skeptical, but with little choice they kept digging anyways. Amazingly, the well they dug was able to provide enough water for the whole village for a long time to come. The water was known to have healing properties, so when elders fell ill, they would bathe in and drink from the well.  This well is now known as the Wellness Healing Well and is a 5-minute walk away from the resort.',NULL,NULL,NULL),
+	(3,'Love Rock',NULL,25,1000,NULL,'Known locally as Batu Luang, Love rock is a bell-shaped rock located on a beautiful strip of beach in Kuala Penyu. Surrounded by mossy rocks, caves, and set to the backdrop of the ocean behind it, you can see one of the most beautiful sunsets in all of Sabah. Love Rock is located 1KM from the resort and is a 25-minute walk away.',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -57,6 +60,7 @@ DROP TABLE IF EXISTS `activity_images`;
 CREATE TABLE `activity_images` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `activity_id` int(11) DEFAULT NULL,
+  `cover_image` varchar(255) DEFAULT NULL,
   `image_path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -67,9 +71,11 @@ CREATE TABLE `activity_images` (
 LOCK TABLES `activity_images` WRITE;
 /*!40000 ALTER TABLE `activity_images` DISABLE KEYS */;
 
-INSERT INTO `activity_images` (`id`, `activity_id`, `image_path`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `activity_images` (`id`, `activity_id`, `cover_image`, `image_path`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,'/static/img/demo-about-01.jpg',NULL,NULL,NULL);
+	(1,1,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
+	(2,2,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
+	(3,3,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activity_images` ENABLE KEYS */;
 UNLOCK TABLES;

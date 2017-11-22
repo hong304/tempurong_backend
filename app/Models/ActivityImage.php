@@ -5,25 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Activity extends Model
+class ActivityImage extends Model
 {
-	use SoftDeletes;
-	
-	/*
+    use SoftDeletes;
+
+    /*
      * ============================================================================================================================================
      * Settings
      * ============================================================================================================================================
      */
-	protected $dates = ['deleted_at'];
-	
-	/*
+    protected $dates = ['deleted_at'];
+
+    /*
      * ============================================================================================================================================
      * Relationships
      * ============================================================================================================================================
      */
-    public function images()
+    public function activity()
     {
-        return $this->hasMany('App\Models\ActivityImage');
+        return $this->belongsTo('App\Models\Activity');
     }
 
 }
