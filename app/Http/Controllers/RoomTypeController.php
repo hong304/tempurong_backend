@@ -15,4 +15,13 @@ class RoomTypeController extends Controller
 		
 		return response()->json($rooms);
 	}
+
+    public function postRoomType(Request $request)
+    {
+        $rooms = RoomType::where('id', $request->typeId)->with(['room' => function ($q) {
+            $q->with('images');
+        }])->get();
+
+        return response()->json($rooms);
+    }
 }
