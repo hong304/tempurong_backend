@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-22 09:40:37 +0000
+# Generation Time: 2017-11-27 15:46:20 +0000
 # ************************************************************
 
 
@@ -126,18 +126,18 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-21 09:10:53',NULL),
-	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
-	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL),
+	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
+	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
+	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
+	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
+	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
 	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL),
-	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-21 09:10:54',NULL);
+	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -212,7 +212,12 @@ CREATE TABLE `room_types` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name_en` varchar(255) DEFAULT NULL,
   `name_sc` varchar(255) DEFAULT NULL,
+  `room_title_en` varchar(255) DEFAULT NULL,
+  `room_title_sc` varchar(255) DEFAULT NULL,
+  `cover_image` varchar(255) DEFAULT NULL,
+  `description` text,
   `capacity` int(2) DEFAULT NULL,
+  `size` varchar(255) DEFAULT NULL,
   `add_bed` tinyint(1) DEFAULT '0',
   `queen_bed` int(2) DEFAULT '0',
   `bunk_bed` int(2) DEFAULT '0',
@@ -226,11 +231,11 @@ CREATE TABLE `room_types` (
 LOCK TABLES `room_types` WRITE;
 /*!40000 ALTER TABLE `room_types` DISABLE KEYS */;
 
-INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `capacity`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `room_title_en`, `room_title_sc`, `cover_image`, `description`, `capacity`, `size`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'sea view','海景房',4,1,2,NULL,250,NULL,NULL,NULL),
-	(2,'river view (big)','河景房（大）',6,0,1,2,274,NULL,NULL,NULL),
-	(3,'river view (small)','河景房（小）',4,1,1,1,250,NULL,NULL,NULL);
+	(1,'sea view','海景房','Family Rooms','家庭房',NULL,'Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar. \n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,2,NULL,250,NULL,NULL,NULL),
+	(2,'river view','河景房','Large Family Rooms','大家庭房',NULL,'3 mix dormitory river view rooms with 2 double decker &amp; 1 queen bed (6pax)\n',6,'16 sq. ft by 15 sq ft = 240 square feet',0,1,2,274,NULL,NULL,NULL),
+	(3,'river view','河景房','Family Rooms','家庭房',NULL,'2 family rooms river view rooms with 1 double decker &amp; 1 queen bed (4pax)\n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,1,1,250,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
