@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-11-27 15:46:20 +0000
+# Generation Time: 2017-12-01 08:06:36 +0000
 # ************************************************************
 
 
@@ -108,7 +108,8 @@ CREATE TABLE `reservation_details` (
   `price` int(11) DEFAULT NULL,
   `capacity` int(11) DEFAULT NULL,
   `no_of_people` int(11) DEFAULT NULL,
-  `add_bed` int(11) DEFAULT NULL,
+  `mattress` int(11) DEFAULT NULL,
+  `breakfast` int(11) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `refund_status` varchar(255) DEFAULT NULL,
   `start_date` date DEFAULT NULL,
@@ -124,20 +125,25 @@ CREATE TABLE `reservation_details` (
 LOCK TABLES `reservation_details` WRITE;
 /*!40000 ALTER TABLE `reservation_details` DISABLE KEYS */;
 
-INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `add_bed`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `mattress`, `breakfast`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(2,2,1,1,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(3,3,1,2,250,4,4,0,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(4,12,1,3,250,4,4,0,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
-	(5,11,1,4,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(6,12,1,5,250,4,4,0,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
-	(7,11,1,5,250,4,4,0,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(8,12,1,6,250,4,4,0,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL),
-	(9,3,1,7,250,4,4,0,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(10,5,1,5,250,4,4,0,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-11-27 13:28:50',NULL),
-	(11,1,1,5,250,4,4,0,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,NULL,NULL),
-	(12,13,1,5,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-11-27 13:28:51',NULL);
+	(1,13,1,1,250,4,4,0,NULL,NULL,NULL,'2017-12-01','2017-12-03',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(2,12,1,1,250,4,4,0,NULL,NULL,NULL,'2017-12-01','2017-12-02',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(3,11,1,2,250,4,4,0,NULL,NULL,NULL,'2017-12-01','2017-12-05',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(4,12,1,3,250,4,4,0,NULL,NULL,NULL,'2017-12-02','2017-12-05',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(5,7,1,4,250,4,4,0,NULL,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-12-01 07:24:12',NULL),
+	(6,12,1,5,250,4,4,0,NULL,NULL,NULL,'2017-12-08','2017-12-11',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(7,11,1,5,250,4,4,0,NULL,NULL,NULL,'2017-12-07','2017-12-11',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(8,12,1,6,250,4,4,0,NULL,NULL,NULL,'2017-12-05','2017-12-08',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(9,13,1,7,250,4,4,0,NULL,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(10,8,1,5,250,4,4,0,NULL,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-12-01 07:24:12',NULL),
+	(11,1,1,5,250,4,4,0,NULL,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,'2017-11-30 12:08:11',NULL),
+	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-01 07:59:44',NULL),
+	(38,13,1,42,560,5,NULL,1,1,'waiting_for_payment',NULL,'2017-12-03','2017-12-05',NULL,NULL,'2017-12-01 07:17:57','2017-12-01 07:59:44',NULL),
+	(39,4,1,42,536,5,NULL,1,0,'waiting_for_payment',NULL,'2017-12-03','2017-12-05',NULL,NULL,'2017-12-01 07:17:57','2017-12-01 07:59:44',NULL),
+	(40,5,2,42,572,6,NULL,0,1,'waiting_for_payment',NULL,'2017-12-03','2017-12-05',NULL,NULL,'2017-12-01 07:17:57','2017-12-01 07:59:44',NULL),
+	(41,7,1,43,560,5,NULL,1,1,'waiting_for_payment',NULL,'2017-12-04','2017-12-06',NULL,NULL,'2017-12-01 07:25:29','2017-12-01 07:59:44',NULL),
+	(42,8,2,43,572,6,NULL,0,1,'waiting_for_payment',NULL,'2017-12-04','2017-12-06',NULL,NULL,'2017-12-01 07:25:29','2017-12-01 07:59:44',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -154,32 +160,37 @@ CREATE TABLE `reservations` (
   `last_name` varchar(50) DEFAULT NULL,
   `transaction_id` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `guests` int(2) DEFAULT NULL,
+  `adults` int(2) DEFAULT NULL,
+  `children` int(2) DEFAULT NULL,
   `check_in` date DEFAULT NULL,
   `check_out` date DEFAULT NULL,
   `language` varchar(10) DEFAULT NULL,
+  `remarks` text,
   `addition_note` text,
   `amount` int(11) DEFAULT NULL,
   `payment_method` varchar(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `session` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
 
-INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `guests`, `check_in`, `check_out`, `language`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`)
+INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`)
 VALUES
-	(1,NULL,NULL,'5467890','test@test.com',NULL,NULL,NULL,'en',NULL,500,'paypal',NULL,NULL,NULL,NULL),
-	(2,NULL,NULL,'4567890','test2@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL),
-	(3,NULL,NULL,'7652679','test3@test.com',NULL,NULL,NULL,'sc',NULL,250,'paypal',NULL,NULL,NULL,NULL),
-	(4,NULL,NULL,'6578877','test4@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL),
-	(5,NULL,NULL,'7658809','test5@test.com',NULL,NULL,NULL,'en',NULL,500,'paypal',NULL,NULL,NULL,NULL),
-	(6,NULL,NULL,'6876425','test6@test.com',NULL,NULL,NULL,'sc',NULL,250,'paypal',NULL,NULL,NULL,NULL),
-	(7,NULL,NULL,'4761909','test7@test.com',NULL,NULL,NULL,'en',NULL,250,'paypal',NULL,NULL,NULL,NULL);
+	(1,NULL,NULL,'5467890','test@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(2,NULL,NULL,'4567890','test2@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(3,NULL,NULL,'7652679','test3@test.com',NULL,NULL,NULL,NULL,'sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(4,NULL,NULL,'6578877','test4@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(5,NULL,NULL,'7658809','test5@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(6,NULL,NULL,'6876425','test6@test.com',NULL,NULL,NULL,NULL,'sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(7,NULL,NULL,'4761909','test7@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(42,'Cleo','Chan',NULL,'cc@buildonauts.com',2,0,'2017-12-03','2017-12-05','en',NULL,NULL,1668,'paypal','2017-12-01 07:17:57','2017-12-01 07:17:57',NULL,'waiting_for_payment','5a2102253ae56192'),
+	(43,'Cleo','Chan',NULL,'cc@buildonauts.com',2,0,'2017-12-04','2017-12-06','en',NULL,NULL,1132,'paypal','2017-12-01 07:25:29','2017-12-01 07:25:29',NULL,'waiting_for_payment','5a2103e990140259');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
