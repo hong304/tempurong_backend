@@ -20,7 +20,7 @@ class RoomTypeController extends Controller
     {
         $rooms = RoomType::where('id', $request->typeId)->with(['room' => function ($q) {
             $q->with('images');
-        }])->get();
+        }])->first();
 
         return response()->json($rooms);
     }
