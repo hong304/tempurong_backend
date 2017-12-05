@@ -37,7 +37,7 @@ class ReservationController extends Controller
 			'email' => 'required|email',
 			'tnc' => 'required|boolean'
 		]);
-		if ($clientInfoValidator->fails() || !$request->clientInfo['tnc']) {
+		if ($clientInfoValidator->fails() || $request->clientInfo['tnc'] != true) {
 			return ErrorController::validationError("clientInfoError");
 		} else {
 			$orderValidator = Validator::make($request->order, [
@@ -91,7 +91,7 @@ class ReservationController extends Controller
 							$mattress = $roomType['mattress'];
 							$breakfast = $roomType['breakfast'];
 							$totalNight = $this->getTotalNight($orderInfo['checkIn'], $orderInfo['checkOut']);
-
+							
 							for ($i = 0; $i < $noOfRoom; $i++) {
 								$reservationDetail = new ReservationDetails();
 								
