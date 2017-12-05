@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -11,7 +12,7 @@ class AdminController extends Controller
   {
     try {
 
-      $result = Reservation::select('first_name', 'last_name', 'email', 'check_in', 'check_out', 'guests', 'amount', 'created_at', 'status')->paginate(30);
+      $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status')->paginate(30);
 
     } catch (\Exception $e) {
       $result = [
@@ -22,6 +23,13 @@ class AdminController extends Controller
 
       return response()->json($result, 500);
     }
+
+    return response()->json($result);
+  }
+
+  public function postOrderHistory(Request $request)
+  {
+    $result = Reservation::where('id', $request->orderId)->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
 
     return response()->json($result);
   }
@@ -40,7 +48,7 @@ class AdminController extends Controller
       $start = new Carbon($r->check_in, 'Asia/Jakarta');
       $end = new Carbon($r->check_out, 'Asia/Jakarta');
       if(Carbon::now()->between($start, $end)) {
-        $summarize['today_guest'] += $r->guests;
+        $summarize['today_guest'] += $r->adults + $r->children;
         $summarize['today_booked'] += 1;
       }
     }

@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.16-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-12-05 06:37:03 +0000
+# Generation Time: 2017-12-05 09:39:29 +0000
 # ************************************************************
 
 
@@ -177,13 +177,13 @@ LOCK TABLES `reservations` WRITE;
 
 INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`)
 VALUES
-	(1,NULL,NULL,'5467890','test@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(2,NULL,NULL,'4567890','test2@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(3,NULL,NULL,'7652679','test3@test.com',NULL,NULL,NULL,NULL,'sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(4,NULL,NULL,'6578877','test4@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(5,NULL,NULL,'7658809','test5@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(6,NULL,NULL,'6876425','test6@test.com',NULL,NULL,NULL,NULL,'sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(7,NULL,NULL,'4761909','test7@test.com',NULL,NULL,NULL,NULL,'en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL);
+	(1,'world one','holle','5467890','test@test.com',2,1,'2017-12-01','2017-12-07','en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(2,'test','holle','4567890','test2@test.com',4,0,'2017-12-05','2017-12-08','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(3,'holle','test','7652679','test3@test.com',3,1,'2017-12-03','2017-12-05','sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(4,'world','test','6578877','test4@test.com',4,0,'2017-12-03','2017-12-08','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(5,'test','world','7658809','test5@test.com',2,2,'2017-12-06','2017-12-11','en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(6,'helloworld','testing','6876425','test6@test.com',3,0,'2017-12-11','2017-12-14','sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(7,'test','yeah','4761909','test7@test.com',2,1,'2017-12-04','2017-12-06','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;

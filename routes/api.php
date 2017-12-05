@@ -24,6 +24,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/room', 'RoomController@getRoom')->name('room.index');
     //Admin
     Route::get('orderHistory', 'AdminController@getOrderHistory');
+    Route::post('orderHistory', 'AdminController@postOrderHistory');
     Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
     //rome type
     Route::get('/room-type', 'RoomTypeController@getRoomType');
