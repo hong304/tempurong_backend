@@ -6,6 +6,7 @@ use App\Models\Reservation;
 use App\Models\ReservationDetails;
 use App\Models\Room;
 use App\Models\RoomType;
+use App\Notifications\ReservationPaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -198,7 +199,7 @@ class ReservationController extends Controller
 			
 			DB::beginTransaction();
 			try {
-				$reservation = Reservation::where('session', $request->sessionId)->first();
+				$reservation = Reservation::where('session', $request->sessionId)->with('reservationDetails')->first();
 				$reservation->transaction_id = $request->transactionId;
 				$reservation->status = "completed";
 				$reservation->save();
@@ -214,9 +215,25 @@ class ReservationController extends Controller
 				DB::rollback();
 				return ErrorController::internalError("UpdateReservationError");
 			}
+			
+			// send email
+			$reservation = Reservation::where('id', '99')->with(['reservationDetails.roomType'])->first();
+			$reservation->total_rooms = count($reservation->reservationDetails);
+			$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
+			$reservation->notify(new ReservationPaid($reservation));
+			
 			return ErrorController::successMessage($request->transactionId);
 		}
 		
+	}
+	
+	public function testEmail()
+	{
+		$reservation = Reservation::where('id', '99')->with(['reservationDetails.roomType'])->first();
+		$reservation->total_rooms = count($reservation->reservationDetails);
+		$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
+//		dd($reservation);
+		$reservation->notify(new ReservationPaid($reservation));
 	}
 	
 	public function getAvailableRoomNumber($checkInDate, $checkOutDate, $roomTypeId)
