@@ -186,6 +186,39 @@ class ReservationController extends Controller
 		
 	}
 	
+	public function updateReservationStatus(Request $request)
+	{
+		$validator = Validator::make($request->all(), [
+			'transactionId' => 'required',
+			'sessionId' => 'required'
+		]);
+		if ($validator->fails()) {
+			return ErrorController::validationError("paypalError");
+		} else {
+			
+			DB::beginTransaction();
+			try {
+				$reservation = Reservation::where('session', $request->sessionId)->first();
+				$reservation->transaction_id = $request->transactionId;
+				$reservation->status = "completed";
+				$reservation->save();
+				
+				$reservationDetails = ReservationDetails::where('reservation_id', $reservation->id)->get();
+				foreach ($reservationDetails as $reservationDetail) {
+					$reservationDetail->status = $reservation->status;
+					$reservationDetail->status_time = $reservation->updated_at;
+					$reservationDetail->save();
+				}
+				DB::commit();
+			} catch (\Exception $e) {
+				DB::rollback();
+				return ErrorController::internalError("UpdateReservationError");
+			}
+			return ErrorController::successMessage($request->transactionId);
+		}
+		
+	}
+	
 	public function getAvailableRoomNumber($checkInDate, $checkOutDate, $roomTypeId)
 	{
 		// select all rooms and count no of rooms of that room type
