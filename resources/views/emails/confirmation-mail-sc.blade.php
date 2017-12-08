@@ -416,7 +416,7 @@
 													    style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 36px; font-weight: 300; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal;">
 														谢谢您！</h1>
 													<p class="text-left heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														你的订单已完成。以下是您的订单资料。</p>
 												</th>
 												<th class="expander"
@@ -452,7 +452,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														姓名:</p>
 												</th>
 											</tr>
@@ -466,7 +466,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														{{$reservation->last_name . $reservation->first_name}}</p>
 												</th>
 											</tr>
@@ -488,7 +488,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														电邮:</p>
 												</th>
 											</tr>
@@ -502,7 +502,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														{{$reservation->email}}</p>
 												</th>
 											</tr>
@@ -524,7 +524,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														订单编号:</p>
 												</th>
 											</tr>
@@ -537,9 +537,9 @@
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
-													<p class="heebo-font"
-													   style="color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														{{$reservation->transaction_id}}</p>
+													<span class="heebo-font"
+													      style="color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														{{$reservation->transaction_id}}</span>
 												</th>
 											</tr>
 											</tbody>
@@ -560,7 +560,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														日期:</p>
 												</th>
 											</tr>
@@ -602,9 +602,9 @@
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
-												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														人数:</p>
 												</th>
 											</tr>
@@ -616,7 +616,7 @@
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
-												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													{{--<p class="heebo-font"--}}
 													{{--style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">--}}
 													{{--{{$reservation->adults + $reservation->children}}</p>--}}
@@ -648,9 +648,9 @@
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
-												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														房型:</p>
 												</th>
 											</tr>
@@ -664,14 +664,14 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														<span style="text-transform: uppercase;">房间总数 x</span>
 														{{$reservation->total_rooms}}</p>
 													@foreach($reservation->reservationDetails as $reservationDetail)
 														<p class="heebo-font"
-														   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-															{{strtoupper($reservationDetail->roomType->name_en)}}
-															({{$reservationDetail->roomType->room_title_en}}) X 1 <br>
+														   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+															{{strtoupper($reservationDetail->roomType->name_sc)}}
+															({{$reservationDetail->roomType->room_title_sc}}) X 1 <br>
 															@if($reservationDetail->mattress && $reservationDetail->breakfast)
 																<span class="heebo-font"
 																      style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
@@ -708,7 +708,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
-													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
 														合计:</p>
 												</th>
 											</tr>
@@ -722,7 +722,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														$ {{$reservation->amount}}MYR</p>
 												</th>
 											</tr>
@@ -756,13 +756,13 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-left heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														如需更多详情请按
 														<a href="tel:+85293195360"
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">此</a>.
 													</p>
 													<p class="text-left heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														金沙龙沙度假村</p>
 												</th>
 												<th class="expander"
