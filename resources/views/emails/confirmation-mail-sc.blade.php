@@ -581,8 +581,8 @@
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														<span style="text-transform: uppercase; margin-right: 10px;">退房</span>
 														<span>{{$reservation->check_out}}</span><br>
-														<span style="margin-right: 10px;">({{$reservation->total_nights + 1}}
-															日，{{$reservation->total_nights}}夜)</span>
+														<i style="margin-right: 10px;">({{$reservation->total_nights + 1}}
+															日，{{$reservation->total_nights}}夜)</i>
 													</p>
 												</th>
 											</tr>
