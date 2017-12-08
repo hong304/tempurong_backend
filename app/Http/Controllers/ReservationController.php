@@ -199,7 +199,7 @@ class ReservationController extends Controller
 			
 			DB::beginTransaction();
 			try {
-				$reservation = Reservation::where('session', $request->sessionId)->with('reservationDetails')->first();
+				$reservation = Reservation::where('session', $request->sessionId)->with(['reservationDetails.roomType'])->first();
 				$reservation->transaction_id = $request->transactionId;
 				$reservation->status = "completed";
 				$reservation->save();
@@ -217,7 +217,6 @@ class ReservationController extends Controller
 			}
 			
 			// send email
-			$reservation = Reservation::where('id', '99')->with(['reservationDetails.roomType'])->first();
 			$reservation->total_rooms = count($reservation->reservationDetails);
 			$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
 			$reservation->notify(new ReservationPaid($reservation));
