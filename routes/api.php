@@ -19,7 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'guest'], function () {
     // activity
-    Route::post('/activity', 'ActivityController@getActivity');
+    Route::get('/activity', 'ActivityController@getActivity');
+    Route::get('/adventure', 'ActivityController@getAdventure');
+
+    // food
+    Route::get('/food', 'FoodController@getFood');
 
     Route::get('/room', 'RoomController@getRoom')->name('room.index');
     //Admin
