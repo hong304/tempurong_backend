@@ -8,7 +8,7 @@ class ActivityController extends Controller
 {
     public function getActivity()
     {
-        $activity = Activity::whereNotNull('difficulty')->get();
+        $activity = Activity::whereNull('difficulty')->get();
         return response()->json($activity);
     }
 
