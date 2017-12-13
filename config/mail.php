@@ -56,9 +56,14 @@ return [
 	 */
 	
 	'from' => [
-		'address' => env('MAIL_FROM_EMAIL', 'no-reply@official.buildonauts.com'),
+		'address' => env('MAIL_FROM_EMAIL', 'no-reply@tempurong.com'),
 		'name' => env('MAIL_FROM_NAME', 'Tempurong Golden Beach Resort'),
 	],
+
+  'enquiry_to' =>[
+    'address' =>env('ENQUIRY_MAIL_TO', 'info@tempurong.com'),
+    'name' => env('MAIL_FROM_DISPLAY_NAME', 'Tempurong.com'),
+  ],
 	
 	/*
 	|--------------------------------------------------------------------------
