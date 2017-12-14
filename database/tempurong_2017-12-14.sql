@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-12-11 09:08:53 +0000
+# Generation Time: 2017-12-14 06:05:29 +0000
 # ************************************************************
 
 
@@ -47,9 +47,9 @@ LOCK TABLES `activities` WRITE;
 
 INSERT INTO `activities` (`id`, `name_en`, `name_sc`, `subtitle_en`, `subtitle_sc`, `duration`, `distance`, `difficulty`, `description_en`, `description_sc`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'Spiritual Tree',NULL,NULL,NULL,5,200,NULL,'Just a 5-minute walk away, there is a towering tree that dates back over 400 years, to a time when two young lovers, one Christian and one Muslim, ran away after their relationship was forbidden by their families. Eventually they came upon the tree, and a spirit in the tree spoke to them, directing them onward. Travelers can visit the large and ancient tree, which still grows sourly fruit to this day. ',NULL,NULL,NULL,NULL),
-	(2,'Healing Well',NULL,NULL,NULL,5,200,NULL,'Over 400 years ago, there was a devastating drought in the area. Villagers were directed to dig a well in a location that was thought to have a water source underground. The villagers tasked with digging the well were skeptical, but with little choice they kept digging anyways. Amazingly, the well they dug was able to provide enough water for the whole village for a long time to come. The water was known to have healing properties, so when elders fell ill, they would bathe in and drink from the well.  This well is now known as the Wellness Healing Well and is a 5-minute walk away from the resort.',NULL,NULL,NULL,NULL),
-	(3,'Love Rock',NULL,NULL,NULL,25,1000,NULL,'Known locally as Batu Luang, Love rock is a bell-shaped rock located on a beautiful strip of beach in Kuala Penyu. Surrounded by mossy rocks, caves, and set to the backdrop of the ocean behind it, you can see one of the most beautiful sunsets in all of Sabah. Love Rock is located 1KM from the resort and is a 25-minute walk away.',NULL,NULL,NULL,NULL),
+	(1,'Spiritual Tree',NULL,NULL,NULL,5,200,NULL,'A 5-minute wander from the resort there is a towering tree that dates back over 400 years, to a time when two young lovers ran away after their relationship was forbidden by their families. Eventually they came upon the tree, and a spirit in the tree spoke to them, directing them onward despite the challenges. Travelers can visit the large and ancient tree, which still grows fruit to this day. ',NULL,NULL,NULL,NULL),
+	(2,'Healing Well',NULL,NULL,NULL,5,200,NULL,'Over 400 years ago, there was a devastating drought in the area. Villagers were directed to dig a well in a location that was thought to have a water source underground. The villagers tasked with digging the well were skeptical, but with little choice they kept digging anyways. Amazingly, the well they dug was able to provide enough water for the whole village for a long time to come. The water was known to have healing properties, so when elders fell ill, they would bathe in and drink from the well.  This well is now known as the Wellness Healing Well and is a 5-minute walk from the resort.',NULL,NULL,NULL,NULL),
+	(3,'Love Rock',NULL,NULL,NULL,25,1000,NULL,'Known locally as Batu Luang （meaning free rock in Malay), Love rock is a bell-shaped rock located on a beautiful strip of beach in Kuala Penyu. Surrounded by mossy rocks, caves, and set to the backdrop of the ocean behind it, you can see one of the most beautiful sunsets in all of Sabah. Love Rock is located 1KM from the resort and is a 25-minute walk away. Here lies a poignant love story with this everlasting concentric rock.',NULL,NULL,NULL,NULL),
 	(4,'Pulau Tiga Day Trip','生还者之岛一日游','Snorkeling and Volcano Mud Bath','迪迦岛浮潜及火山泥浴',25,1000,3.5,'Pulau Tiga is an island off the coast of Borneo that is most well known as “Survivor Island”, as it was the location where the debut season of Survivor was filmed. On this day trip you will depart from the resort by 8:30AM and travel to the beautiful waters off the coast of the island for swimming and snorkeling at various locations. Marvelous sights of giant clams, families of tropical fish, and other beautiful ocean life are common amongst the coral reefs.\n<br><br>\nYou will also have the option of dipping into the volcano mud baths of Pulau Tiga, which are a leisurely 20-minute hike inland from the island’s shore, and enjoy a fun experience said to be good for the skin (Be sure to bring footwear that you won’t mind getting muddy if you opt for the hike!). The length of stay is up to you but we are usually back at the resort by 2:00PM where you can enjoy the rest of the afternoon at your leisure!','迪迦岛是位于婆罗洲海岸的一个岛屿，它也誉名为“生还者之岛”（Survivor Island），基于它因美国拍摄了生还者电视剧而火红的地方。在这一天的行程中，您将于上午8:30离开度假村，前往岛上海岸的美丽水域，在不同的地点游泳和浮潜。在海底世界可以观赏到巨大的蛤蜊，色彩兵纷的珊瑚礁环境里有许许多多热带鱼的家庭和其他美丽的海洋生物。\n<br><br>\n您也可以选择在岛上岸边徒步20分钟到热带岛屿的火山泥浴，并享受一个有趣的体验，据说火山泥对皮肤有滋润美白的功效（选择徒步旅行者请务必携带鞋子，除非你不介意变得浑浊！）。您将投奔大海边清洗边游泳，沉醉在大海的拥抱中。我们通常在下午2:00之前回到休闲亦有隐私的度假村享用美味道地午餐。',NULL,NULL,NULL),
 	(5,'Mangrove River Cruise','红树林游船','Proboscis Monkeys and Fireflies','长鼻猴和萤火虫',25,1000,3.5,'The River Cruise offers opportunities to see the wildlife of Borneo’s wetland jungles. The trip would begin by traveling to the Klias River, about a half hour away from the resort. Upon arrival, there would be a tea break before embarking on a boat ride in search of the Proboscis monkeys, an endangered species that are native to Sabah and are most known for their signature long noses and protruding bellies. Proboscis monkey is our national treasure and only found in Borneo Island. Have you ever seen monkey that does not eat banana? Well, this is the only species! Come and find out more about this interesting monkey!\n<br><br>\nAfter a one and a half hour cruise, we enjoy a break and eat dinner so that you can enjoy the local tastes before embarking on the Firefly Cruise. The evening cruise becomes a mystical ride through the mangroves where fireflies light up the darkness like magical specks and the sounds of nature surround you. Please note that sightings are common, but not guaranteed.','红树林游船提供了看到婆罗洲湿地丛林野生动物在它们自然状态的机会。这个克利亚斯河景点距离度假村大约半小时的车程。抵达后，乘船游览长鼻猴，这是一种原产于沙巴的濒危物种，以其长长的鼻子和突出的腹部而闻名。长鼻猴是马来西亚国宝。它是世界仅有也只生长在婆罗洲岛。有没有见过不吃香蕉的猴子？来吧！在这里你可以寻觅探索观赏到这非常特别的猴子品种。\n<br><br>\n经过一个半小时的巡航，我们休息片刻然后享用当地的风味晚餐。晚餐后，开始萤火虫巡航。晚上的巡游变成了神秘的红树林，在这里，萤火虫像魔法般的斑点照亮黑暗，自然的音律环绕着你。这种生态是常见的，当然气候不好则另当别论。',NULL,NULL,NULL),
 	(6,'Escorted Jungle Trekking ','陪同的丛林徒步旅行',NULL,NULL,25,1000,3.5,'Enjoy some of the world’s dwindling rain forests by doing a leisurely jungle trek - about an hour long. Trek through the low land forest where you may see different kinds of reptiles, birds, plants, bamboo, rattan, and more. Visitors are advised to wear sandals or a good pair of walking shoes, insect repellent, sun screen, a small bottle of water will be provided.\n<br><br>\nThe Healing Well and Love Rock (also known as Space Rock) are also nearby so these additional areas could be tied into after your trek. The sunset is especially gorgeous from the beach by Space Rock as there are rarely any people around. Enjoy the rich colors as the sky changes from golds and oranges to deep reds.','通过一个长达一小时的悠闲丛林徒步旅行，享受世界上一些日益减少的热带雨林。跋涉在低地森林中，您可以看到各种爬行动物，鸟类，植物，竹子，藤条等等。建议游客穿凉鞋或者一双好的步行鞋，驱蚊剂，防晒霜，提供一小瓶水。客人可以自由自在各自徒步。若需陪同，则要另外付费。\n<br><br>\n疗愈水池和同心岩石（太空岩石）也是附近的周边景点，陪同森林徒步后也可以额外到这些地区跋涉。漫步到太岩石的海滩上看日落特别美丽。在这里周围环境的人很稀少。随着天空从黄金和橘子变成深红色，享受无际天空海洋色泽渐变丰富的色彩。。。真是人生一大享受！！！',NULL,NULL,NULL);
@@ -93,6 +93,37 @@ VALUES
 	(12,6,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activity_images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table enquiries
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `enquiries`;
+
+CREATE TABLE `enquiries` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL DEFAULT '',
+  `last_name` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `message` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `enquiries` WRITE;
+/*!40000 ALTER TABLE `enquiries` DISABLE KEYS */;
+
+INSERT INTO `enquiries` (`id`, `first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`)
+VALUES
+	(1,'test a','name b','abc@buildonauts.com','testing','2017-12-13 05:30:51','2017-12-13 05:30:51'),
+	(2,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:38:08','2017-12-13 08:38:08'),
+	(3,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:39:37','2017-12-13 08:39:37'),
+	(4,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:41:22','2017-12-13 08:41:22'),
+	(5,'testing','test','test@buildonauts.com','test dev','2017-12-13 08:45:04','2017-12-13 08:45:04');
+
+/*!40000 ALTER TABLE `enquiries` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -189,7 +220,9 @@ VALUES
 	(9,4,1,7,250,4,4,0,NULL,NULL,NULL,'2017-12-06','2017-12-09',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
 	(10,13,1,5,250,4,4,0,NULL,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
 	(11,1,1,5,250,4,4,0,NULL,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,'2017-11-30 12:08:11',NULL),
-	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL);
+	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
+	(13,12,2,8,2466,6,NULL,0,0,'waiting_for_payment',NULL,'2017-12-20','2017-12-29',NULL,NULL,'2017-12-12 09:20:44','2017-12-13 09:43:32',NULL),
+	(14,12,1,9,2500,4,NULL,0,0,'waiting_for_payment',NULL,'2017-12-12','2017-12-22',NULL,NULL,'2017-12-12 09:35:42','2017-12-13 09:43:32',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -234,7 +267,9 @@ VALUES
 	(4,'world','test','6578877','test4@test.com',4,0,'2017-12-03','2017-12-08','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
 	(5,'test','world','7658809','test5@test.com',2,2,'2017-12-06','2017-12-11','en',NULL,NULL,500,'paypal',NULL,NULL,NULL,NULL,NULL),
 	(6,'helloworld','testing','6876425','test6@test.com',3,0,'2017-12-11','2017-12-14','sc',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
-	(7,'test','yeah','4761909','test7@test.com',2,1,'2017-12-04','2017-12-06','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL);
+	(7,'test','yeah','4761909','test7@test.com',2,1,'2017-12-04','2017-12-06','en',NULL,NULL,250,'paypal',NULL,NULL,NULL,NULL,NULL),
+	(8,'kay','test',NULL,'kl@buildonauts.com',3,0,'2017-12-20','2017-12-29','en','testing testing',NULL,2466,'paypal','2017-12-12 09:20:44','2017-12-12 09:20:44',NULL,'waiting_for_payment','5a2f9f6c5c05c591'),
+	(9,'kay','lun',NULL,'kl@buildonauts.com',3,0,'2017-12-12','2017-12-22','en','testing',NULL,2500,'paypal','2017-12-12 09:35:42','2017-12-12 09:35:42',NULL,'waiting_for_payment','5a2fa2ee0894f507');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
