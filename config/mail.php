@@ -56,13 +56,13 @@ return [
 	 */
 	
 	'from' => [
-		'address' => env('MAIL_FROM_EMAIL', 'no-reply@tempurong.com'),
+		'address' => env('MAIL_FROM_EMAIL', 'no-reply@tempuronggoldenbeachresort.com'),
 		'name' => env('MAIL_FROM_NAME', 'Tempurong Golden Beach Resort'),
 	],
 
   'enquiry_to' =>[
-    'address' =>env('ENQUIRY_MAIL_TO', 'info@tempurong.com'),
-    'name' => env('MAIL_FROM_DISPLAY_NAME', 'Tempurong.com'),
+    'address' =>env('ENQUIRY_MAIL_TO', 'info@tempuronggoldenbeachresort.com'),
+    'name' => env('MAIL_FROM_DISPLAY_NAME', 'Tempuronggoldenbeachresort.com'),
   ],
 	
 	/*
