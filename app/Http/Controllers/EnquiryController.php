@@ -42,7 +42,7 @@ class EnquiryController extends Controller
     //send email here
     $enquiry->notify(new EnquiryNotification($enquiry));
 
-    return ErrorController::successMessage('enquirySubmitSuccess');
+    return ErrorController::successMessage('We have received your enquiry, thank you!');
   }
 
 }

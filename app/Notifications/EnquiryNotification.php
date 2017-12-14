@@ -45,7 +45,7 @@ class EnquiryNotification extends Notification
     {
         $enquiry = $this->enquiry;
       return (new MailMessage)
-        ->subject("Your enquiry has been sent.")
+        ->subject("Your received a new enquiry.")
         ->view('emails.enquiry-mail', compact('enquiry'));
 
     }

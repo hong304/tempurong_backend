@@ -5,7 +5,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Tempurong - Reservation Confirmation</title>
+    <title>Tempurong - Enquiry</title>
 
 </head>
 
@@ -414,11 +414,10 @@
                                                 <th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
                                                     <h1 class="text-left heebo-font email-heading"
                                                         style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 36px; font-weight: 300; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal;">
-                                                        YOU MESSAGE HAS BEEN SENT.</h1>
+                                                        YOU RECEIVED A NEW ENQUIRY.</h1>
                                                     <p class="text-left heebo-font"
                                                        style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-                                                        For your
-                                                        reference, here's a copy of your enquiry:</p>
+                                                        Here's the detail:</p>
                                                 </th>
                                                 <th class="expander"
                                                     style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
