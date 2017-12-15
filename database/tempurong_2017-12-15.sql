@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-12-14 06:05:29 +0000
+# Generation Time: 2017-12-15 10:15:43 +0000
 # ************************************************************
 
 
@@ -79,9 +79,9 @@ LOCK TABLES `activity_images` WRITE;
 
 INSERT INTO `activity_images` (`id`, `activity_id`, `cover_image`, `image_path`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,1,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
-	(2,2,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
-	(3,3,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
+	(1,1,'/static/img/activities/tree.jpg','',NULL,NULL,NULL),
+	(2,2,'/static/img/activities/well.jpg','',NULL,NULL,NULL),
+	(3,3,'/static/img/activities/rock.jpg','',NULL,NULL,NULL),
 	(4,4,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
 	(5,4,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
 	(6,4,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
@@ -121,7 +121,19 @@ VALUES
 	(2,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:38:08','2017-12-13 08:38:08'),
 	(3,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:39:37','2017-12-13 08:39:37'),
 	(4,'test a','name b','abc@buildonauts.com','testing','2017-12-13 08:41:22','2017-12-13 08:41:22'),
-	(5,'testing','test','test@buildonauts.com','test dev','2017-12-13 08:45:04','2017-12-13 08:45:04');
+	(5,'testing','test','test@buildonauts.com','test dev','2017-12-13 08:45:04','2017-12-13 08:45:04'),
+	(6,'hi','world','hi@buildonauts.com','testing','2017-12-14 06:30:13','2017-12-14 06:30:13'),
+	(7,'test a','name b','abc@buildonauts.com','testing','2017-12-14 06:31:52','2017-12-14 06:31:52'),
+	(8,'testing','test','kl@buildonauts.com','sajdhajskhdkajsdh','2017-12-14 06:34:45','2017-12-14 06:34:45'),
+	(9,'abc','test','abc@buildonauts.com','sadhj sahdjsa hdj as','2017-12-14 06:39:12','2017-12-14 06:39:12'),
+	(10,'abc','abc','hsajdhajks@yahoo.com.hk','sdahjkdhak sad as das','2017-12-14 06:40:24','2017-12-14 06:40:24'),
+	(11,'test a','name b','abc@buildonauts.com','testing','2017-12-14 06:40:51','2017-12-14 06:40:51'),
+	(12,'test a','name b','abc@buildonauts.com','testing','2017-12-14 06:42:14','2017-12-14 06:42:14'),
+	(13,'test','test','hello@buildonauts.com','testing mail','2017-12-14 06:50:27','2017-12-14 06:50:27'),
+	(14,'test again','again','kay@buildonauts.com','hskadhjkashdjska hsja khasjk hd','2017-12-14 06:53:09','2017-12-14 06:53:09'),
+	(15,'ggg','ggkkk','gg@buildonauts.com','ggah ash jdas das dsa das','2017-12-14 07:04:05','2017-12-14 07:04:05'),
+	(16,'abc','again','test@abc.com','asdsadsadsads','2017-12-14 07:37:24','2017-12-14 07:37:24'),
+	(17,'test','asdas','test@hello.com','hsajkdhajskhdjkashdisa sad as','2017-12-14 07:41:14','2017-12-14 07:41:14');
 
 /*!40000 ALTER TABLE `enquiries` ENABLE KEYS */;
 UNLOCK TABLES;
