@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
-use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
-    public function getActivity(Request $request)
+    public function getActivity()
     {
-        $activity = Activity::where('id', $request->activityId)->with('images')->first();
+        $activity = Activity::whereNull('difficulty')->with('images')->get();
         return response()->json($activity);
+    }
+
+    public function getAdventure()
+    {
+        $adventure = Activity::whereNotNull('difficulty')->with('images')->get();
+        return response()->json($adventure);
     }
 }
