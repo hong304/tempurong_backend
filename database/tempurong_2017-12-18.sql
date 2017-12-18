@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-12-15 10:15:43 +0000
+# Generation Time: 2017-12-18 10:40:59 +0000
 # ************************************************************
 
 
@@ -233,8 +233,8 @@ VALUES
 	(10,13,1,5,250,4,4,0,NULL,NULL,NULL,'2017-12-04','2017-12-07',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
 	(11,1,1,5,250,4,4,0,NULL,NULL,NULL,'2017-11-28','2017-11-30',NULL,NULL,NULL,'2017-11-30 12:08:11',NULL),
 	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
-	(13,12,2,8,2466,6,NULL,0,0,'waiting_for_payment',NULL,'2017-12-20','2017-12-29',NULL,NULL,'2017-12-12 09:20:44','2017-12-13 09:43:32',NULL),
-	(14,12,1,9,2500,4,NULL,0,0,'waiting_for_payment',NULL,'2017-12-12','2017-12-22',NULL,NULL,'2017-12-12 09:35:42','2017-12-13 09:43:32',NULL);
+	(13,12,2,8,2466,6,NULL,0,0,'waiting_for_payment',NULL,'2017-12-20','2017-12-29',NULL,NULL,'2017-12-12 09:20:44','2017-12-18 04:36:27',NULL),
+	(14,12,1,9,2500,4,NULL,0,0,'waiting_for_payment',NULL,'2017-12-12','2017-12-22',NULL,NULL,'2017-12-12 09:35:42','2017-12-18 04:36:27',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -335,9 +335,9 @@ LOCK TABLES `room_types` WRITE;
 
 INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `room_title_en`, `room_title_sc`, `cover_image`, `description`, `capacity`, `size`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'sea view','海景房','Family Rooms','家庭房','/static/img/room_type/room-01.jpg','Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar. \n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,2,NULL,250,NULL,NULL,NULL),
-	(2,'river view','河景房','Large Family Rooms','大家庭房','/static/img/room_type/room-02.jpg','3 mix dormitory river view rooms with 2 double decker &amp; 1 queen bed (6pax)\n',6,'16 sq. ft by 15 sq ft = 240 square feet',0,1,2,274,NULL,NULL,NULL),
-	(3,'river view','河景房','Family Rooms','家庭房','/static/img/room_type/room-03.jpg','2 family rooms river view rooms with 1 double decker &amp; 1 queen bed (4pax)\n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,1,1,250,NULL,NULL,NULL);
+	(1,'sea view','海景房','Family Rooms','家庭房','/static/img/room_type/sea-view.jpg','Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar. \n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,2,NULL,250,NULL,NULL,NULL),
+	(2,'river view','河景房','Large Family Rooms','大家庭房','/static/img/room_type/river-view-large.jpg','3 mix dormitory river view rooms with 2 double decker &amp; 1 queen bed (6pax)\n',6,'16 sq. ft by 15 sq ft = 240 square feet',0,1,2,274,NULL,NULL,NULL),
+	(3,'river view','河景房','Family Rooms','家庭房','/static/img/room_type/river-view-family.jpg','2 family rooms river view rooms with 1 double decker &amp; 1 queen bed (4pax)\n',4,'16 sq. ft by 15 sq ft = 240 square feet',1,1,1,250,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
