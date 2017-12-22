@@ -35,13 +35,22 @@ Route::group(['middleware' => 'guest'], function () {
   Route::post('/reservation', 'ReservationController@postReservation')->name('reservation.store');
   Route::post('/reservation/update', 'ReservationController@updateReservationStatus')->name('reservation.update');
   Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
-
-  // admin
-  Route::get('orderHistory', 'AdminController@getOrderHistory');
-  Route::post('orderHistory', 'AdminController@postOrderHistory');
-  Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
-
+	
   // enquiry
   Route::post('/enquiry', 'EnquiryController@sendEnquiryForm');
+	
+  // admin
+  Route::post('/login', 'Auth\LoginController@login');
+  Route::get('/check-login', 'Auth\LoginController@checkLogin');
 
+});
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/logout', 'Auth\LoginController@logout');
+
+	// admin
+	Route::get('orderHistory', 'AdminController@getOrderHistory');
+	Route::post('orderHistory', 'AdminController@postOrderHistory');
+	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
+	
 });
