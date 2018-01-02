@@ -28,6 +28,7 @@ class LoginController extends Controller
 	 * @var string
 	 */
 	protected $redirectTo = '/';
+	protected $auth;
 	
 	/**
 	 * Create a new controller instance.
@@ -36,21 +37,24 @@ class LoginController extends Controller
 	 */
 	public function __construct()
 	{
+		$this->auth = new Auth();
 		$this->middleware('guest')->except('logout');
 	}
-
-	public function getlogin(Request $request){
-	    Auth::loginUsingId(1,true);
-    }
-
+	
+	public function getlogin(Request $request)
+	{
+		Auth::loginUsingId(1, true);
+	}
+	
 	public function login(Request $request)
 	{
 		$userData = array(
 			'email' => $request->get('username'),
 			'password' => $request->get('password')
 		);
+		$this->auth->loginUsingId(1, true);
 		
-		if (Auth::attempt($userData, true)) {
+		if ($this->auth->attempt($userData, true)) {
 			
 			$result = [
 				'status' => true,
@@ -65,12 +69,11 @@ class LoginController extends Controller
 			];
 			return response()->json($result, 401);
 		}
-        Auth::loginUsingId(1,true);
 	}
 	
 	public function checkLogin()
 	{
-		if (Auth::check()) {
+		if ($this->auth->check()) {
 			$result = [
 				'status' => true,
 				'message' => 'Logged-in.'
@@ -86,7 +89,7 @@ class LoginController extends Controller
 	
 	public function logout()
 	{
-		Auth::logout();
+		$this->auth->logout();
 		$result = [
 			'status' => true,
 			'message' => 'Logged-out.'
