@@ -40,7 +40,6 @@ Route::group(['middleware' => 'guest'], function () {
   Route::post('/enquiry', 'EnquiryController@sendEnquiryForm');
 	
   // admin
-    Route::get('/getlogin', 'Auth\LoginController@getlogin');
   Route::post('/login', 'Auth\LoginController@login');
   Route::get('/check-login', 'Auth\LoginController@checkLogin');
 

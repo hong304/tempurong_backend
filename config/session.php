@@ -152,7 +152,7 @@ return [
     */
 
 
-    'domain' => env('SESSION_DOMAIN', 'staging.tempurong.buildonauts.com'),
+    'domain' => env('SESSION_DOMAIN', ''),
 
     /*
     |--------------------------------------------------------------------------

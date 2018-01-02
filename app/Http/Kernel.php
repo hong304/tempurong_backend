@@ -44,7 +44,6 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-	        \Barryvdh\Cors\HandleCors::class,
         ],
     ];
 

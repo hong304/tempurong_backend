@@ -65,7 +65,6 @@ class LoginController extends Controller
 			];
 			return response()->json($result, 401);
 		}
-        Auth::loginUsingId(1,true);
 	}
 	
 	public function checkLogin()
