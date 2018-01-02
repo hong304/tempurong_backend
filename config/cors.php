@@ -13,7 +13,7 @@ return [
     */
    
     'supportsCredentials' => true,
-    'allowedOrigins' => ['*'],
+    'allowedOrigins' => ['http://staging.tempurong.buildonauts.com'],
     'allowedHeaders' => ['*'],
     'allowedMethods' => ['*'],
     'exposedHeaders' => [],
