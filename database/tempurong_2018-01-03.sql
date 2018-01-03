@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2017-12-22 05:02:08 +0000
+# Generation Time: 2018-01-03 10:33:08 +0000
 # ************************************************************
 
 
@@ -82,15 +82,15 @@ VALUES
 	(1,1,'/static/img/activities/tree.jpg','',NULL,NULL,NULL),
 	(2,2,'/static/img/activities/well.jpg','',NULL,NULL,NULL),
 	(3,3,'/static/img/activities/rock.jpg','',NULL,NULL,NULL),
-	(4,4,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
-	(5,4,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
-	(6,4,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
-	(7,5,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
-	(8,5,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
-	(9,5,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
-	(10,6,'/static/img/demo-about-01.jpg','',NULL,NULL,NULL),
-	(11,6,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL),
-	(12,6,NULL,'/static/img/demo-about-01.jpg',NULL,NULL,NULL);
+	(4,4,'/static/img/activities/PULAU_TIGA_DAY_TRIP/cover.jpg','',NULL,NULL,NULL),
+	(5,4,NULL,'/static/img/activities/PULAU_TIGA_DAY_TRIP/01.jpg',NULL,NULL,NULL),
+	(6,4,NULL,'/static/img/activities/PULAU_TIGA_DAY_TRIP/02.jpg',NULL,NULL,NULL),
+	(7,5,'/static/img/activities/MANGROVE_RIVER_CRUISE/cover.jpg','',NULL,NULL,NULL),
+	(8,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/01.jpg',NULL,NULL,NULL),
+	(9,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/01.jpg',NULL,NULL,NULL),
+	(10,6,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg','',NULL,NULL,NULL),
+	(11,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg',NULL,NULL,NULL),
+	(12,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activity_images` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -185,6 +185,176 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`)
+VALUES
+	(1,'2014_10_12_000000_create_users_table',1),
+	(2,'2014_10_12_100000_create_password_resets_table',1),
+	(3,'2016_06_01_000001_create_oauth_auth_codes_table',1),
+	(4,'2016_06_01_000002_create_oauth_access_tokens_table',1),
+	(5,'2016_06_01_000003_create_oauth_refresh_tokens_table',1),
+	(6,'2016_06_01_000004_create_oauth_clients_table',1),
+	(7,'2016_06_01_000005_create_oauth_personal_access_clients_table',1);
+
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_access_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_access_tokens`;
+
+CREATE TABLE `oauth_access_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `client_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_access_tokens_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_access_tokens` WRITE;
+/*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`)
+VALUES
+	('0186593f5833a931af482f213020017c1eb5428a62ddcc406de3c3950feac0451ed4bbbf0bc434a8',1,1,'MyApp','[]',0,'2018-01-03 04:08:04','2018-01-03 04:08:04','2019-01-03 04:08:04'),
+	('0221ef689ba5476658a1788dbbd5c7d61a515694e506726191b6e83050d3250d8d04ca7cff49f954',1,1,'kay','[]',0,'2018-01-03 04:41:44','2018-01-03 04:41:44','2019-01-03 04:41:44'),
+	('1dd8f68b10485479c2170ff17fb7fbb8b5611cf9053fcd27fc4592cedf891cf459112eb5c8de51b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:16','2018-01-03 04:07:16','2019-01-03 04:07:16'),
+	('25fcf21019642406fa74584c66d6becb89f1f341a1d006afb3c8a7d71a927a317ef9568da635307f',1,1,'MyApp','[]',0,'2018-01-03 04:08:52','2018-01-03 04:08:52','2019-01-03 04:08:52'),
+	('2d77a70ba998d32bac64e7e06fcca93282c4a980b1dc172c21b0870d0a6615e9d3afa38b9a826459',1,1,'MyApp','[]',0,'2018-01-03 04:08:05','2018-01-03 04:08:05','2019-01-03 04:08:05'),
+	('36a660eedfdf27c4f458c2a92ad7676f24ae27f52585d2b8db1d2b33a314201cd680ce34fe278c3d',1,1,'MyApp','[]',0,'2018-01-03 04:07:52','2018-01-03 04:07:52','2019-01-03 04:07:52'),
+	('4bd56d90fb901edf1c5ce52bb9d439ef27ea94a69c4bd0aa25fe9bb5143209114bcc37c1e6939b61',1,1,'MyApp','[]',0,'2018-01-03 04:02:55','2018-01-03 04:02:55','2019-01-03 04:02:55'),
+	('5c09c46de549eddfe956665ef57727d680a82eaecab9c5a807c3922e0a4fa1ac201a1797addf1aa4',1,1,'MyApp','[]',0,'2018-01-03 04:07:12','2018-01-03 04:07:12','2019-01-03 04:07:12'),
+	('5dd79daa6600b633937c9da3eb266403db411453c4b4f8643258be3a0a0310f491f6a380153f71bb',1,1,'MyApp','[]',0,'2018-01-03 04:07:51','2018-01-03 04:07:51','2019-01-03 04:07:51'),
+	('62d6811a8cc178c07be3e81051cf2facf06a1b9d5602eea702bc262ce9178987a522f76d7698c494',1,1,'MyApp','[]',0,'2018-01-03 04:09:44','2018-01-03 04:09:44','2019-01-03 04:09:44'),
+	('6fd766b9136e7ff986ab185ccafba6beda963d4e7ab6000ad7c284c321279c4cb0d4bece1e4f5aa9',1,1,'kay','[]',0,'2018-01-03 04:43:51','2018-01-03 04:43:51','2019-01-03 04:43:51'),
+	('7a1ef933b6c3fc816049b0a56acb7778e37df84fe9b2380a5d5a0e355e7b00acad803e1314222be0',1,1,'kay','[]',0,'2018-01-03 07:57:56','2018-01-03 07:57:56','2019-01-03 07:57:56'),
+	('88a7a4942c41e83ac7e9dd5c8a97de353be6b0260e3a26083cecd30d7ed895ad12823be822ae3abd',1,1,'MyApp','[]',0,'2018-01-03 04:09:09','2018-01-03 04:09:09','2019-01-03 04:09:09'),
+	('9731d925138cb15fb15ae949b99d87e8eec9a14dfea74d0c23aa87a448ca846e2901796206ea2072',1,1,'kay','[]',0,'2018-01-03 04:42:03','2018-01-03 04:42:03','2019-01-03 04:42:03'),
+	('98182b24fbaf125e8d42dcb43dbbf9dd6b08b201e776b56f3c3df3e7b9ca8edb73702d8f0a993d1b',1,1,'MyApp','[]',0,'2018-01-03 04:03:06','2018-01-03 04:03:06','2019-01-03 04:03:06'),
+	('9e9dbdc8dfbc172e074821db7849d4533aca438043862604a1a9cf12b4eb08d7f94ede05d526dca9',1,1,'MyApp','[]',0,'2018-01-03 03:26:05','2018-01-03 03:26:05','2019-01-03 03:26:05'),
+	('a203eda1e89a47671d9077c0c9210ba18ab1d7d6430b55729de39cf7b9523abcbedd1183623dac3e',1,1,'MyApp','[]',0,'2018-01-03 04:08:53','2018-01-03 04:08:53','2019-01-03 04:08:53'),
+	('c8c4e18af2455550458ea4dfa3274d7cf93f15742ab1fa9b7d764f69a6da13fe8f7a60c593d1d83d',1,1,'MyApp','[]',0,'2018-01-03 04:09:42','2018-01-03 04:09:42','2019-01-03 04:09:42'),
+	('df1ae240eac66dbcad172c3d210e2ff1b62b98b004fe7b4ff8131977929c7370a001ce4615ca32be',1,1,'kay','[]',0,'2018-01-03 07:31:52','2018-01-03 07:31:52','2019-01-03 07:31:52'),
+	('e10f7eeb60fdcd8918e1a141144e9bf42c1781a34ff27ec4801499a98e5a44e131873df7694f0ead',1,1,'MyApp','[]',0,'2018-01-03 03:28:34','2018-01-03 03:28:34','2019-01-03 03:28:34'),
+	('edd57e962b334d60acdca007f78f9f42c411444e8f35ee31d21f97a1d8c5f6dba2ad51ec3152c0b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:59','2018-01-03 04:07:59','2019-01-03 04:07:59'),
+	('f90568ff51f5c179a53521d38b756ac82c100bf50de7d5649d2de471e64984c8528d83939898bc6b',1,1,'MyApp','[]',0,'2018-01-03 04:07:44','2018-01-03 04:07:44','2019-01-03 04:07:44');
+
+/*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_auth_codes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_auth_codes`;
+
+CREATE TABLE `oauth_auth_codes` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_clients`;
+
+CREATE TABLE `oauth_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `personal_access_client` tinyint(1) NOT NULL,
+  `password_client` tinyint(1) NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_clients_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`)
+VALUES
+	(1,NULL,'Laravel Personal Access Client','Cc9HjMXycxN5hVESSEyfdEDu8H6zQjhtVoT7z78q','http://localhost',1,0,0,'2018-01-03 03:02:42','2018-01-03 03:02:42'),
+	(2,NULL,'Laravel Password Grant Client','tpiYDSSeoOmMoVGHX0UrDbqCyoq8nK1BXgbf6npy','http://localhost',0,1,0,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_personal_access_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_personal_access_clients`;
+
+CREATE TABLE `oauth_personal_access_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_personal_access_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_personal_access_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`)
+VALUES
+	(1,1,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_personal_access_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_refresh_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_refresh_tokens`;
+
+CREATE TABLE `oauth_refresh_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table password_resets
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `password_resets`;
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
@@ -386,22 +556,23 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`id`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`)
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq','RrW5ubwxyV0PbVdKe0kjgL7MOAvTU2yog8IS3PMQYXKGa2E9zNrd1Sz89BJ4',NULL,NULL,NULL);
+	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
