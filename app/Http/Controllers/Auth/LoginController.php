@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -28,6 +29,7 @@ class LoginController extends Controller
 	 * @var string
 	 */
 	protected $redirectTo = '/';
+  public $successStatus = 200;
 	
 	/**
 	 * Create a new controller instance.
@@ -45,42 +47,20 @@ class LoginController extends Controller
 
 	public function login(Request $request)
 	{
-		$userData = array(
-			'email' => $request->get('username'),
-			'password' => $request->get('password')
-		);
-		
-		if (Auth::attempt($userData, true)) {
-			
-			$result = [
-				'status' => true,
-				'message' => 'Login Success'
-			];
-			return response()->json($result, 200);
-		} else {
-			
-			$result = [
-				'status' => false,
-				'message' => 'Login Failed'
-			];
-			return response()->json($result, 401);
-		}
+    if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+      $user = Auth::user();
+      $success['token'] =  $user->createToken($user->name)->accessToken;
+      return response()->json(['success' => $success], $this->successStatus);
+    }
+    else{
+      return response()->json(['error'=>'Login failed.'], 401);
+    }
 	}
 	
 	public function checkLogin()
 	{
-		if (Auth::check()) {
-			$result = [
-				'status' => true,
-				'message' => 'Logged-in.'
-			];
-		} else {
-			$result = [
-				'status' => false,
-				'message' => 'Not Logged-in.'
-			];
-		}
-		return response()->json($result, 200);
+    $user = Auth::user();
+    return response()->json(['success' => $user], $this->successStatus);
 	}
 	
 	public function logout()
