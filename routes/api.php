@@ -45,8 +45,8 @@ Route::group(['middleware' => 'guest'], function () {
 
 });
 
-Route::group(['middleware' => 'auth:api'], function () {
-	Route::get('/logout', 'Auth\LoginController@logout');
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('logout', 'Auth\LoginController@logout');
 
 	// admin
 	Route::get('orderHistory', 'AdminController@getOrderHistory');
