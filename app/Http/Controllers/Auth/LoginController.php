@@ -54,12 +54,12 @@ class LoginController extends Controller
 			'password' => request('password')
 		];
 		if (Auth::attempt($userData, true)) {
-			$user = Auth::user();
+//			$user = Auth::user();
 			
 			$result = [
 				'status' => true,
 				'message' => 'Login Success',
-				'token' => $user->createToken(getenv('APP_NAME'))->accessToken
+//				'token' => $user->createToken(getenv('APP_NAME'))->accessToken
 			];
 			return response()->json($result, 200);
 		} else {
@@ -76,11 +76,11 @@ class LoginController extends Controller
 	public function checkLogin()
 	{
 		if (Auth::check()) {
-			$user = Auth::user();
+//			$user = Auth::user();
 			$result = [
 				'status' => true,
 				'message' => 'Logged-in.',
-				'user_data' => $user
+//				'user_data' => $user
 			];
 		} else {
 			$result = [
@@ -94,12 +94,12 @@ class LoginController extends Controller
 	public function logout(Request $request)
 	{
 		
-		$this->guard()->logout();
-		
-		$request->session()->flush();
-		
-		$request->session()->regenerate();
-		
+//		$this->guard()->logout();
+//
+//		$request->session()->flush();
+//
+//		$request->session()->regenerate();
+		Auth::logout();
 		$result = [
 			'status' => true,
 			'message' => 'You are Logged out.'
