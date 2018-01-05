@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ActivityImage extends Model
+class AdventureImage extends Model
 {
     use SoftDeletes;
 
@@ -21,9 +21,9 @@ class ActivityImage extends Model
      * Relationships
      * ============================================================================================================================================
      */
-    public function activity()
+    public function adventure()
     {
-        return $this->belongsTo('App\Models\Activity');
+        return $this->belongsTo('App\Models\Adventure', 'adventure_id');
     }
 
 }

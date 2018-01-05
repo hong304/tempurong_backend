@@ -18,9 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'guest'], function () {
+	
 	// activity
 	Route::get('/activity', 'ActivityController@getActivity');
-	Route::get('/adventure', 'ActivityController@getAdventure');
+	Route::get('/adventures', 'ActivityController@getAdventure');
+	Route::get('/walking-distance', 'ActivityController@getWalkingDistance');
 	
 	// food
 	Route::get('/food', 'FoodController@getFood');
@@ -28,6 +30,7 @@ Route::group(['middleware' => 'guest'], function () {
 	// rome
 	Route::get('/room', 'RoomController@getRoom')->name('room.index');
 	Route::get('/room-type', 'RoomTypeController@getRoomType');
+	Route::get('/amenities', 'RoomTypeController@getAmenities');
 	Route::post('/room-type', 'RoomTypeController@postRoomType');
 	
 	// reservation
@@ -37,6 +40,10 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
 	Route::post('/orderHistory', 'AdminController@postOrderHistory');
 	Route::post('/refund', 'AdminController@refundTransaction');
+	
+	// policy
+	Route::get('/faqs', 'PolicyController@getFaqs');
+	Route::get('/policies', 'PolicyController@getPolicies');
 	
 	// enquiry
 	Route::post('/enquiry', 'EnquiryController@sendEnquiryForm');
