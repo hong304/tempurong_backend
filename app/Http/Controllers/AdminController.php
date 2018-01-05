@@ -84,48 +84,56 @@ class AdminController extends Controller
 			
 			$reservation = Reservation::where('session', $request->sessionId)->where('status', "completed")->first();
 			
-			$checkIn = Carbon::parse($reservation->check_in);
-			$now = Carbon::now();
-			
-			$dateDiff = $checkIn->diffInDays($now, false);
-			
-			//1. validate transaction Id
-			if ($dateDiff >= 31) {
-				$message = "Refund 75%.";
-				$refundAmount = $reservation->amount * 0.75;
-			} else if ($dateDiff >= 15) {
-				$message = "Refund 50%.";
-				$refundAmount = $reservation->amount * 0.5;
-			} else {
-				$message = "Refund 0%.";
-				$refundAmount = 0;
-			}
-			
-			
-			if ($refundAmount > 0) {
-				$provider = new ExpressCheckout;
-				$response = $provider->refundTransaction($reservation->transaction_id, $refundAmount);
+			if ($reservation) {
+				$checkIn = Carbon::parse($reservation->check_in);
+				$now = Carbon::now();
 				
-				if ($response['ACK'] == "Success") {
-					$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
-					$reservation->status = "refunded";
-					$reservation->save();
+				$dateDiff = $checkIn->diffInDays($now, false);
+				
+				//1. validate transaction Id
+				if ($dateDiff >= 31) {
+					$message = "Refund 75%.";
+					$refundAmount = $reservation->amount * 0.75;
+				} else if ($dateDiff >= 15) {
+					$message = "Refund 50%.";
+					$refundAmount = $reservation->amount * 0.5;
 				} else {
-					$result = [
-						'status' => false,
-						'message' => $response,
-					];
-					return response()->json($result, 422);
+					$message = "Refund 0%.";
+					$refundAmount = 0;
 				}
+				
+				
+				if ($refundAmount > 0) {
+					$provider = new ExpressCheckout;
+					$response = $provider->refundTransaction($reservation->transaction_id, $refundAmount);
+					
+					if ($response['ACK'] == "Success") {
+						$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
+						$reservation->status = "refunded";
+						$reservation->save();
+					} else {
+						$result = [
+							'status' => false,
+							'message' => $response,
+						];
+						return response()->json($result, 422);
+					}
+				} else {
+					$message = $message . " No Refund";
+				}
+				
+				$result = [
+					'status' => true,
+					'message' => $message,
+				];
+				return response()->json($result, 200);
 			} else {
-				$message = $message . " No Refund";
+				$result = [
+					'status' => false,
+					'message' => $reservation
+				];
+				return response()->json($result, 422);
 			}
-			
-			$result = [
-				'status' => true,
-				'message' => $message,
-			];
-			return response()->json($result, 200);
 		}
 		
 	}
