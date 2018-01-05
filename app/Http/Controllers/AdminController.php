@@ -82,7 +82,7 @@ class AdminController extends Controller
 		} else {
 			
 			
-			$reservation = Reservation::where('session', $request->sessionId)->first();
+			$reservation = Reservation::where('session', $request->sessionId)->where('status', "completed")->first();
 			
 			$checkIn = Carbon::parse($reservation->check_in);
 			$now = Carbon::now();
@@ -108,6 +108,8 @@ class AdminController extends Controller
 				
 				if ($response['ACK'] == "Success") {
 					$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
+					$reservation->status = "refunded";
+					$reservation->save();
 				} else {
 					$result = [
 						'status' => false,
