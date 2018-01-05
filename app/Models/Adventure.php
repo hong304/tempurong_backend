@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Activity extends Model
+class Adventure extends Model
 {
 	use SoftDeletes;
 	
@@ -21,5 +21,9 @@ class Activity extends Model
      * Relationships
      * ============================================================================================================================================
      */
+    public function images()
+    {
+        return $this->hasMany('App\Models\AdventureImage');
+    }
 
 }
