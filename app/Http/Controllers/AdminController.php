@@ -6,6 +6,8 @@ use App\Models\Reservation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Srmklive\PayPal\Services\ExpressCheckout;
 
 class AdminController extends Controller
 {
@@ -30,14 +32,19 @@ class AdminController extends Controller
 	
 	public function postOrderHistory(Request $request)
 	{
-		$result = Reservation::where('session', $request->sessionId)->where('status', "completed")->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
+		$reservation = Reservation::where('session', $request->sessionId)->where('status', "completed")->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
 		
-		$result->isAdmin = (Auth::check()) ? true : false;
+		$reservation->isAdmin = (Auth::check()) ? true : false;
 		
-		if ($result) {
+		if ($reservation) {
+			$result = [
+				'status' => true,
+				'message' => 'Reservation Found.',
+				'reservationData' => $reservation
+			];
 			return response()->json($result, 200);
 		} else {
-			return ErrorController::validationError('Reservation Not Found');
+			return ErrorController::validationError('ReservationNotFound');
 		}
 	}
 	
@@ -66,12 +73,58 @@ class AdminController extends Controller
 	
 	public function refundTransaction(Request $request)
 	{
-		//1. validate transaction Id
+		$validator = Validator::make($request->all(), [
+			'sessionId' => 'required|exists:reservations,session'
+		]);
 		
-		//Case 1, Refund normally
-		//2. Do refund according to request date (today)
-		
-		//Case 2, Refund with special amount
+		if ($validator->fails()) {
+			return ErrorController::validationError("RefundError");
+		} else {
+			
+			
+			$reservation = Reservation::where('session', $request->sessionId)->first();
+			
+			$checkIn = Carbon::parse($reservation->check_in);
+			$now = Carbon::now();
+			
+			$dateDiff = $checkIn->diffInDays($now, false);
+			
+			//1. validate transaction Id
+			if ($dateDiff >= 31) {
+				$message = "Refund 75%.";
+				$refundAmount = $reservation->amount * 0.75;
+			} else if ($dateDiff >= 15) {
+				$message = "Refund 50%.";
+				$refundAmount = $reservation->amount * 0.5;
+			} else {
+				$message = "Refund 0%.";
+				$refundAmount = 0;
+			}
+			
+			
+			if ($refundAmount > 0) {
+				$provider = new ExpressCheckout;
+				$response = $provider->refundTransaction($reservation->transaction_id, $refundAmount);
+				
+				if ($response['ACK'] == "Success") {
+					$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
+				} else {
+					$result = [
+						'status' => false,
+						'message' => $response,
+					];
+					return response()->json($result, 422);
+				}
+			} else {
+				$message = $message . " No Refund";
+			}
+			
+			$result = [
+				'status' => true,
+				'message' => $message,
+			];
+			return response()->json($result, 200);
+		}
 		
 	}
 }

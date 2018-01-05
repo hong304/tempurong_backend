@@ -35,7 +35,8 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/reservation', 'ReservationController@postReservation')->name('reservation.store');
 	Route::post('/reservation/update', 'ReservationController@updateReservationStatus')->name('reservation.update');
 	Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
-	Route::post('orderHistory', 'AdminController@postOrderHistory');
+	Route::post('/orderHistory', 'AdminController@postOrderHistory');
+	Route::post('/refund', 'AdminController@refundTransaction');
 	
 	// enquiry
 	Route::post('/enquiry', 'EnquiryController@sendEnquiryForm');
