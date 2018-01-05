@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Lcobucci\JWT\Parser;
 
 class LoginController extends Controller
 {
@@ -38,23 +41,25 @@ class LoginController extends Controller
 	{
 		$this->middleware('guest')->except('logout');
 	}
-
-	public function getlogin(Request $request){
-	    Auth::loginUsingId(1,true);
-    }
-
+	
+	public function getlogin(Request $request)
+	{
+		Auth::loginUsingId(1, true);
+	}
+	
 	public function login(Request $request)
 	{
-		$userData = array(
-			'email' => $request->get('username'),
-			'password' => $request->get('password')
-		);
-		
+		$userData = [
+			'email' => request('email'),
+			'password' => request('password')
+		];
 		if (Auth::attempt($userData, true)) {
+//			$user = Auth::user();
 			
 			$result = [
 				'status' => true,
-				'message' => 'Login Success'
+				'message' => 'Login Success',
+//				'token' => $user->createToken(getenv('APP_NAME'))->accessToken
 			];
 			return response()->json($result, 200);
 		} else {
@@ -63,6 +68,7 @@ class LoginController extends Controller
 				'status' => false,
 				'message' => 'Login Failed'
 			];
+			
 			return response()->json($result, 401);
 		}
 	}
@@ -70,9 +76,11 @@ class LoginController extends Controller
 	public function checkLogin()
 	{
 		if (Auth::check()) {
+//			$user = Auth::user();
 			$result = [
 				'status' => true,
-				'message' => 'Logged-in.'
+				'message' => 'Logged-in.',
+//				'user_data' => $user
 			];
 		} else {
 			$result = [
@@ -83,13 +91,20 @@ class LoginController extends Controller
 		return response()->json($result, 200);
 	}
 	
-	public function logout()
+	public function logout(Request $request)
 	{
+		
+//		$this->guard()->logout();
+//
+//		$request->session()->flush();
+//
+//		$request->session()->regenerate();
 		Auth::logout();
 		$result = [
 			'status' => true,
-			'message' => 'Logged-out.'
+			'message' => 'You are Logged out.'
 		];
+		
 		return response()->json($result, 200);
 	}
 }
