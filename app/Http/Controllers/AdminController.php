@@ -130,7 +130,7 @@ class AdminController extends Controller
 			} else {
 				$result = [
 					'status' => false,
-					'message' => $reservation
+					'message' => "Already Refunded."
 				];
 				return response()->json($result, 422);
 			}
