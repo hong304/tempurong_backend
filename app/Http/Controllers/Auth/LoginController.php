@@ -6,9 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Lcobucci\JWT\Parser;
 
 class LoginController extends Controller
 {
@@ -54,12 +51,10 @@ class LoginController extends Controller
 			'password' => request('password')
 		];
 		if (Auth::attempt($userData, true)) {
-//			$user = Auth::user();
 			
 			$result = [
 				'status' => true,
 				'message' => 'Login Success',
-//				'token' => $user->createToken(getenv('APP_NAME'))->accessToken
 			];
 			return response()->json($result, 200);
 		} else {
@@ -76,11 +71,9 @@ class LoginController extends Controller
 	public function checkLogin()
 	{
 		if (Auth::check()) {
-//			$user = Auth::user();
 			$result = [
 				'status' => true,
 				'message' => 'Logged-in.',
-//				'user_data' => $user
 			];
 		} else {
 			$result = [
@@ -93,12 +86,6 @@ class LoginController extends Controller
 	
 	public function logout(Request $request)
 	{
-		
-//		$this->guard()->logout();
-//
-//		$request->session()->flush();
-//
-//		$request->session()->regenerate();
 		Auth::logout();
 		$result = [
 			'status' => true,
