@@ -90,7 +90,6 @@ class AdminController extends Controller
 				
 				$dateDiff = $now->diffInDays($checkIn, false);
 				
-				//1. validate transaction Id
 				if ($dateDiff >= 31) {
 					$message = "Refund 75%.";
 					$refundAmount = $reservation->amount * 0.75;
