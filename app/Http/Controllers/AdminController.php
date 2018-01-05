@@ -30,10 +30,15 @@ class AdminController extends Controller
 	
 	public function postOrderHistory(Request $request)
 	{
-		$result = Reservation::where('session', $request->sessionId)->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
+		$result = Reservation::where('session', $request->sessionId)->where('status', "completed")->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
 		
 		$result->isAdmin = (Auth::check()) ? true : false;
-		return response()->json($result);
+		
+		if ($result) {
+			return response()->json($result, 200);
+		} else {
+			return ErrorController::validationError('Reservation Not Found');
+		}
 	}
 	
 	public function getOrderHistorySummarize()
