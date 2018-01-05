@@ -88,9 +88,8 @@ class AdminController extends Controller
 				$checkIn = Carbon::parse($reservation->check_in);
 				$now = Carbon::now();
 				
-				$dateDiff = $checkIn->diffInDays($now, false);
+				$dateDiff = $now->diffInDays($checkIn, false);
 				
-				//1. validate transaction Id
 				if ($dateDiff >= 31) {
 					$message = "Refund 75%.";
 					$refundAmount = $reservation->amount * 0.75;
@@ -102,10 +101,11 @@ class AdminController extends Controller
 					$refundAmount = 0;
 				}
 				
-				
 				if ($refundAmount > 0) {
 					$provider = new ExpressCheckout;
-					$response = $provider->refundTransaction($reservation->transaction_id, $refundAmount);
+					$transaction = $provider->getExpressCheckoutDetails($reservation->transaction_id);
+					
+					$response = $provider->refundTransaction($transaction['TRANSACTIONID'], $refundAmount);
 					
 					if ($response['ACK'] == "Success") {
 						$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
