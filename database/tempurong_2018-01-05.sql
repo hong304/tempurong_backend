@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.18-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-05 10:06:49 +0000
+# Generation Time: 2018-01-05 11:32:34 +0000
 # ************************************************************
 
 
@@ -50,12 +50,50 @@ VALUES
 	(4,'Sea Kayaking','海上划皮艇','/static/img/icons/activities/sea-kayaking.png',1,NULL,NULL,NULL,NULL,NULL),
 	(5,'Beach Volleyball','沙滩排球','/static/img/icons/activities/beach-volleyball.png',1,NULL,NULL,NULL,NULL,NULL),
 	(6,'Hammock','海沙浴','/static/img/icons/activities/hammock.png',1,NULL,NULL,NULL,NULL,NULL),
-	(7,'Coral Reef Snorkeling',NULL,'/static/img/landing/CoralReefSnorkeling.jpg',0,'The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.',NULL,NULL,NULL,NULL),
-	(8,'Volcano Mud Bath',NULL,'/static/img/landing/VolcanoMudBath.jpg',0,'Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?',NULL,NULL,NULL,NULL),
-	(9,'The Rare Proboscis Monkey',NULL,'/static/img/landing/TheRareProboscisMonkey.jpg',0,'Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.',NULL,NULL,NULL,NULL),
-	(10,'Magical Fireflies in Nature',NULL,'/static/img/landing/MagicalFirefliesInNature.jpg',0,'Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.',NULL,NULL,NULL,NULL);
+	(7,'Coral Reef Snorkeling','Coral Reef Snorkeling','/static/img/landing/CoralReefSnorkeling.jpg',0,'The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.','The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.',NULL,NULL,NULL),
+	(8,'Volcano Mud Bath','Volcano Mud Bath','/static/img/landing/VolcanoMudBath.jpg',0,'Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?','Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?',NULL,NULL,NULL),
+	(9,'The Rare Proboscis Monkey','The Rare Proboscis Monkey','/static/img/landing/TheRareProboscisMonkey.jpg',0,'Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.','Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.',NULL,NULL,NULL),
+	(10,'Magical Fireflies in Nature','Magical Fireflies in Nature','/static/img/landing/MagicalFirefliesInNature.jpg',0,'Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.','Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table activity_images
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `activity_images`;
+
+CREATE TABLE `activity_images` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `activity_id` int(11) DEFAULT NULL,
+  `cover_image` varchar(255) DEFAULT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `activity_images` WRITE;
+/*!40000 ALTER TABLE `activity_images` DISABLE KEYS */;
+
+INSERT INTO `activity_images` (`id`, `activity_id`, `cover_image`, `image_path`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,1,'/static/img/activities/tree.jpg','',NULL,NULL,NULL),
+	(2,2,'/static/img/activities/well.jpg','',NULL,NULL,NULL),
+	(3,3,'/static/img/activities/rock.jpg','',NULL,NULL,NULL),
+	(4,4,'/static/img/activities/PULAU_TIGA_DAY_TRIP/cover.jpg','',NULL,NULL,NULL),
+	(5,4,NULL,'/static/img/activities/PULAU_TIGA_DAY_TRIP/01.jpg',NULL,NULL,NULL),
+	(6,4,NULL,'/static/img/activities/PULAU_TIGA_DAY_TRIP/02.jpg',NULL,NULL,NULL),
+	(7,5,'/static/img/activities/MANGROVE_RIVER_CRUISE/cover.jpg','',NULL,NULL,NULL),
+	(8,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/01.jpg',NULL,NULL,NULL),
+	(9,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/02.jpg',NULL,NULL,NULL),
+	(10,6,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg','',NULL,NULL,NULL),
+	(11,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/01.jpg',NULL,NULL,NULL),
+	(12,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/02.jpg',NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `activity_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -85,10 +123,10 @@ VALUES
 	(6,4,NULL,'/static/img/activities/PULAU_TIGA_DAY_TRIP/02.jpg',NULL,NULL,NULL),
 	(7,5,'/static/img/activities/MANGROVE_RIVER_CRUISE/cover.jpg','',NULL,NULL,NULL),
 	(8,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/01.jpg',NULL,NULL,NULL),
-	(9,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/01.jpg',NULL,NULL,NULL),
+	(9,5,NULL,'/static/img/activities/MANGROVE_RIVER_CRUISE/02.jpg',NULL,NULL,NULL),
 	(10,6,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg','',NULL,NULL,NULL),
-	(11,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg',NULL,NULL,NULL),
-	(12,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/cover.jpg',NULL,NULL,NULL);
+	(11,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/01.jpg',NULL,NULL,NULL),
+	(12,6,NULL,'/static/img/activities/ESCORTED_JUNGLE_TREKKING/02.jpg',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `adventure_images` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -301,161 +339,6 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table oauth_access_tokens
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_access_tokens`;
-
-CREATE TABLE `oauth_access_tokens` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `client_id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `scopes` text COLLATE utf8mb4_unicode_ci,
-  `revoked` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_access_tokens_user_id_index` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-LOCK TABLES `oauth_access_tokens` WRITE;
-/*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
-
-INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`)
-VALUES
-	('0186593f5833a931af482f213020017c1eb5428a62ddcc406de3c3950feac0451ed4bbbf0bc434a8',1,1,'MyApp','[]',0,'2018-01-03 04:08:04','2018-01-03 04:08:04','2019-01-03 04:08:04'),
-	('0221ef689ba5476658a1788dbbd5c7d61a515694e506726191b6e83050d3250d8d04ca7cff49f954',1,1,'kay','[]',0,'2018-01-03 04:41:44','2018-01-03 04:41:44','2019-01-03 04:41:44'),
-	('1dd8f68b10485479c2170ff17fb7fbb8b5611cf9053fcd27fc4592cedf891cf459112eb5c8de51b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:16','2018-01-03 04:07:16','2019-01-03 04:07:16'),
-	('25fcf21019642406fa74584c66d6becb89f1f341a1d006afb3c8a7d71a927a317ef9568da635307f',1,1,'MyApp','[]',0,'2018-01-03 04:08:52','2018-01-03 04:08:52','2019-01-03 04:08:52'),
-	('2d77a70ba998d32bac64e7e06fcca93282c4a980b1dc172c21b0870d0a6615e9d3afa38b9a826459',1,1,'MyApp','[]',0,'2018-01-03 04:08:05','2018-01-03 04:08:05','2019-01-03 04:08:05'),
-	('36a660eedfdf27c4f458c2a92ad7676f24ae27f52585d2b8db1d2b33a314201cd680ce34fe278c3d',1,1,'MyApp','[]',0,'2018-01-03 04:07:52','2018-01-03 04:07:52','2019-01-03 04:07:52'),
-	('4bd56d90fb901edf1c5ce52bb9d439ef27ea94a69c4bd0aa25fe9bb5143209114bcc37c1e6939b61',1,1,'MyApp','[]',0,'2018-01-03 04:02:55','2018-01-03 04:02:55','2019-01-03 04:02:55'),
-	('5c09c46de549eddfe956665ef57727d680a82eaecab9c5a807c3922e0a4fa1ac201a1797addf1aa4',1,1,'MyApp','[]',0,'2018-01-03 04:07:12','2018-01-03 04:07:12','2019-01-03 04:07:12'),
-	('5dd79daa6600b633937c9da3eb266403db411453c4b4f8643258be3a0a0310f491f6a380153f71bb',1,1,'MyApp','[]',0,'2018-01-03 04:07:51','2018-01-03 04:07:51','2019-01-03 04:07:51'),
-	('62d6811a8cc178c07be3e81051cf2facf06a1b9d5602eea702bc262ce9178987a522f76d7698c494',1,1,'MyApp','[]',0,'2018-01-03 04:09:44','2018-01-03 04:09:44','2019-01-03 04:09:44'),
-	('6fd766b9136e7ff986ab185ccafba6beda963d4e7ab6000ad7c284c321279c4cb0d4bece1e4f5aa9',1,1,'kay','[]',0,'2018-01-03 04:43:51','2018-01-03 04:43:51','2019-01-03 04:43:51'),
-	('7a1ef933b6c3fc816049b0a56acb7778e37df84fe9b2380a5d5a0e355e7b00acad803e1314222be0',1,1,'kay','[]',0,'2018-01-03 07:57:56','2018-01-03 07:57:56','2019-01-03 07:57:56'),
-	('88a7a4942c41e83ac7e9dd5c8a97de353be6b0260e3a26083cecd30d7ed895ad12823be822ae3abd',1,1,'MyApp','[]',0,'2018-01-03 04:09:09','2018-01-03 04:09:09','2019-01-03 04:09:09'),
-	('9731d925138cb15fb15ae949b99d87e8eec9a14dfea74d0c23aa87a448ca846e2901796206ea2072',1,1,'kay','[]',0,'2018-01-03 04:42:03','2018-01-03 04:42:03','2019-01-03 04:42:03'),
-	('98182b24fbaf125e8d42dcb43dbbf9dd6b08b201e776b56f3c3df3e7b9ca8edb73702d8f0a993d1b',1,1,'MyApp','[]',0,'2018-01-03 04:03:06','2018-01-03 04:03:06','2019-01-03 04:03:06'),
-	('9e9dbdc8dfbc172e074821db7849d4533aca438043862604a1a9cf12b4eb08d7f94ede05d526dca9',1,1,'MyApp','[]',0,'2018-01-03 03:26:05','2018-01-03 03:26:05','2019-01-03 03:26:05'),
-	('a203eda1e89a47671d9077c0c9210ba18ab1d7d6430b55729de39cf7b9523abcbedd1183623dac3e',1,1,'MyApp','[]',0,'2018-01-03 04:08:53','2018-01-03 04:08:53','2019-01-03 04:08:53'),
-	('c8c4e18af2455550458ea4dfa3274d7cf93f15742ab1fa9b7d764f69a6da13fe8f7a60c593d1d83d',1,1,'MyApp','[]',0,'2018-01-03 04:09:42','2018-01-03 04:09:42','2019-01-03 04:09:42'),
-	('df1ae240eac66dbcad172c3d210e2ff1b62b98b004fe7b4ff8131977929c7370a001ce4615ca32be',1,1,'kay','[]',0,'2018-01-03 07:31:52','2018-01-03 07:31:52','2019-01-03 07:31:52'),
-	('e10f7eeb60fdcd8918e1a141144e9bf42c1781a34ff27ec4801499a98e5a44e131873df7694f0ead',1,1,'MyApp','[]',0,'2018-01-03 03:28:34','2018-01-03 03:28:34','2019-01-03 03:28:34'),
-	('edd57e962b334d60acdca007f78f9f42c411444e8f35ee31d21f97a1d8c5f6dba2ad51ec3152c0b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:59','2018-01-03 04:07:59','2019-01-03 04:07:59'),
-	('f90568ff51f5c179a53521d38b756ac82c100bf50de7d5649d2de471e64984c8528d83939898bc6b',1,1,'MyApp','[]',0,'2018-01-03 04:07:44','2018-01-03 04:07:44','2019-01-03 04:07:44');
-
-/*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table oauth_auth_codes
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_auth_codes`;
-
-CREATE TABLE `oauth_auth_codes` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `scopes` text COLLATE utf8mb4_unicode_ci,
-  `revoked` tinyint(1) NOT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table oauth_clients
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_clients`;
-
-CREATE TABLE `oauth_clients` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `personal_access_client` tinyint(1) NOT NULL,
-  `password_client` tinyint(1) NOT NULL,
-  `revoked` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_clients_user_id_index` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-LOCK TABLES `oauth_clients` WRITE;
-/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
-
-INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`)
-VALUES
-	(1,NULL,'Laravel Personal Access Client','Cc9HjMXycxN5hVESSEyfdEDu8H6zQjhtVoT7z78q','http://localhost',1,0,0,'2018-01-03 03:02:42','2018-01-03 03:02:42'),
-	(2,NULL,'Laravel Password Grant Client','tpiYDSSeoOmMoVGHX0UrDbqCyoq8nK1BXgbf6npy','http://localhost',0,1,0,'2018-01-03 03:02:42','2018-01-03 03:02:42');
-
-/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table oauth_personal_access_clients
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_personal_access_clients`;
-
-CREATE TABLE `oauth_personal_access_clients` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-LOCK TABLES `oauth_personal_access_clients` WRITE;
-/*!40000 ALTER TABLE `oauth_personal_access_clients` DISABLE KEYS */;
-
-INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`)
-VALUES
-	(1,1,'2018-01-03 03:02:42','2018-01-03 03:02:42');
-
-/*!40000 ALTER TABLE `oauth_personal_access_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table oauth_refresh_tokens
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_refresh_tokens`;
-
-CREATE TABLE `oauth_refresh_tokens` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `revoked` tinyint(1) NOT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table password_resets
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `password_resets`;
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
 # Dump of table policies
 # ------------------------------------------------------------
 
@@ -537,12 +420,12 @@ VALUES
 	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
 	(13,12,2,8,2466,6,NULL,0,0,'waiting_for_payment',NULL,'2017-12-20','2017-12-29',NULL,NULL,'2017-12-12 09:20:44','2017-12-18 04:36:27',NULL),
 	(14,12,1,9,2500,4,NULL,0,0,'waiting_for_payment',NULL,'2017-12-12','2017-12-22',NULL,NULL,'2017-12-12 09:35:42','2017-12-18 04:36:27',NULL),
-	(15,12,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:29:09',NULL),
-	(16,13,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:29:09',NULL),
-	(17,11,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:29:09',NULL),
-	(18,4,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:29:09',NULL),
-	(19,5,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:29:09',NULL),
-	(20,6,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:29:09',NULL),
+	(15,11,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 11:21:17',NULL),
+	(16,4,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 11:21:17',NULL),
+	(17,5,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 11:21:17',NULL),
+	(18,6,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 11:21:17',NULL),
+	(19,7,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 11:21:17',NULL),
+	(20,8,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 11:21:17',NULL),
 	(21,7,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:29:09',NULL),
 	(22,8,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:29:09',NULL),
 	(23,1,1,14,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:50:53','2018-01-05 06:50:53',NULL),
@@ -551,8 +434,11 @@ VALUES
 	(26,2,1,15,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:51:32','2018-01-05 06:51:32',NULL),
 	(27,1,1,16,2250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-18',NULL,NULL,'2018-01-05 09:09:32','2018-01-05 09:09:32',NULL),
 	(28,1,1,17,2250,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-18','2018-01-05 09:28:05',NULL,'2018-01-05 09:27:03','2018-01-05 09:28:05',NULL),
-	(29,1,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 09:29:42',NULL),
-	(30,2,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 09:29:42',NULL);
+	(29,12,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 11:21:17',NULL),
+	(30,13,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 11:21:17',NULL),
+	(31,1,1,19,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-04-12','2018-04-13',NULL,NULL,'2018-01-05 11:22:03','2018-01-05 11:22:03',NULL),
+	(32,1,1,20,262,4,NULL,0,1,'waiting_for_payment',NULL,'2018-03-01','2018-03-02',NULL,NULL,'2018-01-05 11:29:39','2018-01-05 11:29:39',NULL),
+	(33,1,1,21,262,4,NULL,0,1,'waiting_for_payment',NULL,'2018-03-01','2018-03-02',NULL,NULL,'2018-01-05 11:30:14','2018-01-05 11:30:14',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -608,7 +494,10 @@ VALUES
 	(15,'kay','lun',NULL,'kl@buildonauts.com',3,0,'2018-01-09','2018-01-12','en','sadasd','asdsad',1500,'paypal','2018-01-05 06:51:32','2018-01-05 06:51:32',NULL,'waiting_for_payment','5a4f2074afbbf132'),
 	(16,'kay','lun',NULL,'kl@buildonauts.com',2,0,'2018-01-09','2018-01-18','sc','hasjdhasjkdh','hjsahdjksahjdk',2250,'paypal','2018-01-05 09:09:32','2018-01-05 09:09:32',NULL,'waiting_for_payment','5a4f40cc01e60247'),
 	(17,'kay','lun','PAY-62862408B81867603LJHUJ7Q','kl@buildonauts.com',2,0,'2018-01-09','2018-01-18','en','testing','testtesyeasyue',2250,'paypal','2018-01-05 09:27:03','2018-01-05 09:28:05',NULL,'completed','5a4f44e72689c561'),
-	(18,'kay','lun','PAY-91S079360K816242VLJHUK6A','kl@buildonauts.com',2,0,'2018-01-09','2018-01-11','en','jksajkldjka','jksadjkdsaj',1000,'paypal','2018-01-05 09:29:22','2018-01-05 09:29:42',NULL,'completed','5a4f457281fb2960');
+	(18,'kay','lun','PAY-91S079360K816242VLJHUK6A','kl@buildonauts.com',2,0,'2018-01-09','2018-01-11','en','jksajkldjka','jksadjkdsaj',1000,'paypal','2018-01-05 09:29:22','2018-01-05 09:29:42',NULL,'completed','5a4f457281fb2960'),
+	(19,'C','CCC',NULL,'cc@rytuiop.com',2,0,'2018-04-12','2018-04-13','sc',NULL,'Test',250,'paypal','2018-01-05 11:22:03','2018-01-05 11:22:03',NULL,'waiting_for_payment','5a4f5fdba090f294'),
+	(20,'Cleo','Chan',NULL,'cc@buildonauts.com',2,0,'2018-03-01','2018-03-02','en',NULL,NULL,262,'paypal','2018-01-05 11:29:39','2018-01-05 11:29:39',NULL,'waiting_for_payment','5a4f61a3966cc702'),
+	(21,'Cleo','Chan',NULL,'cc@buildonauts.com',2,0,'2018-03-01','2018-03-02','en',NULL,NULL,262,'paypal','2018-01-05 11:30:14','2018-01-05 11:30:14',NULL,'waiting_for_payment','5a4f61c6641da446');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -756,6 +645,7 @@ CREATE TABLE `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -763,11 +653,11 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`)
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL),
-	(2,'cleo','cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL),
-	(3,'hilton','hl@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL);
+	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL,NULL),
+	(2,'cleo','cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq','RX0VXfyzDz0ozfim1J2l5mWU10p046rQ3VqEtoMkfiChLtIPNndYzTV4fwpX',NULL,NULL,NULL),
+	(3,'hilton','hl@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
