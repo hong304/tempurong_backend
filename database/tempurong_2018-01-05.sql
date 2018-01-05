@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-05 09:16:12 +0000
+# Generation Time: 2018-01-05 10:06:49 +0000
 # ************************************************************
 
 
@@ -537,19 +537,22 @@ VALUES
 	(12,6,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2017-12-03','2017-12-11',NULL,NULL,NULL,'2017-12-04 09:06:03',NULL),
 	(13,12,2,8,2466,6,NULL,0,0,'waiting_for_payment',NULL,'2017-12-20','2017-12-29',NULL,NULL,'2017-12-12 09:20:44','2017-12-18 04:36:27',NULL),
 	(14,12,1,9,2500,4,NULL,0,0,'waiting_for_payment',NULL,'2017-12-12','2017-12-22',NULL,NULL,'2017-12-12 09:35:42','2017-12-18 04:36:27',NULL),
-	(15,12,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:09:17',NULL),
-	(16,13,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:09:17',NULL),
-	(17,11,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:09:17',NULL),
-	(18,4,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:09:17',NULL),
-	(19,5,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:09:17',NULL),
-	(20,6,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:09:17',NULL),
-	(21,7,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:09:17',NULL),
-	(22,8,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:09:17',NULL),
+	(15,12,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:29:09',NULL),
+	(16,13,1,10,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:46:13','2018-01-05 09:29:09',NULL),
+	(17,11,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:29:09',NULL),
+	(18,4,1,11,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:01','2018-01-05 09:29:09',NULL),
+	(19,5,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:29:09',NULL),
+	(20,6,1,12,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:12','2018-01-05 09:29:09',NULL),
+	(21,7,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:29:09',NULL),
+	(22,8,1,13,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:48:14','2018-01-05 09:29:09',NULL),
 	(23,1,1,14,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:50:53','2018-01-05 06:50:53',NULL),
 	(24,2,1,14,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:50:53','2018-01-05 06:50:53',NULL),
 	(25,1,1,15,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:51:32','2018-01-05 06:51:32',NULL),
 	(26,2,1,15,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-05 06:51:32','2018-01-05 06:51:32',NULL),
-	(27,1,1,16,2250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-18',NULL,NULL,'2018-01-05 09:09:32','2018-01-05 09:09:32',NULL);
+	(27,1,1,16,2250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-18',NULL,NULL,'2018-01-05 09:09:32','2018-01-05 09:09:32',NULL),
+	(28,1,1,17,2250,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-18','2018-01-05 09:28:05',NULL,'2018-01-05 09:27:03','2018-01-05 09:28:05',NULL),
+	(29,1,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 09:29:42',NULL),
+	(30,2,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-11','2018-01-05 09:29:42',NULL,'2018-01-05 09:29:22','2018-01-05 09:29:42',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -603,7 +606,9 @@ VALUES
 	(13,'kay','lun',NULL,'kl@buildonauts.com',3,0,'2018-01-09','2018-01-12','en','sadasd','asdsad',1500,'paypal','2018-01-05 06:48:14','2018-01-05 06:48:14',NULL,'waiting_for_payment','5a4f1faee3ff1729'),
 	(14,'kay','lun',NULL,'kl@buildonauts.com',3,0,'2018-01-09','2018-01-12','en','sadasd','asdsad',1500,'paypal','2018-01-05 06:50:53','2018-01-05 06:50:53',NULL,'waiting_for_payment','5a4f204de85d2653'),
 	(15,'kay','lun',NULL,'kl@buildonauts.com',3,0,'2018-01-09','2018-01-12','en','sadasd','asdsad',1500,'paypal','2018-01-05 06:51:32','2018-01-05 06:51:32',NULL,'waiting_for_payment','5a4f2074afbbf132'),
-	(16,'kay','lun',NULL,'kl@buildonauts.com',2,0,'2018-01-09','2018-01-18','sc','hasjdhasjkdh','hjsahdjksahjdk',2250,'paypal','2018-01-05 09:09:32','2018-01-05 09:09:32',NULL,'waiting_for_payment','5a4f40cc01e60247');
+	(16,'kay','lun',NULL,'kl@buildonauts.com',2,0,'2018-01-09','2018-01-18','sc','hasjdhasjkdh','hjsahdjksahjdk',2250,'paypal','2018-01-05 09:09:32','2018-01-05 09:09:32',NULL,'waiting_for_payment','5a4f40cc01e60247'),
+	(17,'kay','lun','PAY-62862408B81867603LJHUJ7Q','kl@buildonauts.com',2,0,'2018-01-09','2018-01-18','en','testing','testtesyeasyue',2250,'paypal','2018-01-05 09:27:03','2018-01-05 09:28:05',NULL,'completed','5a4f44e72689c561'),
+	(18,'kay','lun','PAY-91S079360K816242VLJHUK6A','kl@buildonauts.com',2,0,'2018-01-09','2018-01-11','en','jksajkldjka','jksadjkdsaj',1000,'paypal','2018-01-05 09:29:22','2018-01-05 09:29:42',NULL,'completed','5a4f457281fb2960');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -706,6 +711,38 @@ VALUES
 UNLOCK TABLES;
 
 
+# Dump of table testimonials
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `testimonials`;
+
+CREATE TABLE `testimonials` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content` text,
+  `from` varchar(255) DEFAULT '',
+  `chinese` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `testimonials` WRITE;
+/*!40000 ALTER TABLE `testimonials` DISABLE KEYS */;
+
+INSERT INTO `testimonials` (`id`, `content`, `from`, `chinese`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,'They helped us arrange all our activities based on our interests even though we came without a real plan. Very family-friendly and lots of space to run around on grass or sand.','- Emily L. (UK)',0,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL),
+	(2,'Such a charming, low-key place to stay in Sabah. I felt like I went back to a time when the beaches were pristine and undisturbed. They even rehabilitate baby turtles! Truly special.','- Laura W. (USA)',0,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL),
+	(3,'Came here to get away from work, the city and noise. This place was what I needed. Zero noise pollution, I felt like I could actually relax, read, and enjoy nature.','- Vincent H. (Hong Kong)',0,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL),
+	(4,'在海邊過了一個很不錯的假期～！食物的種類很多，特別的是龍蝦真的新鮮又美味！會再回來的！','-  王芝穎（台灣）',1,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL),
+	(5,'這邊的日落真的名不虛傳，拍了很多照片，又跟家人一起留下了很多回憶！','-  李朗洋（香港）',1,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL),
+	(6,'本以為在這裡沒什麼好玩的，沒想到活動還挺多的，水上活動、陸上活動！晚上還一可以在海邊一邊看日落一邊燒烤呢！','-  張志強（台灣）',1,'2018-01-03 04:08:04','2018-01-03 04:08:04',NULL);
+
+/*!40000 ALTER TABLE `testimonials` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 # Dump of table users
 # ------------------------------------------------------------
 
@@ -728,7 +765,9 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL);
+	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL),
+	(2,'cleo','cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL),
+	(3,'hilton','hl@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;

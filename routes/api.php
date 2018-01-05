@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'guest'], function () {
 
+  Route::post('/testimonial', 'TestimonialController@getTestimonials');
+
   // activity
   Route::get('/activity', 'ActivityController@getActivity');
   Route::get('/adventures', 'ActivityController@getAdventure');
