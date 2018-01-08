@@ -25,5 +25,19 @@ class Adventure extends Model
     {
         return $this->hasMany('App\Models\AdventureImage');
     }
-
+    
+	/*
+     * ============================================================================================================================================
+     * Mutator
+     * ============================================================================================================================================
+     */
+	public function getDescriptionEnAttribute($value)
+	{
+		return nl2br($value);
+	}
+	
+	public function getDescriptionScAttribute($value)
+	{
+		return nl2br($value);
+	}
 }
