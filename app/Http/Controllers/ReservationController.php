@@ -49,6 +49,17 @@ class ReservationController extends Controller
 			} else {
 				// if no error, put reservation details into DB
 				$session_id = uniqid() . mt_rand(100, 999);
+				
+				$orderInfo = $request->order;
+				foreach ($orderInfo['roomObjects'] as $roomType) {
+					$noOfRoom = (int)$roomType['noOfRoom'];
+					$avail = $this->checkReservationAvailability($orderInfo['checkIn'], $orderInfo['checkOut'], $roomType['id'], $noOfRoom);
+					
+					if (!$avail) {
+						return ErrorController::validationError('roomAvailableError');
+					}
+				}
+				
 				DB::beginTransaction();
 				try {
 					$clientInfo = $request->clientInfo;
@@ -134,19 +145,23 @@ class ReservationController extends Controller
 		
 	}
 	
-	public function availableRooms()
+	public function checkReservationAvailability($checkInDate, $checkOutDate, $roomTypeId, $orderNum)
 	{
-		
+		$avail_num = $this->getAvailableRoomNumber($checkInDate, $checkOutDate, $roomTypeId);
+		if (($avail_num - $orderNum) >= 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
-	public function postCheckAvailableRooms(Request $request)
+	public function getAvailableRoomData($checkInDate, $checkOutDate, $withRoomDetails)
 	{
+		$withRoomDetails = $withRoomDetails || false;
 		
 		$room_type_ids = [1, 2, 3];
 		$rooms_available = [];
 		
-		$checkInDate = $request->checkIn;
-		$checkOutDate = $request->checkOut;
 		try {
 			foreach ($room_type_ids as $k => $room_type_id) {
 				
@@ -169,7 +184,7 @@ class ReservationController extends Controller
 		}
 		
 		
-		if ($request->withRoomDetails) {
+		if ($withRoomDetails) {
 			$room_type_details = RoomType::with('room')
 				->orderBy('id', 'asc')->get();
 			
@@ -180,6 +195,51 @@ class ReservationController extends Controller
 		}
 		
 		return response()->json($rooms_available);
+		
+	}
+	
+	public function postCheckAvailableRooms(Request $request)
+	{
+		$checkInDate = $request->checkIn;
+		$checkOutDate = $request->checkOut;
+		
+		return $this->getAvailableRoomData($checkInDate, $checkOutDate, $request->withRoomDetails);
+//		$room_type_ids = [1, 2, 3];
+//		$rooms_available = [];
+//
+//		try {
+//			foreach ($room_type_ids as $k => $room_type_id) {
+//
+//				//reorder reservation in DB of this room type
+//				$this->reorderReservation($room_type_id);
+//
+//				// select available room again
+//				// put available room value to array
+//				$rooms_available[$room_type_id] = $this->getAvailableRoomNumber($checkInDate, $checkOutDate, $room_type_id);
+//
+//			}
+//		} catch (\Exception $e) {
+//			$result = [
+//				'status' => false,
+//				'code' => $e->getCode(),
+//				'message' => $e->getMessage()
+//			];
+//
+//			return response()->json($result, 500);
+//		}
+//
+//
+//		if ($request->withRoomDetails) {
+//			$room_type_details = RoomType::with('room')
+//				->orderBy('id', 'asc')->get();
+//
+//			foreach ($room_type_details as $key => $room_type) {
+//				$room_type->available_room = $rooms_available[$key + 1];
+//			}
+//			return response()->json($room_type_details);
+//		}
+//
+//		return response()->json($rooms_available);
 		
 	}
 	
