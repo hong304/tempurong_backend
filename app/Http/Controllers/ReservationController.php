@@ -204,43 +204,7 @@ class ReservationController extends Controller
 		$checkOutDate = $request->checkOut;
 		
 		return $this->getAvailableRoomData($checkInDate, $checkOutDate, $request->withRoomDetails);
-//		$room_type_ids = [1, 2, 3];
-//		$rooms_available = [];
-//
-//		try {
-//			foreach ($room_type_ids as $k => $room_type_id) {
-//
-//				//reorder reservation in DB of this room type
-//				$this->reorderReservation($room_type_id);
-//
-//				// select available room again
-//				// put available room value to array
-//				$rooms_available[$room_type_id] = $this->getAvailableRoomNumber($checkInDate, $checkOutDate, $room_type_id);
-//
-//			}
-//		} catch (\Exception $e) {
-//			$result = [
-//				'status' => false,
-//				'code' => $e->getCode(),
-//				'message' => $e->getMessage()
-//			];
-//
-//			return response()->json($result, 500);
-//		}
-//
-//
-//		if ($request->withRoomDetails) {
-//			$room_type_details = RoomType::with('room')
-//				->orderBy('id', 'asc')->get();
-//
-//			foreach ($room_type_details as $key => $room_type) {
-//				$room_type->available_room = $rooms_available[$key + 1];
-//			}
-//			return response()->json($room_type_details);
-//		}
-//
-//		return response()->json($rooms_available);
-		
+
 	}
 	
 	public function updateReservationStatus(Request $request)
