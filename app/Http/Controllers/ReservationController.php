@@ -28,10 +28,6 @@ class ReservationController extends Controller
 	
 	public function postReservation(Request $request)
 	{
-//		if (isset($_SERVER['HTTP_POSTMAN_TOKEN']))
-//			var_dump('200 OK');
-		
-		//
 		$clientInfoValidator = Validator::make($request->clientInfo, [
 			'firstName' => 'required',
 			'lastName' => 'required',
@@ -249,7 +245,10 @@ class ReservationController extends Controller
 			})->orwhere(function ($q) use ($checkOutDate) {
 				$q->where('start_date', '<', $checkOutDate)->where('end_date', '>=', $checkOutDate);
 			});
-		})->whereNull('status')->where('room_type_id', $roomTypeId)->distinct('room_id')->count();
+		})->where(function ($query) {
+			$query->where('status', 'waiting_for_payment')
+				->orWhere('status', 'completed');
+		})->where('room_type_id', $roomTypeId)->distinct('room_id')->count();
 		
 		// count available room
 		$avail_room = $total_no_of_rooms - $passingCheckIn;
@@ -270,7 +269,10 @@ class ReservationController extends Controller
 			})->orwhere(function ($q) use ($checkOutDate) {
 				$q->where('start_date', '<', $checkOutDate)->where('end_date', '>=', $checkOutDate);
 			});
-		})->whereNull('status')->where('room_type_id', $roomTypeId)->distinct('room_id')->get()->pluck('room_id')->toArray();
+		})->where(function ($query) {
+			$query->where('status', 'waiting_for_payment')
+				->orWhere('status', 'completed');
+		})->where('room_type_id', $roomTypeId)->distinct('room_id')->get()->pluck('room_id')->toArray();
 		
 		$roomAvail = array_values(array_diff($allRoomId, $roomOccupied));
 		return $roomAvail;
@@ -330,6 +332,27 @@ class ReservationController extends Controller
 		foreach ($fixed_block as $v) {
 			ReservationDetails::where('id', $v->id)->update(['room_id' => $v->room_id]);
 		}
+	}
+	
+	public function deleteInvalidReservation()
+	{
+		$reservations = Reservation::where(function ($query) {
+			$query->where('status', 'waiting_for_payment')
+				->orWhereNull('status');
+		})
+			->whereTime('updated_at', '<', Carbon::now()->subMinutes(30)->toDateTimeString());
+		
+		$reservations->delete();
+		
+		
+		$reservationDetails = ReservationDetails::where(function ($query) {
+			$query->where('status', 'waiting_for_payment')
+				->orWhereNull('status');
+		})
+			->whereTime('updated_at', '<', Carbon::now()->subMinutes(30)->toDateTimeString());
+		
+		$reservationDetails->delete();
+		
 	}
 	
 	private function validateRoomObjects($roomObjects)
