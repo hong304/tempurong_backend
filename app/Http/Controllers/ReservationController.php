@@ -56,7 +56,7 @@ class ReservationController extends Controller
 					$avail = $this->checkReservationAvailability($orderInfo['checkIn'], $orderInfo['checkOut'], $roomType['id'], $noOfRoom);
 					
 					if (!$avail) {
-						return ErrorController::validationError('roomAvailableError');
+						return ErrorController::validationError('error.roomAvailable');
 					}
 				}
 				
