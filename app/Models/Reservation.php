@@ -32,5 +32,20 @@ class Reservation extends Model
 	{
 		return $this->email;
 	}
+	
+	/*
+     * ============================================================================================================================================
+     * Mutator
+     * ============================================================================================================================================
+     */
+	public function getRemarksAttribute($value)
+	{
+		return nl2br($value);
+	}
+	
+	public function getAdditionNoteAttribute($value)
+	{
+		return nl2br($value);
+	}
 }
 

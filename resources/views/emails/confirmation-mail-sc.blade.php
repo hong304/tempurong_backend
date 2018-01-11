@@ -365,7 +365,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th class="pt-20"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; padding-left: 20px !important; padding-right: 20px !important; text-align: left;">
-													<img src="http://staging.tempurong.buildonauts.com/static/img/logo.png" alt="Tempurong"
+													<img src="https://www.tempuronggoldenbeachresort.com/static/img/logo.png" alt="Tempurong"
 													     style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; max-width: 100%; outline: none; text-decoration: none; height: 40px; padding-top:16px; float:left; margin-right: 10px;">
 													<h3 style="display: inline-block; line-height:40px; text-transform: uppercase; color: #866809; font-size: 24px; margin: 0; padding-top: 16px;">
 														Tempurong</h3>
