@@ -32,11 +32,20 @@ class AdminController extends Controller
 	
 	public function postOrderHistory(Request $request)
 	{
-		$reservation = Reservation::where('session', $request->sessionId)->where('status', "completed")->with(['reservationDetails.roomType', 'reservationDetails.images'])->first();
+		$reservation = Reservation::where('session', $request->sessionId)
+			->with(['reservationDetails.roomType', 'reservationDetails.images']);
 		
-		$reservation->isAdmin = (Auth::check()) ? true : false;
+		if (!Auth::check()) {
+			$reservation = $reservation->where(function ($query) {
+				$query->where('status', 'completed')
+					->orWhere('status', 'refunded');
+			});
+		}
+		
+		$reservation = $reservation->first();
 		
 		if ($reservation) {
+			$reservation->isAdmin = (Auth::check()) ? true : false;
 			$result = [
 				'status' => true,
 				'message' => 'Reservation Found.',
