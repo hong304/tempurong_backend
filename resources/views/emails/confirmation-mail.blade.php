@@ -367,8 +367,6 @@
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; padding-left: 20px !important; padding-right: 20px !important; text-align: left;">
 													<img src="https://www.tempuronggoldenbeachresort.com/static/img/logo.png" alt="Tempurong"
 													     style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; max-width: 100%; outline: none; text-decoration: none; height: 40px; padding-top:16px; float:left; margin-right: 10px;">
-													<h3 style="display: inline-block; line-height:40px; text-transform: uppercase; color: #866809; font-size: 24px; margin: 0; padding-top: 16px;">
-														Tempurong</h3>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
@@ -674,24 +672,24 @@
 														   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 															{{strtoupper($reservationDetail->roomType->name_en)}}
 															({{$reservationDetail->roomType->room_title_en}}) X 1 <br>
-														@if($reservationDetail->mattress && $reservationDetail->breakfast)
-															<span class="heebo-font"
-															   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
+															@if($reservationDetail->mattress && $reservationDetail->breakfast)
+																<span class="heebo-font"
+																      style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
 																<i style="margin-right: 10px;">(including 1 extra mattress
 																	and 1 extra breakfast)</i></span>
-														@elseif($reservationDetail->mattress && !$reservationDetail->breakfast)
-															<span class="heebo-font"
-															   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
+															@elseif($reservationDetail->mattress && !$reservationDetail->breakfast)
+																<span class="heebo-font"
+																      style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
 																<i style="margin-right: 10px;">(including 1 extra
 																	mattress)</i></span>
-														@elseif(!$reservationDetail->mattress && $reservationDetail->breakfast)
-															<span class="heebo-font"
-															   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
+															@elseif(!$reservationDetail->mattress && $reservationDetail->breakfast)
+																<span class="heebo-font"
+																      style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
 																<i style="margin-right: 10px;">(including 1 extra
 																	breakfast)</i></span>
 															@endif
-															</p>
-															@endforeach
+														</p>
+													@endforeach
 												</th>
 											</tr>
 											</tbody>
@@ -729,6 +727,77 @@
 													<p class="heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														$ {{$reservation->amount}}MYR</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+							<table class="row"
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-4 columns first pt-20"
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-right heebo-font bold small-text-left"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+														Remarks:</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-8 columns last pt-20"
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														{{$reservation->remarks}}</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+							
+							<table class="row"
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-4 columns first pt-20"
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-right heebo-font bold small-text-left"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+														Additional notes:</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-8 columns last pt-20"
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														{{$reservation->addition_note}}</p>
 												</th>
 											</tr>
 											</tbody>
