@@ -230,6 +230,7 @@ class ReservationController extends Controller
 					$reservationDetail->status_time = $reservation->updated_at;
 					$reservationDetail->save();
 				}
+
 				DB::commit();
 			} catch (\Exception $e) {
 				DB::rollback();

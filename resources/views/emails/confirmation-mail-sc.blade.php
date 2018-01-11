@@ -539,7 +539,7 @@
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<span class="heebo-font"
 													      style="color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														{{$reservation->transaction_id}}</span>
+														{{$reservation->session}}</span>
 												</th>
 											</tr>
 											</tbody>
@@ -758,7 +758,8 @@
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														如需更多详情请按
-														<a href="tel:+85293195360"
+														<a href="https://www.tempuronggoldenbeachresort.com/reservations/details/{{$reservation->session}}"
+														   target="_blank"
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">此</a>.
 													</p>
 													<p class="text-left heebo-font"
