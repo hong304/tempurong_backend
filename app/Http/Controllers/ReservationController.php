@@ -204,7 +204,7 @@ class ReservationController extends Controller
 		$checkOutDate = $request->checkOut;
 		
 		return $this->getAvailableRoomData($checkInDate, $checkOutDate, $request->withRoomDetails);
-
+		
 	}
 	
 	public function updateReservationStatus(Request $request)
@@ -230,7 +230,7 @@ class ReservationController extends Controller
 					$reservationDetail->status_time = $reservation->updated_at;
 					$reservationDetail->save();
 				}
-
+				
 				DB::commit();
 			} catch (\Exception $e) {
 				DB::rollback();
@@ -247,9 +247,9 @@ class ReservationController extends Controller
 		
 	}
 	
-	public function testEmail()
+	public function testEmail(Request $request)
 	{
-		$reservation = Reservation::where('id', '99')->with(['reservationDetails.roomType'])->first();
+		$reservation = Reservation::where('id', $request->id)->with(['reservationDetails.roomType'])->first();
 		$reservation->total_rooms = count($reservation->reservationDetails);
 		$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
 //		dd($reservation);

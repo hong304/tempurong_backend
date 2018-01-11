@@ -62,4 +62,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('orderHistory', 'AdminController@getOrderHistory');
 	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
 	
+	//test email
+	Route::get('/email/{id?}', 'ReservationController@testEmail')->name('email.test');
 });
