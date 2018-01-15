@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-10 09:03:04 +0000
+# Generation Time: 2018-01-15 11:19:51 +0000
 # ************************************************************
 
 
@@ -50,10 +50,10 @@ VALUES
 	(4,'Sea Kayaking','海上划皮艇','/static/img/icons/activities/sea-kayaking.png',1,NULL,NULL,NULL,NULL,NULL),
 	(5,'Beach Volleyball','沙滩排球','/static/img/icons/activities/beach-volleyball.png',1,NULL,NULL,NULL,NULL,NULL),
 	(6,'Hammock','海沙浴','/static/img/icons/activities/hammock.png',1,NULL,NULL,NULL,NULL,NULL),
-	(7,'Coral Reef Snorkeling','Coral Reef Snorkeling','/static/img/landing/CoralReefSnorkeling.jpg',0,'The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.','The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.',NULL,NULL,NULL),
-	(8,'Volcano Mud Bath','Volcano Mud Bath','/static/img/landing/VolcanoMudBath.jpg',0,'Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?','Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?',NULL,NULL,NULL),
-	(9,'The Rare Proboscis Monkey','The Rare Proboscis Monkey','/static/img/landing/TheRareProboscisMonkey.jpg',0,'Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.','Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.',NULL,NULL,NULL),
-	(10,'Magical Fireflies in Nature','Magical Fireflies in Nature','/static/img/landing/MagicalFirefliesInNature.jpg',0,'Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.','Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.',NULL,NULL,NULL);
+	(7,'Coral Reef Snorkeling','珊瑚礁浮潜','/static/img/landing/CoralReefSnorkeling.jpg',0,'The corals in Sabah are breathtaking, but don’t worry, you’ll have your snorkel on! If you’re lucky, you might spot a sea turtle.','沙巴的珊瑚是惊艳的，但不要担心，套上浮潜用具后，你自然会浮潜！如果你幸运的话，你可能会发现海龟。',NULL,NULL,NULL),
+	(8,'Volcano Mud Bath','冷火山泥浴','/static/img/landing/VolcanoMudBath.jpg',0,'Famed for its skin nutrient benefits, this mud bath is fun and popular! Did you know, the mud makes you float?','以其对皮肤的营养价值而闻名，这种泥浴非常有趣而且很受欢迎！您可以想象自己飘浮在泥土上吗？',NULL,NULL,NULL),
+	(9,'The Rare Proboscis Monkey','罕见的长鼻猴','/static/img/landing/TheRareProboscisMonkey.jpg',0,'Seen only in Borneo, the Proboscis monkey is one of the largest monkey species native to Asia. Enjoy a day out viewing these wonderful creatures in their natural habitat.','长鼻猴是亚洲最大的猴子之一，全世界只有在婆罗洲可以看到。让自己享受一天，观赏这些奇妙的生物如何自然地栖息。\n',NULL,NULL,NULL),
+	(10,'Magical Fireflies in Nature','在自然界里神奇的萤火虫','/static/img/landing/MagicalFirefliesInNature.jpg',0,'Fireflies only thrive in areas away from urban cities and with clean, flowing water. Enjoy a beautiful evening cruising through the mangroves as they light up the night.','萤火虫只能在没有污染远离城市的地区繁殖生存。夜幕降临，乘船漫游红树林欣赏萤火虫在树上跳舞点缀整个美丽的夜晚。\n',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -338,98 +338,6 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table oauth_access_tokens
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_access_tokens`;
-
-CREATE TABLE `oauth_access_tokens` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `client_id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `scopes` text COLLATE utf8mb4_unicode_ci,
-  `revoked` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_access_tokens_user_id_index` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table oauth_auth_codes
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_auth_codes`;
-
-CREATE TABLE `oauth_auth_codes` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `scopes` text COLLATE utf8mb4_unicode_ci,
-  `revoked` tinyint(1) NOT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table oauth_clients
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_clients`;
-
-CREATE TABLE `oauth_clients` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `personal_access_client` tinyint(1) NOT NULL,
-  `password_client` tinyint(1) NOT NULL,
-  `revoked` tinyint(1) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_clients_user_id_index` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table oauth_personal_access_clients
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_personal_access_clients`;
-
-CREATE TABLE `oauth_personal_access_clients` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-# Dump of table oauth_refresh_tokens
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `oauth_refresh_tokens`;
-
-CREATE TABLE `oauth_refresh_tokens` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `revoked` tinyint(1) NOT NULL,
-  `expires_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
 # Dump of table policies
 # ------------------------------------------------------------
 
@@ -497,14 +405,13 @@ LOCK TABLES `reservation_details` WRITE;
 
 INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `mattress`, `breakfast`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,12,2,1,858,6,NULL,0,1,'completed',NULL,'2018-01-09','2018-01-12','2018-01-09 10:54:52',NULL,'2018-01-09 10:54:18','2018-01-10 07:44:05',NULL),
-	(2,13,2,1,858,6,NULL,0,1,'completed',NULL,'2018-01-09','2018-01-12','2018-01-09 10:54:52',NULL,'2018-01-09 10:54:18','2018-01-10 07:44:05',NULL),
-	(3,11,2,1,822,6,NULL,0,0,'completed',NULL,'2018-01-09','2018-01-12','2018-01-09 10:54:52',NULL,'2018-01-09 10:54:18','2018-01-10 07:44:05',NULL),
-	(4,1,1,2,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-09 10:56:22','2018-01-10 07:44:05',NULL),
-	(5,2,1,2,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-09 10:56:22','2018-01-10 07:44:05',NULL),
-	(6,3,1,2,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-09 10:56:22','2018-01-10 07:44:05',NULL),
-	(7,4,1,2,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-09 10:56:22','2018-01-10 07:44:05',NULL),
-	(8,5,1,2,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-01-09','2018-01-12',NULL,NULL,'2018-01-09 10:56:22','2018-01-10 07:44:05',NULL);
+	(1,13,1,1,750,4,NULL,0,0,'completed',NULL,'2018-01-13','2018-01-16','2018-01-12 07:27:27',NULL,'2018-01-12 07:26:45','2018-01-12 07:47:18',NULL),
+	(2,11,1,2,500,4,NULL,0,0,'completed',NULL,'2018-01-19','2018-01-21','2018-01-12 07:28:21',NULL,'2018-01-12 07:28:05','2018-01-12 07:47:18',NULL),
+	(3,12,1,3,500,4,NULL,0,0,'completed',NULL,'2018-01-13','2018-01-15','2018-01-12 07:30:53',NULL,'2018-01-12 07:30:40','2018-01-12 07:47:18',NULL),
+	(4,13,1,4,1250,4,NULL,0,0,'completed',NULL,'2018-01-18','2018-01-23','2018-01-12 07:31:38',NULL,'2018-01-12 07:31:22','2018-01-12 07:47:18',NULL),
+	(5,11,1,5,750,4,NULL,0,0,'completed',NULL,'2018-01-14','2018-01-17','2018-01-12 07:32:21',NULL,'2018-01-12 07:32:07','2018-01-12 07:47:18',NULL),
+	(6,4,1,6,1000,4,NULL,0,0,'completed',NULL,'2018-01-20','2018-01-24','2018-01-12 07:33:06',NULL,'2018-01-12 07:32:53','2018-01-12 07:47:18',NULL),
+	(7,12,1,7,1500,4,NULL,0,0,'completed',NULL,'2018-01-16','2018-01-22','2018-01-12 07:33:50',NULL,'2018-01-12 07:33:36','2018-01-12 07:47:18',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -543,8 +450,13 @@ LOCK TABLES `reservations` WRITE;
 
 INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`)
 VALUES
-	(1,'winko','leung','EC-2E993019MC242713S','wl@buildonauts.com',2,0,'2018-01-09','2018-01-12','en',NULL,NULL,2538,'paypal','2018-01-09 10:54:18','2018-01-09 10:54:52',NULL,'completed','5a549f5a1b33a670'),
-	(2,'winkp','leunf',NULL,'wl@buildonauts.com',2,0,'2018-01-09','2018-01-12','en',NULL,NULL,3750,'paypal','2018-01-09 10:56:22','2018-01-09 10:56:22',NULL,'waiting_for_payment','5a549fd68997e119');
+	(1,'w','l','EC-80274006M8293891C','wl@buildonauts.com',2,0,'2018-01-13','2018-01-16','en',NULL,NULL,750,'paypal','2018-01-12 07:26:45','2018-01-12 07:27:27',NULL,'completed','5a5863351c223662'),
+	(2,'w','l','EC-5CF986047G207291M','wl@buildonauts.com',1,0,'2018-01-19','2018-01-21','en',NULL,NULL,500,'paypal','2018-01-12 07:28:05','2018-01-12 07:28:21',NULL,'completed','5a5863853d457714'),
+	(3,'w','l','EC-39H73555VF3786250','wl@buildonauts.com',2,0,'2018-01-13','2018-01-15','en',NULL,NULL,500,'paypal','2018-01-12 07:30:40','2018-01-12 07:30:53',NULL,'completed','5a5864200b8e3619'),
+	(4,'w','l','EC-1YV95118EW766125M','wl@buildonauts.com',1,0,'2018-01-18','2018-01-23','en',NULL,NULL,1250,'paypal','2018-01-12 07:31:22','2018-01-12 07:31:38',NULL,'completed','5a58644a95dbb489'),
+	(5,'w','l','EC-8BH5954064425074A','wl@buildonauts.com',1,0,'2018-01-14','2018-01-17','en',NULL,NULL,750,'paypal','2018-01-12 07:32:07','2018-01-12 07:32:21',NULL,'completed','5a58647794718129'),
+	(6,'w','l','EC-2B71966802441291A','wl@buildonauts.com',1,0,'2018-01-20','2018-01-24','en',NULL,NULL,1000,'paypal','2018-01-12 07:32:53','2018-01-12 07:33:06',NULL,'completed','5a5864a5d53ab682'),
+	(7,'w','l','EC-55Y4170025701802L','wl@buildonauts.com',1,0,'2018-01-16','2018-01-22','en',NULL,NULL,1500,'paypal','2018-01-12 07:33:36','2018-01-12 07:33:50',NULL,'completed','5a5864d01e41c425');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -603,8 +515,8 @@ LOCK TABLES `room_types` WRITE;
 INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `room_title_en`, `room_title_sc`, `room_subtitle_en`, `room_subtitle_sc`, `cover_image`, `description_en`, `description_sc`, `capacity`, `size_en`, `size_sc`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
 	(1,'sea view','海景房','8 Family Rooms','八间家庭房型',NULL,NULL,'/static/img/room_type/sea-view.jpg','Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar. \n','我们的海景房距离沙滩仅有20步之遥，能够容纳从小家庭到单身旅客的任何人，顾客可以拥有自己的理想空间。每间房都配备了两张大床，一个空调机组，一个风扇，一个带西式冲水厕所和热水淋浴的浴室。客房面向美丽的海滩，客人可以享受在吊床吹海风和看夕阳海景等。',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,2,NULL,250,NULL,NULL,NULL),
-	(2,'river view','河景房','3 Mixed-Dormitory Rooms','3间混合房型','3 mix dormitory river view rooms with 2 double decker & 1 queen bed (6pax)','3间河景房，各有2张双层床和1张双人大床（6人房）','/static/img/room_type/river-view-large.jpg','The River View Mixed-Dormitory Rooms can accommodate up to six people with double-decker beds. Located above the main entrance and dining area, the main differences between the two types of River View rooms are the amount of beds and the maximum number of guests it allows. It is still very close to the beach, about a 15-second walk over a small bridge.','The River View Mixed-Dormitory Rooms can accommodate up to six people with double-decker beds. Located above the main entrance and dining area, the main differences between the two types of River View rooms are the amount of beds and the maximum number of guests it allows. It is still very close to the beach, about a 15-second walk over a small bridge.',6,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',0,1,2,274,NULL,NULL,NULL),
-	(3,'river view','河景房','2 Family Rooms','两间家庭式房型','2 family rooms river view rooms with 1 double decker & 1 queen bed (4pax)','2间家庭河景房，各有1张双层床位和1张双人大床（4人房）','/static/img/room_type/river-view-family.jpg','The River View Family Room accommodates four people comfortably with the option to add a single floor-mattress for a maximum of five. It is located above the dining area and is a 15-second skip over a small bridge from the beach. ','The River View Family Room accommodates four people comfortably with the option to add a single floor-mattress for a maximum of five. It is located above the dining area and is a 15-second skip over a small bridge from the beach. ',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,1,1,250,NULL,NULL,NULL);
+	(2,'river view','河景房','3 Mixed-Dormitory Rooms','3间混合房型','3 mix dormitory river view rooms with 2 double decker & 1 queen bed (6pax)','3间河景房，各有2张双层床和1张双人大床（6人房）','/static/img/room_type/river-view-large.jpg','The River View Mixed-Dormitory Rooms can accommodate up to six people with double-decker beds. Located above the main entrance and dining area, the main differences between the two types of River View rooms are the amount of beds and the maximum number of guests it allows. It is still very close to the beach, about a 15-second walk over a small bridge.','河景混合宿舍间最多可容纳6人，配有双层床。位于主入口和用餐区之上，两种河景房的主要区别在于床的数量和允许的最大客人数量。它离海滩还很近，步行15秒左右就能到达一座小桥。',6,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',0,1,2,274,NULL,NULL,NULL),
+	(3,'river view','河景房','2 Family Rooms','两间家庭式房型','2 family rooms river view rooms with 1 double decker & 1 queen bed (4pax)','2间家庭河景房，各有1张双层床位和1张双人大床（4人房）','/static/img/room_type/river-view-family.jpg','The River View Family Room accommodates four people comfortably with the option to add a single floor-mattress for a maximum of five. It is located above the dining area and is a 15-second skip over a small bridge from the beach. ','河景家庭房可容纳4人舒适地与选择增加一个唯一地板床垫最多五人。位于用餐区上方，距离海滩的小桥不到15秒。\n',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,1,1,250,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `room_types` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -634,9 +546,9 @@ VALUES
 	(3,1,NULL,NULL,NULL),
 	(4,1,NULL,NULL,NULL),
 	(5,1,NULL,NULL,NULL),
-	(6,1,NULL,NULL,NULL),
-	(7,1,NULL,NULL,NULL),
-	(8,1,NULL,NULL,NULL),
+	(6,1,NULL,NULL,'2018-01-09 10:54:52'),
+	(7,1,NULL,NULL,'2018-01-09 10:54:52'),
+	(8,1,NULL,NULL,'2018-01-09 10:54:52'),
 	(9,2,NULL,NULL,NULL),
 	(10,2,NULL,NULL,NULL),
 	(11,2,NULL,NULL,NULL),
