@@ -15,7 +15,7 @@ class AdminController extends Controller
     {
         try {
 
-            $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status')->paginate(30);
+            $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session')->paginate(30);
 
         } catch (\Exception $e) {
             $result = [
@@ -51,7 +51,7 @@ class AdminController extends Controller
         }
 
         if ($reservation) {
-            $reservation->isAdmin = (Auth::check()) ? true : false;
+            $reservation->isAdmin = Auth::check();
             $result = [
                 'status' => true,
                 'message' => 'Reservation Found.',
