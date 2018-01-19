@@ -401,6 +401,25 @@ class ReservationController extends Controller
 		$reservation->notify(new ReservationPaid($reservation));
 	}
 	
+	public function getEnvironment()
+	{
+		if (getenv('PAYPAL_MODE') == "sandbox") {
+			$result = [
+				'status' => true,
+				'message' => 'Sandbox mode',
+				'development' => true
+			];
+			return response()->json($result, 200);
+		} else {
+			$result = [
+				'status' => true,
+				'message' => 'Live mode',
+				'development' => false
+			];
+			return response()->json($result, 200);
+		}
+	}
+	
 	private function validateRoomObjects($roomObjects)
 	{
 		try {
