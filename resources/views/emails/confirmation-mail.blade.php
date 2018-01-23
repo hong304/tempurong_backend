@@ -511,6 +511,42 @@
 								</tr>
 								</tbody>
 							</table>
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-4 columns first pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-right heebo-font bold small-text-left"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
+														Contact Number:</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-8 columns last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														{{$reservation->countryCode}} {{$reservation->mobile}}</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
 							
 							<table class="row"
 							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
