@@ -42,8 +42,10 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
 	Route::post('orderHistory', 'AdminController@postOrderHistory');
 	Route::get('/getEnvironment', 'ReservationController@getEnvironment');
-	
-	// policy
+    Route::post('/refund', 'AdminController@refundTransaction');
+
+
+    // policy
 	Route::get('/faqs', 'PolicyController@getFaqs');
 	Route::get('/policies', 'PolicyController@getPolicies');
 	
