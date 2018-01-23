@@ -41,6 +41,7 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/reservation/update', 'ReservationController@updateReservationStatus')->name('reservation.update');
 	Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
 	Route::post('orderHistory', 'AdminController@postOrderHistory');
+	Route::get('/getEnvironment', 'ReservationController@getEnvironment');
 	
 	// policy
 	Route::get('/faqs', 'PolicyController@getFaqs');
