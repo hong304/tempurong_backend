@@ -72,7 +72,9 @@ class ReservationController extends Controller
 					$reservation->first_name = $clientInfo['firstName'];
 					$reservation->last_name = $clientInfo['lastName'];
 					$reservation->email = $clientInfo['email'];
-					
+					$reservation->tel = $clientInfo['mobile'];
+					$reservation->country_code = $clientInfo['countryCode'];
+
 					$reservation->adults = $orderInfo['adults'];
 					$reservation->children = $orderInfo['children'];
 					$reservation->check_in = $orderInfo['checkIn'];
