@@ -910,7 +910,7 @@
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														For full details? Please
-														<a href="https://www.tempuronggoldenbeachresort.com/reservations/details/{{$reservation->session}}"
+														<a href="{{config('app.url')}}/reservations/details/{{$reservation->session}}"
 														   target="_blank"
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">click
 															here</a>.
