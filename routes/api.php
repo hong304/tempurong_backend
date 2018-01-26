@@ -62,7 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('logout', 'Auth\LoginController@logout');
 	
 	// admin
-	Route::get('orderHistory', 'AdminController@getOrderHistory');
+	Route::post('orderHistory', 'AdminController@getOrderHistory');
 	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
 	
 	//test email
