@@ -412,14 +412,56 @@
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<h1 class="text-left heebo-font email-heading"
 													    style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 36px; font-weight: 300; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal;">
-														THANK YOU, {{ $reservation->first_name }}</h1>
+														Dear, {{ $reservation->first_name }}</h1>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; padding: 0; text-align: left;">
+														Thank you for your reservation booking with Tempurong Golden Beach Resort! We look forward to welcoming you to our slice of paradise.</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														You reservation has been approved. <br> For your
-														reference, here's a copy of your booking:</p>
+														Here is your reservation summary; if you have any changes or questions, please don't hesitate to contact us.</p>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-6 columns first pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-left heebo-font bold">Address</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
+														Jalan Kg Tempurong, Kuala Penyu,<br>
+														89740 Kuala Penyu,<br>
+														Sabah, Malaysia</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-6 columns last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-left heebo-font bold">Telephone</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
+														+60 88-230 916</p>
+												</th>
 											</tr>
 											</tbody>
 										</table>
@@ -868,7 +910,7 @@
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														For full details? Please
-														<a href="https://www.tempuronggoldenbeachresort.com/reservations/details/{{$reservation->session}}"
+														<a href="{{config('app.url')}}/reservations/details/{{$reservation->session}}"
 														   target="_blank"
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">click
 															here</a>.
@@ -886,8 +928,166 @@
 								</tr>
 								</tbody>
 							</table>
+
+							<table class="spacer"
+								   style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<td height="40px"
+										style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+										&nbsp;
+									</td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+
+									<th class="small-12 large-12 columns first last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-left heebo-font bold">
+														Check-in and Check-out
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
+														Check-in is at 2PM<br>
+														Check-out is at 12PM
+													</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-12 columns first last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-left heebo-font bold">
+														Tourism Tax
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
+														A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law. This tax is not included in the room rate and must be paid upon check-in. Guests with a valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.
+													</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="spacer"
+								   style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<td height="20px"
+										style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+										&nbsp;
+									</td>
+								</tr>
+								</tbody>
+							</table>
+
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-12 columns first last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														If you have any requests for <a href="https://www.tempuronggoldenbeachresort.com/contact" target="_blank" >airport pick-up</a>, <a href="https://www.tempuronggoldenbeachresort.com/activities" target="_blank">activities</a> or <a href="https://www.tempuronggoldenbeachresort.com/food" target="_blank">food</a>, we would be happy to make arrangements for you.
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														See you there!
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														Sincerely,<br>
+														TBGR Team
+													</p>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
+
+
 							
 							<hr style="border: 1px solid #866809;">
+
+							<table class="row"
+								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								<tbody>
+								<tr style="padding: 0; text-align: left; vertical-align: top;">
+									<th class="small-12 large-4 columns first pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
+													<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"><p class="text-left heebo-font bold">Home</p></a>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-4 columns pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
+													<a href="https://www.tempuronggoldenbeachresort.com/faq" target="_blank"><p class="text-left heebo-font bold">FAQ</p></a>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+									<th class="small-12 large-4 columns last pt-20"
+										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+											<tbody>
+											<tr style="padding: 0; text-align: left; vertical-align: top;">
+												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
+													<a href="https://www.tempuronggoldenbeachresort.com/policy" target="_blank"><p class="text-left heebo-font bold">Resort Policies</p></a>
+												</th>
+											</tr>
+											</tbody>
+										</table>
+									</th>
+								</tr>
+								</tbody>
+							</table>
 							
 							<table class="row collapsed footer"
 							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
@@ -910,7 +1110,7 @@
 													</table>
 													<p class="text-center heebo-font small"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 10pt; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-														<a href="http://www.tempuronggoldenbeachresort.com/" target="_blank"
+														<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"
 														   style="Margin: 0; color: #866809; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">www.tempuronggoldenbeachresort.com</a>
 													</p>
 													<p class="text-center heebo-font small"
@@ -918,7 +1118,7 @@
 														Jalan Kg Tempurong, Kuala Penyu,<br>89740 Kuala Penyu, Sabah, Malaysia</p>
 													<p class="text-center heebo-font small"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 10pt; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-														Copyright © 2017 Tempurong Golden Beach Resort. All rights reserved.</p>
+														Copyright © 2018 Tempurong Golden Beach Resort. All rights reserved.</p>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>

@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.20-0ubuntu0.16.04.1)
+# Host: 127.0.0.1 (MySQL 5.7.21-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-15 11:19:51 +0000
+# Generation Time: 2018-01-24 07:20:42 +0000
 # ************************************************************
 
 
@@ -159,9 +159,9 @@ LOCK TABLES `adventures` WRITE;
 
 INSERT INTO `adventures` (`id`, `name_en`, `name_sc`, `subtitle_en`, `subtitle_sc`, `duration`, `distance`, `difficulty`, `description_en`, `description_sc`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(4,'Pulau Tiga Day Trip','生还者之岛一日游','Snorkeling and Volcano Mud Bath','迪迦岛浮潜及火山泥浴',25,1000,3.5,'Pulau Tiga is an island off the coast of Borneo that is most well known as “Survivor Island”, as it was the location where the debut season of Survivor was filmed. On this day trip you will depart from the resort by 8:30AM and travel to the beautiful waters off the coast of the island for swimming and snorkeling at various locations. Marvelous sights of giant clams, families of tropical fish, and other beautiful ocean life are common amongst the coral reefs.\n<br>\n<br>\nYou will also have the option of dipping into the volcano mud baths of Pulau Tiga, which are a leisurely 20-minute hike inland from the island’s shore, and enjoy a fun experience said to be good for the skin (Be sure to bring footwear that you won’t mind getting muddy if you opt for the hike!). The length of stay is up to you but we are usually back at the resort by 2:00PM where you can enjoy the rest of the afternoon at your leisure!','迪迦岛是位于婆罗洲海岸的一个岛屿，它也誉名为「生还者之岛」（Survivor Island），因美国在这里拍摄了生还者电视剧而有名。在这一天的行程中，您将于上午8:30离开度假村，前往迪迦岛附近的美丽水域，在不同的地点游泳和浮潜。在海底世界可以观赏到巨大的蛤蜊，色彩缤纷的珊瑚礁，还有许多不同种类的热带鱼 和其他美丽的海洋生物。\n\n您也可以选择在岸边徒步20分钟到迪迦岛的火山泥浴，并享受一个有趣的体验，据说火山泥对皮肤有滋润美白的功效（选择徒步旅行者请务必脱下并携带鞋子，除非你不介意弄脏鞋子！）。享受火山泥浴後，您可以投奔大海边清洗边游泳，沉醉在大海的拥抱中。我们通常在下午2:00之前回到悠闲的度假村享用美味的地道午餐。',NULL,NULL,NULL),
-	(5,'Mangrove River Cruise','红树林游船','Proboscis Monkeys and Fireflies','长鼻猴和萤火虫',25,1000,3.5,'The River Cruise offers opportunities to see the wildlife of Borneo’s wetland jungles. The trip would begin by traveling to the Klias River, about a half hour away from the resort. Upon arrival, there would be a tea break before embarking on a boat ride in search of the Proboscis monkeys, an endangered species that are native to Sabah and are most known for their signature long noses and protruding bellies. Proboscis monkey is our national treasure and only found in Borneo Island. Have you ever seen monkey that does not eat banana? Well, this is the only species! Come and find out more about this interesting monkey!\n\nAfter a one and a half hour cruise, we enjoy a break and eat dinner so that you can enjoy the local tastes before embarking on the Firefly Cruise. The evening cruise becomes a mystical ride through the mangroves where fireflies light up the darkness like magical specks and the sounds of nature surround you. Please note that sightings are common, but not guaranteed. ','红树林游船提供了观看婆罗洲湿地丛林野生动物的机会。这个克利亚斯河景点距离度假村大约半小时的车程，抵达后将乘船游览长鼻猴。长鼻猴，是一种原产于沙巴的濒危物种，以其长长的鼻子和突出的腹部而闻名。长鼻猴是马来西亚的国宝，它们只生长在婆罗洲岛。有没有见过不吃香蕉的猴子？来吧！在这里你可以探寻观赏到这品种非常特别的猴子。\n\n在一个半小时的巡航后，我们会休息片刻，然后享用当地的风味晚餐。晚餐后，将会继续乘船，开始萤火虫的巡航。晚上变得神秘的红树林，萤火虫像魔法般一点点照亮黑暗，整个人都被自然的音律环绕着。虽然萤火虫是常见的，但气候不好时则另当别论。',NULL,NULL,NULL),
-	(6,'Escorted Jungle Trekking ','丛林徒步旅行',NULL,NULL,25,1000,3.5,'Enjoy some of the world’s dwindling rain forests by doing a leisurely jungle trek - about an hour long. Trek through the low land forest where you may see different kinds of reptiles, birds, plants, bamboo, rattan, and more. Visitors are advised to wear sandals or a good pair of walking shoes and bring insect repellent and sun screen.  A  small bottle of water will be provided.\n\nThe Healing Well and Love Rock (also known as Space Rock) are also nearby so these additional areas could be tied into after your trek. The sunset is especially gorgeous from the beach by Space Rock as there are rarely any people around. Enjoy the rich colors as the sky changes from golds and oranges to deep reds.','通过一个长达一小时的悠闲丛林徒步旅行，享受世界上一些日益减少的热带雨林。跋涉在低地森林中，您可以看到各种爬行动物，鸟类，植物，竹子，藤条等等。建议游客穿凉鞋或者一双好的步行鞋，涂上驱蚊剂和防晒霜，我们会提供一小瓶水。客人可以自由自在各自徒步。若需导游陪同，则要另外付费。\n\n疗愈水池和永结同心石（太空岩石）也是附近的景点， 森林徒步后也可以另外到这些地区游览。漫步到太空岩石的海滩，周围的人烟稀少，在这里观看日落会特别美丽。随着天空从黄金和橘子变成深红色，无际的海洋色泽也渐变成丰富的色彩⋯⋯绝对是人生一大享受！！！',NULL,NULL,NULL);
+	(4,'Pulau Tiga Day Trip','生还者之岛一日游','Snorkeling and Volcano Mud Bath','迪迦岛浮潜及火山泥浴',25,1000,1.5,'Pulau Tiga is an island off the coast of Borneo that is most well known as “Survivor Island”, as it was the location where the debut season of Survivor was filmed. On this day trip you will depart from the resort by 8:30AM and travel to the beautiful waters off the coast of the island for swimming and snorkeling at various locations. Marvelous sights of giant clams, families of tropical fish, and other beautiful ocean life are common amongst the coral reefs.\n<br>\n<br>\nYou will also have the option of dipping into the volcano mud baths of Pulau Tiga, which are a leisurely 20-minute hike inland from the island’s shore, and enjoy a fun experience said to be good for the skin (Be sure to bring footwear that you won’t mind getting muddy if you opt for the hike!). The length of stay is up to you but we are usually back at the resort by 2:00PM where you can enjoy the rest of the afternoon at your leisure!','迪迦岛是位于婆罗洲海岸的一个岛屿，它也誉名为「生还者之岛」（Survivor Island），因美国在这里拍摄了生还者电视剧而有名。在这一天的行程中，您将于上午8:30离开度假村，前往迪迦岛附近的美丽水域，在不同的地点游泳和浮潜。在海底世界可以观赏到巨大的蛤蜊，色彩缤纷的珊瑚礁，还有许多不同种类的热带鱼 和其他美丽的海洋生物。\n\n您也可以选择在岸边徒步20分钟到迪迦岛的火山泥浴，并享受一个有趣的体验，据说火山泥对皮肤有滋润美白的功效（选择徒步旅行者请务必脱下并携带鞋子，除非你不介意弄脏鞋子！）。享受火山泥浴後，您可以投奔大海边清洗边游泳，沉醉在大海的拥抱中。我们通常在下午2:00之前回到悠闲的度假村享用美味的地道午餐。',NULL,NULL,NULL),
+	(5,'Mangrove River Cruise','红树林游船','Proboscis Monkeys and Fireflies','长鼻猴和萤火虫',25,1000,1.5,'The River Cruise offers opportunities to see the wildlife of Borneo’s wetland jungles. The trip would begin by traveling to the Klias River, about a half hour away from the resort. Upon arrival, there would be a tea break before embarking on a boat ride in search of the Proboscis monkeys, an endangered species that are native to Sabah and are most known for their signature long noses and protruding bellies. Proboscis monkey is our national treasure and only found in Borneo Island. Have you ever seen monkey that does not eat banana? Well, this is the only species! Come and find out more about this interesting monkey!\n\nAfter a one and a half hour cruise, we enjoy a break and eat dinner so that you can enjoy the local tastes before embarking on the Firefly Cruise. The evening cruise becomes a mystical ride through the mangroves where fireflies light up the darkness like magical specks and the sounds of nature surround you. Please note that sightings are common, but not guaranteed. ','红树林游船提供了观看婆罗洲湿地丛林野生动物的机会。这个克利亚斯河景点距离度假村大约半小时的车程，抵达后将乘船游览长鼻猴。长鼻猴，是一种原产于沙巴的濒危物种，以其长长的鼻子和突出的腹部而闻名。长鼻猴是马来西亚的国宝，它们只生长在婆罗洲岛。有没有见过不吃香蕉的猴子？来吧！在这里你可以探寻观赏到这品种非常特别的猴子。\n\n在一个半小时的巡航后，我们会休息片刻，然后享用当地的风味晚餐。晚餐后，将会继续乘船，开始萤火虫的巡航。晚上变得神秘的红树林，萤火虫像魔法般一点点照亮黑暗，整个人都被自然的音律环绕着。虽然萤火虫是常见的，但气候不好时则另当别论。',NULL,NULL,NULL),
+	(6,'Escorted Jungle Trekking ','丛林徒步旅行',NULL,NULL,25,1000,2.5,'Enjoy some of the world’s dwindling rain forests by doing a leisurely jungle trek - about an hour long. Trek through the low land forest where you may see different kinds of reptiles, birds, plants, bamboo, rattan, and more. Visitors are advised to wear sandals or a good pair of walking shoes and bring insect repellent and sun screen.  A  small bottle of water will be provided.\n\nThe Healing Well and Love Rock (also known as Space Rock) are also nearby so these additional areas could be tied into after your trek. The sunset is especially gorgeous from the beach by Space Rock as there are rarely any people around. Enjoy the rich colors as the sky changes from golds and oranges to deep reds.','通过一个长达一小时的悠闲丛林徒步旅行，享受世界上一些日益减少的热带雨林。跋涉在低地森林中，您可以看到各种爬行动物，鸟类，植物，竹子，藤条等等。建议游客穿凉鞋或者一双好的步行鞋，涂上驱蚊剂和防晒霜，我们会提供一小瓶水。客人可以自由自在各自徒步。若需导游陪同，则要另外付费。\n\n疗愈水池和永结同心石（太空岩石）也是附近的景点， 森林徒步后也可以另外到这些地区游览。漫步到太空岩石的海滩，周围的人烟稀少，在这里观看日落会特别美丽。随着天空从黄金和橘子变成深红色，无际的海洋色泽也渐变成丰富的色彩⋯⋯绝对是人生一大享受！！！',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `adventures` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -269,7 +269,7 @@ VALUES
 	(7,'Do you have wifi?','网络供应如何？','There is no wifi or television - we do have air conditioning and hot showers, though! Enjoy being unplugged for a bit and have a bit of a digital detox.\n\nIf you’re really desperate, make sure to grab a Malaysian sim card in the city; we receive a data signal so you’re still able to post all those Instaworthy photos.','在这里没有电视和网络，但我们有空调和热水炉！享受与世隔绝的放空，让自己真正的放松，回归大自然。给自己一个“电子”排毒的机会。\n\n如果您真的很日却渴望有电讯联络，您必须在城市或机场购买马来西亚电话卡；这里是可以收到电话信号的，所以你仍然可以立刻发布所有美拍的照片。'),
 	(8,'Do you accept credit cards?','有没有收信用卡？','At this time we can only accept credit cards through our online booking system. Since we are quite remote, we can only accept cash on site.','目前我们只能通过我们的在线预订系统使用信用卡。由于我们地点相当偏远，所以度假村现场只接受现金。'),
 	(9,'What if I need to cancel my booking?','如果我要取消我的预约？','It takes a lot of planning to ensure your visit is comfortable yet authentic, but things happen and we understand that! Our cancellation policy, as mentioned in our Resort Policy, is as follows:\n\n60 - 31 days prior to arrival a 75% refund will apply\n30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n\nPlease be sure to also read our entire <a href=\"/policy\" class=\"content-link\">RESORT POLICY</a> (It’s not that long, promise.).','为了确保顾客的入住时的舒适，我们需要很多时间计划和安排，以迎合客人的需求。若实在没有办法或遇到不能避免的事情而必须取消预订房间和服务，我们也可以理解！我们度假村的取消政策如下：\n\n抵达前60  -  31天取消，将退还75％的费用\r\n抵达前30  -  15日取消，将退款50％的费用\r\n抵达前14 天內取消，将不退还任何的费用\n\n请务必阅读我们整个<a href=\"/policy\" class=\"content-link\">度假村政策</a>（请放心，不会很长）。'),
-	(10,'Why can’t I pay for everything on the website?','为何我不能够把所有费用都在网站一次付清？','The website is built to collect payment of basic room bookings (as it’s quite straight-forward), however additional meals or tour packages are dependent on many factors so it’s much better for both sides to arrange directly. This also allows us to get to know you and your preferences so that we can create the perfect experience for you and your party.<br><br>\n\nAlso, by legal requirement, we have to check if you have a Malaysian passport in order to waive the 10% tourism tax, so this is also easier to settled in cash at the resort. This fee and any outstanding costs for extra mattresses, meals and tour packages will be settled in cash at the resort, so please come prepared as there are no ATMs on this side of paradise!','这个网站的目的是收取基本的房间预订费用（因为它的设计非常简单），但是额外的餐饮或旅游套餐建基于很多因素，因此双方直接进行安排会更好。这也让我们了解你和你的喜好，以便我们可以为您和您的旅伴创造完美的体验。<br><br>此外，根据法定要求，我们必须检查您是否拥有马来西亚护照，以豁免10％的旅游税，因此在度假村以现金结算也更容易。这笔费用以及额外床垫，餐饮和旅游套餐的任何费用将在度假村以现金结算，请预先准备好，因为这里没有自动提款机。');
+	(10,'Why can’t I pay for everything on the website?','为何我不能够把所有费用都在网站一次付清？','The website is built to collect payment of basic room bookings (as it’s quite straight-forward), however additional meals or tour packages are dependent on many factors so it’s much better for both sides to arrange directly. This also allows us to get to know you and your preferences so that we can create the perfect experience for you and your party.\n\nAlso, by legal requirement, we have to check if you have a Malaysian passport in order to waive the 10% tourism tax, so this is also easier to settled in cash at the resort. This fee and any outstanding costs for extra mattresses, meals and tour packages will be settled in cash at the resort, so please come prepared as there are no ATMs on this side of paradise!','这个网站的目的是收取基本的房间预订费用（因为它的设计非常简单），但是额外的餐饮或旅游套餐建基于很多因素，因此双方直接进行安排会更好。这也让我们了解你和你的喜好，以便我们可以为您和您的旅伴创造完美的体验。<br><br>此外，根据法定要求，我们必须检查您是否拥有马来西亚护照，以豁免10％的旅游税，因此在度假村以现金结算也更容易。这笔费用以及额外床垫，餐饮和旅游套餐的任何费用将在度假村以现金结算，请预先准备好，因为这里没有自动提款机。');
 
 /*!40000 ALTER TABLE `faqs` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -338,6 +338,161 @@ VALUES
 UNLOCK TABLES;
 
 
+# Dump of table oauth_access_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_access_tokens`;
+
+CREATE TABLE `oauth_access_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `client_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_access_tokens_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_access_tokens` WRITE;
+/*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`)
+VALUES
+	('0186593f5833a931af482f213020017c1eb5428a62ddcc406de3c3950feac0451ed4bbbf0bc434a8',1,1,'MyApp','[]',0,'2018-01-03 04:08:04','2018-01-03 04:08:04','2019-01-03 04:08:04'),
+	('0221ef689ba5476658a1788dbbd5c7d61a515694e506726191b6e83050d3250d8d04ca7cff49f954',1,1,'kay','[]',0,'2018-01-03 04:41:44','2018-01-03 04:41:44','2019-01-03 04:41:44'),
+	('1dd8f68b10485479c2170ff17fb7fbb8b5611cf9053fcd27fc4592cedf891cf459112eb5c8de51b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:16','2018-01-03 04:07:16','2019-01-03 04:07:16'),
+	('25fcf21019642406fa74584c66d6becb89f1f341a1d006afb3c8a7d71a927a317ef9568da635307f',1,1,'MyApp','[]',0,'2018-01-03 04:08:52','2018-01-03 04:08:52','2019-01-03 04:08:52'),
+	('2d77a70ba998d32bac64e7e06fcca93282c4a980b1dc172c21b0870d0a6615e9d3afa38b9a826459',1,1,'MyApp','[]',0,'2018-01-03 04:08:05','2018-01-03 04:08:05','2019-01-03 04:08:05'),
+	('36a660eedfdf27c4f458c2a92ad7676f24ae27f52585d2b8db1d2b33a314201cd680ce34fe278c3d',1,1,'MyApp','[]',0,'2018-01-03 04:07:52','2018-01-03 04:07:52','2019-01-03 04:07:52'),
+	('4bd56d90fb901edf1c5ce52bb9d439ef27ea94a69c4bd0aa25fe9bb5143209114bcc37c1e6939b61',1,1,'MyApp','[]',0,'2018-01-03 04:02:55','2018-01-03 04:02:55','2019-01-03 04:02:55'),
+	('5c09c46de549eddfe956665ef57727d680a82eaecab9c5a807c3922e0a4fa1ac201a1797addf1aa4',1,1,'MyApp','[]',0,'2018-01-03 04:07:12','2018-01-03 04:07:12','2019-01-03 04:07:12'),
+	('5dd79daa6600b633937c9da3eb266403db411453c4b4f8643258be3a0a0310f491f6a380153f71bb',1,1,'MyApp','[]',0,'2018-01-03 04:07:51','2018-01-03 04:07:51','2019-01-03 04:07:51'),
+	('62d6811a8cc178c07be3e81051cf2facf06a1b9d5602eea702bc262ce9178987a522f76d7698c494',1,1,'MyApp','[]',0,'2018-01-03 04:09:44','2018-01-03 04:09:44','2019-01-03 04:09:44'),
+	('6fd766b9136e7ff986ab185ccafba6beda963d4e7ab6000ad7c284c321279c4cb0d4bece1e4f5aa9',1,1,'kay','[]',0,'2018-01-03 04:43:51','2018-01-03 04:43:51','2019-01-03 04:43:51'),
+	('7a1ef933b6c3fc816049b0a56acb7778e37df84fe9b2380a5d5a0e355e7b00acad803e1314222be0',1,1,'kay','[]',0,'2018-01-03 07:57:56','2018-01-03 07:57:56','2019-01-03 07:57:56'),
+	('88a7a4942c41e83ac7e9dd5c8a97de353be6b0260e3a26083cecd30d7ed895ad12823be822ae3abd',1,1,'MyApp','[]',0,'2018-01-03 04:09:09','2018-01-03 04:09:09','2019-01-03 04:09:09'),
+	('9731d925138cb15fb15ae949b99d87e8eec9a14dfea74d0c23aa87a448ca846e2901796206ea2072',1,1,'kay','[]',0,'2018-01-03 04:42:03','2018-01-03 04:42:03','2019-01-03 04:42:03'),
+	('98182b24fbaf125e8d42dcb43dbbf9dd6b08b201e776b56f3c3df3e7b9ca8edb73702d8f0a993d1b',1,1,'MyApp','[]',0,'2018-01-03 04:03:06','2018-01-03 04:03:06','2019-01-03 04:03:06'),
+	('9e9dbdc8dfbc172e074821db7849d4533aca438043862604a1a9cf12b4eb08d7f94ede05d526dca9',1,1,'MyApp','[]',0,'2018-01-03 03:26:05','2018-01-03 03:26:05','2019-01-03 03:26:05'),
+	('a203eda1e89a47671d9077c0c9210ba18ab1d7d6430b55729de39cf7b9523abcbedd1183623dac3e',1,1,'MyApp','[]',0,'2018-01-03 04:08:53','2018-01-03 04:08:53','2019-01-03 04:08:53'),
+	('c8c4e18af2455550458ea4dfa3274d7cf93f15742ab1fa9b7d764f69a6da13fe8f7a60c593d1d83d',1,1,'MyApp','[]',0,'2018-01-03 04:09:42','2018-01-03 04:09:42','2019-01-03 04:09:42'),
+	('df1ae240eac66dbcad172c3d210e2ff1b62b98b004fe7b4ff8131977929c7370a001ce4615ca32be',1,1,'kay','[]',0,'2018-01-03 07:31:52','2018-01-03 07:31:52','2019-01-03 07:31:52'),
+	('e10f7eeb60fdcd8918e1a141144e9bf42c1781a34ff27ec4801499a98e5a44e131873df7694f0ead',1,1,'MyApp','[]',0,'2018-01-03 03:28:34','2018-01-03 03:28:34','2019-01-03 03:28:34'),
+	('edd57e962b334d60acdca007f78f9f42c411444e8f35ee31d21f97a1d8c5f6dba2ad51ec3152c0b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:59','2018-01-03 04:07:59','2019-01-03 04:07:59'),
+	('f90568ff51f5c179a53521d38b756ac82c100bf50de7d5649d2de471e64984c8528d83939898bc6b',1,1,'MyApp','[]',0,'2018-01-03 04:07:44','2018-01-03 04:07:44','2019-01-03 04:07:44');
+
+/*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_auth_codes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_auth_codes`;
+
+CREATE TABLE `oauth_auth_codes` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_clients`;
+
+CREATE TABLE `oauth_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `personal_access_client` tinyint(1) NOT NULL,
+  `password_client` tinyint(1) NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_clients_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`)
+VALUES
+	(1,NULL,'Laravel Personal Access Client','Cc9HjMXycxN5hVESSEyfdEDu8H6zQjhtVoT7z78q','http://localhost',1,0,0,'2018-01-03 03:02:42','2018-01-03 03:02:42'),
+	(2,NULL,'Laravel Password Grant Client','tpiYDSSeoOmMoVGHX0UrDbqCyoq8nK1BXgbf6npy','http://localhost',0,1,0,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_personal_access_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_personal_access_clients`;
+
+CREATE TABLE `oauth_personal_access_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_personal_access_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_personal_access_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`)
+VALUES
+	(1,1,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_personal_access_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_refresh_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_refresh_tokens`;
+
+CREATE TABLE `oauth_refresh_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table password_resets
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `password_resets`;
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
 # Dump of table policies
 # ------------------------------------------------------------
 
@@ -359,10 +514,10 @@ LOCK TABLES `policies` WRITE;
 
 INSERT INTO `policies` (`id`, `title_en`, `title_sc`, `content_en`, `content_sc`, `sub_content_en`, `sub_content_sc`)
 VALUES
-	(1,'Check-in and Check-out','入住及退房','Check in is 2PM\nCheckout is 12PM','入住时间是下午2点\r\n退房时间是中午12点\r\n',NULL,NULL),
+	(1,'Check-in and Check-out','入住及退房','Check-in is at 2PM\nCheck-out is at 12PM','入住时间是下午2点\r\n退房时间是中午12点\r\n',NULL,NULL),
 	(2,'Tourism Tax','旅游税','A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law. This tax is not included in the room rate and must be paid upon check-in. Guests with a valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.','马来西亚法律规定，所有外国客人必需缴付每间客房每晚MYR10的旅游税。这笔税费不包含在房价内，且必须在办理入住时支付。持有有效的马来西亚身份证或有效的永久居民身份证的客人可获得豁免。',NULL,NULL),
-	(3,'Payment for Accommodation Booking','支付住宿预订','Our website is built to handle transactions for accommodation only. You may pay by PayPal, credit card (Visa and Mastercard only). Any outstanding charges may be settled in cash on-site, PayPal or direct bank transfer.<br><br>\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing. If you’d like to add more people, mattresses, rooms, meals, etc. please contact us directly and we will do our best to accommodate.<br><br>\n\nIf you arrive with more people and/or require more services than paid for, you will be expected to settle the correct and remaining amount in person with cash (we are unable to process credit cards on-site).','我们的网站是专为处理住宿交易而设计的。您可以通过PayPal，维萨信用卡（ Visa）或万事达卡（Mastercard）付款。任何未支付的费用可通过现场支付，PayPal或直接银行转账。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发货后5天内没有收到错误通知，金沙龙虾湾度假村不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n如果你想添加更多的人，床垫，房间，餐食等，请直接与我们联系，我们将尽我们所能安排。 如果您抵达的人数更多，并且/或者需要更多的服务，您将需要现金支付（我们无法在现场处理信用卡支付）。',NULL,NULL),
-	(4,'Deposit and Final Payment for Tours','订金和旅游配套的最终付款事项','Any additional tours or services require a non-refundable, non-transferable deposit of 25%. Note that bookings are not confirmed nor secure until TGBR receives this deposit and you receive a confirmation invoice. TGBR reserves the right to release or cancel any bookings being held where this required deposit has not been received by the deposit due date. Payment of the deposit indicates you have read and accepted these Terms and Conditions.<br><br>\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing.<br><br>\n\nFinal payment for your booking is due 30 days prior to commencement of services. If final payment is not received by the due date, your reservation will be cancelled and TGBR will retain your full deposit. TGBR is not responsible for cancelled land and/or air reservations in the event payment is not received by the final payment date. If a booking is made within 30 days prior to arrival, full payment will be required at the time of booking.<br><br>\n\nAll payments shall be made either by credit card or telegraphic transfer to the appropriate account:','任何额外的旅行或服务都需要缴付25％的押金，押金不可退款和不可转让。请注意，只有在金沙龙虾湾度假村收到这笔押金后，您才能获得确认发票。金沙龙虾湾度假村保留取消任何在存款到期日前仍未缴的押金的预订的权利。支付押金表示您已经阅读并接受这些条款及细则。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发出预订发票后5天内没有收到错误通知，金沙龙虾湾度假村将不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n您的预订的最后付款日期应在服务开始前30天。如果到期日未收到最终付款，您的预订将被取消，金沙龙虾湾度假村将沒收您的全额押金。如果在最后付款日期没有收到付款，金沙龙虾湾度假村不会负责因没有付款而被取消的服务和房间预订。如果客人在抵达前30天内预订，则需在预订时支付全额费用。\n\n所有的付款都应通过信用卡或电汇转账到度假村的账户：','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD'),
+	(3,'Payment for Accommodation Booking','支付住宿预订','Our website is built to handle transactions for accommodation only. You may pay by PayPal, credit card (Visa and Mastercard only). Any outstanding charges may be settled in cash on-site, PayPal or direct bank transfer.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing. If you’d like to add more people, mattresses, rooms, meals, etc. please contact us directly and we will do our best to accommodate.\n\nIf you arrive with more people and/or require more services than paid for, you will be expected to settle the correct and remaining amount in person with cash (we are unable to process credit cards on-site).','我们的网站是专为处理住宿交易而设计的。您可以通过PayPal，维萨信用卡（ Visa）或万事达卡（Mastercard）付款。任何未支付的费用可通过现场支付，PayPal或直接银行转账。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发货后5天内没有收到错误通知，金沙龙虾湾度假村不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n如果你想添加更多的人，床垫，房间，餐食等，请直接与我们联系，我们将尽我们所能安排。 如果您抵达的人数更多，并且/或者需要更多的服务，您将需要现金支付（我们无法在现场处理信用卡支付）。',NULL,NULL),
+	(4,'Deposit and Final Payment for Tours','订金和旅游配套的最终付款事项','Any additional tours or services require a non-refundable, non-transferable deposit of 25%. Note that bookings are not confirmed nor secure until TGBR receives this deposit and you receive a confirmation invoice. TGBR reserves the right to release or cancel any bookings being held where this required deposit has not been received by the deposit due date. Payment of the deposit indicates you have read and accepted these Terms and Conditions.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing.\n\nFinal payment for your booking is due 30 days prior to commencement of services. If final payment is not received by the due date, your reservation will be cancelled and TGBR will retain your full deposit. TGBR is not responsible for cancelled land and/or air reservations in the event payment is not received by the final payment date. If a booking is made within 30 days prior to arrival, full payment will be required at the time of booking.\n\nAll payments shall be made either by credit card or telegraphic transfer to the appropriate account:','任何额外的旅行或服务都需要缴付25％的押金，押金不可退款和不可转让。请注意，只有在金沙龙虾湾度假村收到这笔押金后，您才能获得确认发票。金沙龙虾湾度假村保留取消任何在存款到期日前仍未缴的押金的预订的权利。支付押金表示您已经阅读并接受这些条款及细则。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发出预订发票后5天内没有收到错误通知，金沙龙虾湾度假村将不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n您的预订的最后付款日期应在服务开始前30天。如果到期日未收到最终付款，您的预订将被取消，金沙龙虾湾度假村将沒收您的全额押金。如果在最后付款日期没有收到付款，金沙龙虾湾度假村不会负责因没有付款而被取消的服务和房间预订。如果客人在抵达前30天内预订，则需在预订时支付全额费用。\n\n所有的付款都应通过信用卡或电汇转账到度假村的账户：','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD'),
 	(5,'Cancellation By You','您取消的预订服务','If Tempurong Golden Beach Resort receives a booking cancellation prior to the final payment date of your vacation, your non-refundable deposit will be retained. Standard cancellation fees as stated apply to all booking cancellations.','如果金沙龙虾湾度假村在您该支付余款的截止日期之前收到取消预订服务，您的押金将不会退还。标准取消费如以下所述：','60 - 31 days prior to arrival a 75% refund will apply\n30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n\nIf you cancel more than 60 days ahead of time, we will still retain your non-refundable 25% deposit. ','抵达前60  -  31天取消，将退还75％的费用\r\n抵达前30  -  15日取消，将退还50％的费用\r\n将在抵达前14  -  0天取消，将不会退还任何的费用\n\nIf you cancel more than 60 days ahead of time, we will still retain your non-refundable 25% deposit. '),
 	(6,'Refund of Unused Services','未使用的服务的退款','No refunds or exchanges can be made in respect of accommodation, meals, sightseeing tours, transport or any other services that are included in the tour pieces but not utilized by the tour member.','在旅游项目中包括的未被旅游团成员使用的住宿，餐饮，观光旅游，交通或任何其他服务，将不予退款或换成任何其他服务。',NULL,NULL),
 	(7,'Force Majeure','不可抗力','If as a consequence of \'Force Majeure\' as defined below, TGBR is obliged to curtail, alter, extend or cancel the tour, the customer shall not be at liberty to maintain a claim for compensation or otherwise for any loss arising as a consequence of said curtailment, alteration, extension or cancellation of the tour. \'Force Majeure\' means Acts of God, natural disasters, adverse weather conditions, fire or other destruction of any vessel, craft or vehicle to be used in connection with a holiday, destruction or damage to holiday accommodation, riots, acts of war, civil commotion, exercise of legislative or government action, municipal or military or other authority, strikes, industrial action, requisition of equipment, mechanical breakdown, shortage of fuel, insolvency or default of any carrier or service connected with the tour, fraud perpetrated against TGBR.','如果是因为下面定义的「不可抗力」，金沙龙虾湾度假村有义务限制、更改、延长或取消旅程，而客户不可向金沙龙虾湾度假村索取赔偿，或因其他原因造成的任何损失而削减，改变，延长或取消行程。 「不可抗力」是指自然灾害，不利的天气条件，火灾或其他任何与度假有关的船只，船只或车辆的毁坏，假日住宿的破坏或损坏，骚乱，战争行为，民事行政，立法或政府行动，市政或军事或其他权力，罢工，工业行为，设备的征用，机械故障，燃料短缺，破产或任何与旅游有关的承运人或服务的拖延，对金沙龙虾湾度假村的欺诈行为。',NULL,NULL),
@@ -411,7 +566,19 @@ VALUES
 	(4,13,1,4,1250,4,NULL,0,0,'completed',NULL,'2018-01-18','2018-01-23','2018-01-12 07:31:38',NULL,'2018-01-12 07:31:22','2018-01-12 07:47:18',NULL),
 	(5,11,1,5,750,4,NULL,0,0,'completed',NULL,'2018-01-14','2018-01-17','2018-01-12 07:32:21',NULL,'2018-01-12 07:32:07','2018-01-12 07:47:18',NULL),
 	(6,4,1,6,1000,4,NULL,0,0,'completed',NULL,'2018-01-20','2018-01-24','2018-01-12 07:33:06',NULL,'2018-01-12 07:32:53','2018-01-12 07:47:18',NULL),
-	(7,12,1,7,1500,4,NULL,0,0,'completed',NULL,'2018-01-16','2018-01-22','2018-01-12 07:33:50',NULL,'2018-01-12 07:33:36','2018-01-12 07:47:18',NULL);
+	(7,12,1,7,1500,4,NULL,0,0,'completed',NULL,'2018-01-16','2018-01-22','2018-01-12 07:33:50',NULL,'2018-01-12 07:33:36','2018-01-12 07:47:18',NULL),
+	(11,1,1,8,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-23','2018-02-24',NULL,NULL,'2018-01-23 08:41:40','2018-01-23 08:41:40',NULL),
+	(12,2,1,9,250,4,NULL,0,0,'completed',NULL,'2018-02-23','2018-02-24','2018-01-23 08:42:51',NULL,'2018-01-23 08:42:36','2018-01-23 08:42:51',NULL),
+	(13,3,1,10,250,4,NULL,0,0,'completed',NULL,'2018-02-23','2018-02-24','2018-01-23 08:44:05',NULL,'2018-01-23 08:43:51','2018-01-23 08:44:05',NULL),
+	(14,4,1,11,250,4,NULL,0,0,'completed',NULL,'2018-02-23','2018-02-24','2018-01-23 09:07:44',NULL,'2018-01-23 09:05:20','2018-01-23 09:07:44',NULL),
+	(18,1,1,12,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-27','2018-02-28',NULL,NULL,'2018-01-23 09:18:15','2018-01-23 09:18:15',NULL),
+	(19,2,1,13,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-27','2018-02-28',NULL,NULL,'2018-01-23 10:07:03','2018-01-23 10:07:03',NULL),
+	(20,3,1,14,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-27','2018-02-28',NULL,NULL,'2018-01-23 11:07:12','2018-01-23 11:07:12',NULL),
+	(21,4,1,15,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-27','2018-02-28',NULL,NULL,'2018-01-23 11:07:12','2018-01-23 11:07:12',NULL),
+	(22,5,1,16,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-27','2018-02-28',NULL,NULL,'2018-01-23 11:07:40','2018-01-23 11:07:40',NULL),
+	(23,1,1,17,750,4,NULL,0,0,'completed',NULL,'2018-01-23','2018-01-26','2018-01-24 06:54:55',NULL,'2018-01-24 06:53:15','2018-01-24 06:54:55',NULL),
+	(27,3,1,18,500,4,NULL,0,0,'completed',NULL,'2018-01-24','2018-01-26','2018-01-24 07:00:56',NULL,'2018-01-24 07:00:34','2018-01-24 07:14:34',NULL),
+	(31,2,1,19,500,4,NULL,0,0,'completed',NULL,'2018-01-24','2018-01-26','2018-01-24 07:16:09',NULL,'2018-01-24 07:14:48','2018-01-24 07:16:09',NULL);
 
 /*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -428,6 +595,8 @@ CREATE TABLE `reservations` (
   `last_name` varchar(50) DEFAULT NULL,
   `transaction_id` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
+  `country_code` varchar(5) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
   `adults` int(2) DEFAULT NULL,
   `children` int(2) DEFAULT NULL,
   `check_in` date DEFAULT NULL,
@@ -448,15 +617,27 @@ CREATE TABLE `reservations` (
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
 
-INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`)
+INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `country_code`, `tel`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`)
 VALUES
-	(1,'w','l','EC-80274006M8293891C','wl@buildonauts.com',2,0,'2018-01-13','2018-01-16','en',NULL,NULL,750,'paypal','2018-01-12 07:26:45','2018-01-12 07:27:27',NULL,'completed','5a5863351c223662'),
-	(2,'w','l','EC-5CF986047G207291M','wl@buildonauts.com',1,0,'2018-01-19','2018-01-21','en',NULL,NULL,500,'paypal','2018-01-12 07:28:05','2018-01-12 07:28:21',NULL,'completed','5a5863853d457714'),
-	(3,'w','l','EC-39H73555VF3786250','wl@buildonauts.com',2,0,'2018-01-13','2018-01-15','en',NULL,NULL,500,'paypal','2018-01-12 07:30:40','2018-01-12 07:30:53',NULL,'completed','5a5864200b8e3619'),
-	(4,'w','l','EC-1YV95118EW766125M','wl@buildonauts.com',1,0,'2018-01-18','2018-01-23','en',NULL,NULL,1250,'paypal','2018-01-12 07:31:22','2018-01-12 07:31:38',NULL,'completed','5a58644a95dbb489'),
-	(5,'w','l','EC-8BH5954064425074A','wl@buildonauts.com',1,0,'2018-01-14','2018-01-17','en',NULL,NULL,750,'paypal','2018-01-12 07:32:07','2018-01-12 07:32:21',NULL,'completed','5a58647794718129'),
-	(6,'w','l','EC-2B71966802441291A','wl@buildonauts.com',1,0,'2018-01-20','2018-01-24','en',NULL,NULL,1000,'paypal','2018-01-12 07:32:53','2018-01-12 07:33:06',NULL,'completed','5a5864a5d53ab682'),
-	(7,'w','l','EC-55Y4170025701802L','wl@buildonauts.com',1,0,'2018-01-16','2018-01-22','en',NULL,NULL,1500,'paypal','2018-01-12 07:33:36','2018-01-12 07:33:50',NULL,'completed','5a5864d01e41c425');
+	(1,'w','l','EC-80274006M8293891C','wl@buildonauts.com',NULL,NULL,2,0,'2018-01-13','2018-01-16','en',NULL,NULL,750,'paypal','2018-01-12 07:26:45','2018-01-12 07:27:27',NULL,'completed','5a5863351c223662'),
+	(2,'w','l','EC-5CF986047G207291M','wl@buildonauts.com',NULL,NULL,1,0,'2018-01-19','2018-01-21','en',NULL,NULL,500,'paypal','2018-01-12 07:28:05','2018-01-12 07:28:21',NULL,'completed','5a5863853d457714'),
+	(3,'w','l','EC-39H73555VF3786250','wl@buildonauts.com',NULL,NULL,2,0,'2018-01-13','2018-01-15','en',NULL,NULL,500,'paypal','2018-01-12 07:30:40','2018-01-12 07:30:53',NULL,'completed','5a5864200b8e3619'),
+	(4,'w','l','EC-1YV95118EW766125M','wl@buildonauts.com',NULL,NULL,1,0,'2018-01-18','2018-01-23','en',NULL,NULL,1250,'paypal','2018-01-12 07:31:22','2018-01-12 07:31:38',NULL,'completed','5a58644a95dbb489'),
+	(5,'w','l','EC-8BH5954064425074A','wl@buildonauts.com',NULL,NULL,1,0,'2018-01-14','2018-01-17','en',NULL,NULL,750,'paypal','2018-01-12 07:32:07','2018-01-12 07:32:21',NULL,'completed','5a58647794718129'),
+	(6,'w','l','EC-2B71966802441291A','wl@buildonauts.com',NULL,NULL,1,0,'2018-01-20','2018-01-24','en',NULL,NULL,1000,'paypal','2018-01-12 07:32:53','2018-01-12 07:33:06',NULL,'completed','5a5864a5d53ab682'),
+	(7,'w','l','EC-55Y4170025701802L','wl@buildonauts.com',NULL,NULL,1,0,'2018-01-16','2018-01-22','en',NULL,NULL,1500,'paypal','2018-01-12 07:33:36','2018-01-12 07:33:50',NULL,'completed','5a5864d01e41c425'),
+	(8,'Cleo','Chan',NULL,'cc@buildonauts.com',NULL,NULL,2,0,'2018-02-23','2018-02-24','en','Test','Test',250,'paypal','2018-01-23 08:41:40','2018-01-23 08:41:40',NULL,'waiting_for_payment','5a66f54473574104'),
+	(9,'Cleo','Chan','EC-8MJ53656L4318550J','cc@buildonauts.com',NULL,NULL,2,0,'2018-02-23','2018-02-24','en','Test','Test',250,'paypal','2018-01-23 08:42:36','2018-01-23 09:00:34',NULL,'refunded','5a66f57c0724e674'),
+	(10,'Cleo','Chan','EC-0E590085GE612761K','cc@buildonauts.com',NULL,NULL,2,0,'2018-02-23','2018-02-24','en','Test','Test',250,'paypal','2018-01-23 08:43:51','2018-01-23 08:59:03',NULL,'refunded','5a66f5c7a3df6318'),
+	(11,'Cleo','Chan','EC-8KL01722PS815531B','cc@buildonauts.com',NULL,NULL,2,0,'2018-02-23','2018-02-24','en','test','test',250,'paypal','2018-01-23 09:05:20','2018-01-23 09:08:09',NULL,'refunded','5a66fad02a1b3297'),
+	(12,'Cleo','Chan',NULL,'cc@buildonauts.com',NULL,NULL,2,0,'2018-02-27','2018-02-28','en','Test','test',250,'paypal','2018-01-23 09:18:15','2018-01-23 09:18:15',NULL,'waiting_for_payment','5a66fdd758fee622'),
+	(13,'Cleo','Chan',NULL,'cc@buildonauts.com','852','34567890',2,0,'2018-02-27','2018-02-28','en','test',NULL,250,'paypal','2018-01-23 10:07:03','2018-01-23 10:07:03',NULL,'waiting_for_payment','5a670947e0157683'),
+	(14,'Cleo','Chan',NULL,'cc@buildonauts.com','852','34567890',2,0,'2018-02-27','2018-02-28','en','test',NULL,250,'paypal','2018-01-23 11:07:12','2018-01-23 11:07:12',NULL,'waiting_for_payment','5a6717600f890453'),
+	(15,'Cleo','Chan',NULL,'cc@buildonauts.com','852','34567890',2,0,'2018-02-27','2018-02-28','en','test',NULL,250,'paypal','2018-01-23 11:07:12','2018-01-23 11:07:12',NULL,'waiting_for_payment','5a67176028a17398'),
+	(16,'Cleo','Chan',NULL,'cc@buildonauts.com','852','34567890',2,0,'2018-02-27','2018-02-28','en','test',NULL,250,'paypal','2018-01-23 11:07:40','2018-01-23 11:07:40',NULL,'waiting_for_payment','5a67177c2c67b475'),
+	(17,'kay','lun','EC-8LC10873MA3470342','kl@buildonauts.com','+852','60335207',2,0,'2018-01-23','2018-01-26','en','ahsjdkh',NULL,750,'paypal','2018-01-24 06:53:15','2018-01-24 06:54:55',NULL,'completed','5a682d5b8a084443'),
+	(18,'kay','lun','EC-4WK40241YU962062A','kl@buildonauts.com','+852','60335207',3,0,'2018-01-24','2018-01-26','en',NULL,NULL,500,'paypal','2018-01-24 07:00:34','2018-01-24 07:00:56',NULL,'completed','5a682f125ea40289'),
+	(19,'kay','lun','EC-3X41400089301040V','kl@buildonauts.com','+852','60335207',3,0,'2018-01-24','2018-01-26','en',NULL,NULL,500,'paypal','2018-01-24 07:14:48','2018-01-24 07:16:09',NULL,'completed','5a6832689884a359');
 
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -615,7 +796,7 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
 	(1,'kay','kl@buildonauts.com','$2y$10$ysoVB3APBJL6ouRIZbMbPO8hTQD3P35ikyRBjHMNNZTrf13SVu3Zq',NULL,NULL,NULL,NULL),
-	(2,'cleo','cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq','HXMTDMSyr7ik8JpaHyMTNIz1PUfmVezu7A3UiYPVU6SmeqkGp8aKusOTfaLP',NULL,NULL,NULL),
+	(2,'cleo','cc@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq','P80Q69ea1GkoPkJv3atVrVZylgkxsuBzV7TZVAsXkhPnby44yKtvdUjQc3MB',NULL,NULL,NULL),
 	(3,'hilton','hl@buildonauts.com','$2y$10$Tjhl9LbUOPHZmiSOzO7QVea/VguBRrcBuppzZRpb0iKBNTg3pSKYq',NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
