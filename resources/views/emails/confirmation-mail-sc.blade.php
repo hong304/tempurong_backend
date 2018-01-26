@@ -906,7 +906,7 @@
 													</table>
 													<p class="text-center heebo-font small"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 10pt; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-														<a href="http://www.tempuronggoldenbeachresort.com/" target="_blank"
+														<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"
 														   style="Margin: 0; color: #866809; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">www.tempuronggoldenbeachresort.com</a>
 													</p>
 													<p class="text-center heebo-font small"
@@ -914,7 +914,7 @@
 														Jalan Kg Tempurong, Kuala Penyu,<br>89740 Kuala Penyu, Sabah, Malaysia</p>
 													<p class="text-center heebo-font small"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 10pt; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-														Copyright © 2017 Tempurong Golden Beach Resort. All rights reserved.</p>
+														Copyright © 2018 Tempurong Golden Beach Resort. All rights reserved.</p>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
