@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -83,6 +84,46 @@ class LoginController extends Controller
 		}
 		return response()->json($result, 200);
 	}
+
+  public function getProfile()
+  {
+    if (Auth::check()) {
+      $user = Auth::user();
+
+      $result = [
+        'status' => true,
+        'data' => $user
+      ];
+    } else {
+      $result = [
+        'status' => false,
+        'message' => 'Not Logged-in.'
+      ];
+    }
+    return response()->json($result, 200);
+  }
+
+  public function updateProfile(Request $request)
+  {
+    if (Auth::check()) {
+      $user = User::where('id', $request->id)->first();
+      $user->password = bcrypt($request->new_password);
+      $user->save();
+
+      Auth::loginUsingId($request->id);
+
+      $result = [
+        'status' => true,
+        'message' => 'Password updated.'
+      ];
+    } else {
+      $result = [
+        'status' => false,
+        'message' => 'Not Logged-in.'
+      ];
+    }
+    return response()->json($result, 200);
+  }
 	
 	public function logout(Request $request)
 	{

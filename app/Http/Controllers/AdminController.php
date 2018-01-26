@@ -18,22 +18,21 @@ class AdminController extends Controller
 
     try {
 
-      $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session')
-        ->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
+      if (isset($request->searchItem)) {
+        $columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session'];
+        $query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note');
 
-//      if (isset($request->query)) {
-//        $all = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session')->get();
-//        foreach($all as $a) {
-//          $a->where('first_name', 'LIKE', $request->query)->get();
-//          $d->push($a);
-//        }
-//
-//        $result = $d->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
-//
-//      } else {
-//        $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session')
-//          ->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
-//      }
+        foreach($columns as $column)
+        {
+          $query->orWhere($column, 'LIKE', '%'.$request->searchItem.'%');
+        }
+
+        $result = $query->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
+
+      } else {
+        $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
+          ->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
+      }
 
     } catch (\Exception $e) {
       $result = [

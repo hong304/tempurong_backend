@@ -59,10 +59,12 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+	Route::get('profile', 'Auth\LoginController@getProfile');
+	Route::post('profile', 'Auth\LoginController@updateProfile');
 	Route::get('logout', 'Auth\LoginController@logout');
-	
+
 	// admin
-	Route::post('orderHistory', 'AdminController@getOrderHistory');
+	Route::post('adminOrderHistory', 'AdminController@getOrderHistory');
 	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
 	
 	//test email
