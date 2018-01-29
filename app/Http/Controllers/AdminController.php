@@ -20,11 +20,7 @@ class AdminController extends Controller
 			
 			if (isset($request->searchItem)) {
 				$columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session'];
-				$query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
-					->where(function ($query) {
-						$query->where('status', 'completed')
-							->orWhere('status', 'refunded');
-					});
+				$query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note');
 				
 				foreach ($columns as $column) {
 					$query->orWhere($column, 'LIKE', '%' . $request->searchItem . '%');
@@ -34,10 +30,6 @@ class AdminController extends Controller
 				
 			} else {
 				$result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
-					->where(function ($query) {
-						$query->where('status', 'completed')
-							->orWhere('status', 'refunded');
-					})
 					->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
 			}
 			
@@ -149,6 +141,8 @@ class AdminController extends Controller
 					if ($response['ACK'] == "Success") {
 						$message = $message . " Refund Success, amount is " . $refundAmount . " MYR.";
 						$reservation->status = "refunded";
+						$reservation->refund_amount = $refundAmount;
+						$reservation->refund_at = Carbon::now();
 						$reservation->save();
 					} else {
 						$result = [
