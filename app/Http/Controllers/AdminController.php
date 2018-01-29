@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
+use App\Notifications\ReservationPaid;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -144,6 +145,10 @@ class AdminController extends Controller
 						$reservation->refund_amount = $refundAmount;
 						$reservation->refund_at = Carbon::now();
 						$reservation->save();
+						
+						$reservation->total_rooms = count($reservation->reservationDetails);
+						$reservation->total_nights = ReservationController::getTotalNight($reservation->check_in, $reservation->check_out);
+						$reservation->notify(new ReservationPaid($reservation));
 					} else {
 						$result = [
 							'status' => false,
