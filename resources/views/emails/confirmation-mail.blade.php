@@ -415,10 +415,12 @@
 														Dear, {{ $reservation->first_name }}</h1>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; padding: 0; text-align: left;">
-														Thank you for your reservation booking with Tempurong Golden Beach Resort! We look forward to welcoming you to our slice of paradise.</p>
+														Thank you for your reservation booking with Tempurong Golden Beach Resort! We look forward
+														to welcoming you to our slice of paradise.</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														Here is your reservation summary; if you have any changes or questions, please don't hesitate to contact us.</p>
+														Here is your reservation summary; if you have any changes or questions, please don't
+														hesitate to contact us.</p>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
@@ -429,13 +431,13 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-6 columns first pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -452,7 +454,7 @@
 										</table>
 									</th>
 									<th class="small-12 large-6 columns last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -553,13 +555,13 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-4 columns first pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -573,7 +575,7 @@
 										</table>
 									</th>
 									<th class="small-12 large-8 columns last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -653,11 +655,12 @@
 													<p class="heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 5px; padding: 0; text-align: left;">
 														<span style="text-transform: uppercase; margin-right: 10px;">check in</span>
-														<span>{{$reservation->check_in}}</span></p>
+														<span>{{\Illuminate\Support\Carbon::parse($reservation->check_in)->format('jS F Y')}}</span>
+													</p>
 													<p class="heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														<span style="text-transform: uppercase; margin-right: 10px;">check out</span>
-														<span>{{$reservation->check_out}}</span><br>
+														<span>{{\Illuminate\Support\Carbon::parse($reservation->check_out)->format('jS F Y')}}</span><br>
 														<i style="margin-right: 10px;">({{$reservation->total_nights + 1}}
 															days, {{$reservation->total_nights}} @if($reservation->total_nights == 1)night)@else
 																night(s))@endif</i>
@@ -848,7 +851,7 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="row"
 							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
@@ -884,14 +887,14 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							@if($reservation->status == 'refunded')
 								<table class="row"
-									   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 									<tbody>
 									<tr style="padding: 0; text-align: left; vertical-align: top;">
 										<th class="small-12 large-4 columns first pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -905,7 +908,7 @@
 											</table>
 										</th>
 										<th class="small-12 large-8 columns last pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -921,13 +924,13 @@
 									</tr>
 									</tbody>
 								</table>
-
+								
 								<table class="row"
-									   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 									<tbody>
 									<tr style="padding: 0; text-align: left; vertical-align: top;">
 										<th class="small-12 large-4 columns first pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -941,7 +944,7 @@
 											</table>
 										</th>
 										<th class="small-12 large-8 columns last pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -957,13 +960,13 @@
 									</tr>
 									</tbody>
 								</table>
-
+								
 								<table class="row"
-									   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+								       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 									<tbody>
 									<tr style="padding: 0; text-align: left; vertical-align: top;">
 										<th class="small-12 large-4 columns first pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -977,14 +980,15 @@
 											</table>
 										</th>
 										<th class="small-12 large-8 columns last pt-20"
-											style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
+										    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 370.66667px;">
 											<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 												<tbody>
 												<tr style="padding: 0; text-align: left; vertical-align: top;">
 													<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 														<p class="heebo-font"
 														   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-															{!! $reservation->refund_at !!}</p>
+															{{\Illuminate\Support\Carbon::parse($reservation->refund_at)->format('jS F Y, H:i:s ')}}
+														</p>
 													</th>
 												</tr>
 												</tbody>
@@ -1038,26 +1042,26 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="spacer"
-								   style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<td height="40px"
-										style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+									    style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
 										&nbsp;
 									</td>
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
-
+									
 									<th class="small-12 large-12 columns first last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -1078,14 +1082,14 @@
 								</tr>
 								</tbody>
 							</table>
-
-
+							
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-12 columns first last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -1095,7 +1099,9 @@
 													</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
-														A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law. This tax is not included in the room rate and must be paid upon check-in. Guests with a valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.
+														A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law.
+														This tax is not included in the room rate and must be paid upon check-in. Guests with a
+														valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.
 													</p>
 												</th>
 											</tr>
@@ -1105,33 +1111,37 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="spacer"
-								   style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<td height="20px"
-										style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+									    style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
 										&nbsp;
 									</td>
 								</tr>
 								</tbody>
 							</table>
-
-
+							
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-12 columns first last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 564px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														If you have any requests for <a href="https://www.tempuronggoldenbeachresort.com/contact" target="_blank" >airport pick-up</a>, <a href="https://www.tempuronggoldenbeachresort.com/activities" target="_blank">activities</a> or <a href="https://www.tempuronggoldenbeachresort.com/food" target="_blank">food</a>, we would be happy to make arrangements for you.
+														If you have any requests for <a href="https://www.tempuronggoldenbeachresort.com/contact"
+														                                target="_blank">airport pick-up</a>, <a
+																		href="https://www.tempuronggoldenbeachresort.com/activities" target="_blank">activities</a>
+														or <a href="https://www.tempuronggoldenbeachresort.com/food" target="_blank">food</a>, we
+														would be happy to make arrangements for you.
 													</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
@@ -1150,46 +1160,48 @@
 								</tr>
 								</tbody>
 							</table>
-
-
+							
 							
 							<hr style="border: 1px solid #866809;">
-
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-4 columns first pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"><p class="text-left heebo-font bold">Home</p></a>
+													<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"><p
+																		class="text-left heebo-font bold">Home</p></a>
 												</th>
 											</tr>
 											</tbody>
 										</table>
 									</th>
 									<th class="small-12 large-4 columns pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="https://www.tempuronggoldenbeachresort.com/faq" target="_blank"><p class="text-left heebo-font bold">FAQ</p></a>
+													<a href="https://www.tempuronggoldenbeachresort.com/faq" target="_blank"><p
+																		class="text-left heebo-font bold">FAQ</p></a>
 												</th>
 											</tr>
 											</tbody>
 										</table>
 									</th>
 									<th class="small-12 large-4 columns last pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 182.666px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="https://www.tempuronggoldenbeachresort.com/policy" target="_blank"><p class="text-left heebo-font bold">Resort Policies</p></a>
+													<a href="https://www.tempuronggoldenbeachresort.com/policy" target="_blank"><p
+																		class="text-left heebo-font bold">Resort Policies</p></a>
 												</th>
 											</tr>
 											</tbody>
