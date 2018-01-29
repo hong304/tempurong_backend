@@ -462,7 +462,7 @@
 													<p class="text-left heebo-font bold">Telephone</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0;">
-														+60 88-230 916</p>
+														+60 088-253 335</p>
 												</th>
 											</tr>
 											</tbody>
