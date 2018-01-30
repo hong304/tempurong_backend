@@ -67,6 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('adminOrderHistory', 'AdminController@getOrderHistory');
 	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
 	Route::post('saveInternalNote', 'AdminController@saveInternalNote');
+	Route::post('/reservation/skip-payment', 'ReservationController@reserveWithoutPay')->name('admin.reservation.update');
 	
 	//test email
 	Route::get('/email/{id?}', 'ReservationController@testEmail')->name('email.test');

@@ -382,6 +382,44 @@ class ReservationController extends Controller
 		
 	}
 	
+	public function reserveWithoutPay(Request $request)
+	{
+		$validator = Validator::make($request->all(), [
+			'sessionId' => 'required'
+		]);
+		if ($validator->fails()) {
+			return ErrorController::validationError("adminSkipPaymentError");
+		} else {
+			
+			DB::beginTransaction();
+			try {
+				$reservation = Reservation::where('session', $request->sessionId)->with(['reservationDetails.roomType'])->first();
+				$reservation->payment_method = 'admin';
+				$reservation->status = "completed";
+				$reservation->save();
+				
+				$reservationDetails = ReservationDetails::where('reservation_id', $reservation->id)->get();
+				foreach ($reservationDetails as $reservationDetail) {
+					$reservationDetail->status = $reservation->status;
+					$reservationDetail->status_time = $reservation->updated_at;
+					$reservationDetail->save();
+				}
+				
+				DB::commit();
+			} catch (\Exception $e) {
+				DB::rollback();
+				return ErrorController::internalError("UpdateReservationError");
+			}
+			
+			// send email
+			$reservation->total_rooms = count($reservation->reservationDetails);
+			$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
+			$reservation->notify(new ReservationPaid($reservation));
+			
+			return ErrorController::successMessage($request->transactionId);
+		}
+		
+	}
 	
 	public function deleteInvalidReservation()
 	{

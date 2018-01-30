@@ -128,7 +128,10 @@ class AdminController extends Controller
 		} else {
 			
 			
-			$reservation = Reservation::where('session', $request->sessionId)->where('status', "completed")->first();
+			$reservation = Reservation::where('session', $request->sessionId)
+				->where('payment_method', 'paypal')
+				->where('status', "completed")
+				->first();
 			
 			if ($reservation) {
 				$checkIn = Carbon::parse($reservation->check_in);
