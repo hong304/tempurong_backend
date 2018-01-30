@@ -21,7 +21,11 @@ class AdminController extends Controller
 			
 			if (isset($request->searchItem)) {
 				$columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session'];
-				$query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note');
+				$query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
+					->where(function ($query) {
+						$query->where('status', 'completed')
+							->orWhere('status', 'refunded');
+					});
 				
 				foreach ($columns as $column) {
 					$query->orWhere($column, 'LIKE', '%' . $request->searchItem . '%');
@@ -31,6 +35,10 @@ class AdminController extends Controller
 				
 			} else {
 				$result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
+					->where(function ($query) {
+						$query->where('status', 'completed')
+							->orWhere('status', 'refunded');
+					})
 					->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
 			}
 			
