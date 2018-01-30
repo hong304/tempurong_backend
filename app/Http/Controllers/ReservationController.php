@@ -427,7 +427,7 @@ class ReservationController extends Controller
 			$query->where('status', 'waiting_for_payment')
 				->orWhereNull('status');
 		})
-			->where('created_at', '<', Carbon::now()->setTimezone(config('app.timezone'))->subMinutes(10)->toDateTimeString());
+			->where('updated_at', '<', Carbon::now()->setTimezone(config('app.timezone'))->subMinutes(10)->toDateTimeString());
 		
 		$reservations->delete();
 		
@@ -436,7 +436,7 @@ class ReservationController extends Controller
 			$query->where('status', 'waiting_for_payment')
 				->orWhereNull('status');
 		})
-			->where('created_at', '<', Carbon::now()->setTimezone(config('app.timezone'))->subMinutes(10)->toDateTimeString());
+			->where('updated_at', '<', Carbon::now()->setTimezone(config('app.timezone'))->subMinutes(10)->toDateTimeString());
 		
 		$reservationDetails->delete();
 		
