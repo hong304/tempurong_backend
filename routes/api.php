@@ -42,10 +42,10 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/checkAvailableRooms', 'ReservationController@postCheckAvailableRooms');
 	Route::post('orderHistory', 'AdminController@postOrderHistory');
 	Route::get('/getEnvironment', 'ReservationController@getEnvironment');
-    Route::post('/refund', 'AdminController@refundTransaction');
-
-
-    // policy
+	Route::post('/refund', 'AdminController@refundTransaction');
+	
+	
+	// policy
 	Route::get('/faqs', 'PolicyController@getFaqs');
 	Route::get('/policies', 'PolicyController@getPolicies');
 	
@@ -62,7 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', 'Auth\LoginController@getProfile');
 	Route::post('profile', 'Auth\LoginController@updateProfile');
 	Route::get('logout', 'Auth\LoginController@logout');
-
+	
 	// admin
 	Route::post('adminOrderHistory', 'AdminController@getOrderHistory');
 	Route::get('orderHistorySummarize', 'AdminController@getOrderHistorySummarize');
@@ -70,4 +70,7 @@ Route::group(['middleware' => 'auth'], function () {
 	
 	//test email
 	Route::get('/email/{id?}', 'ReservationController@testEmail')->name('email.test');
+	
+//	Route::get('/reservation/delete', 'ReservationController@deleteInvalidReservation')->name('reservation.delete');
+	
 });
