@@ -379,7 +379,7 @@ class ReservationController extends Controller
 			$query->where('status', 'waiting_for_payment')
 				->orWhereNull('status');
 		})
-			->whereTime('created_at', '<', Carbon::now()->subMinutes(30)->toDateTimeString());
+			->whereTime('created_at', '<', Carbon::now()->subMinutes(10)->toDateTimeString());
 		
 		$reservations->delete();
 		
@@ -388,7 +388,7 @@ class ReservationController extends Controller
 			$query->where('status', 'waiting_for_payment')
 				->orWhereNull('status');
 		})
-			->whereTime('created_at', '<', Carbon::now()->subMinutes(30)->toDateTimeString());
+			->whereTime('created_at', '<', Carbon::now()->subMinutes(10)->toDateTimeString());
 		
 		$reservationDetails->delete();
 		
