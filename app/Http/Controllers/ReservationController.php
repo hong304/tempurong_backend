@@ -48,7 +48,11 @@ class ReservationController extends Controller
 				return ErrorController::validationError("orderInfoError");
 			} else {
 				// if no error, put reservation details into DB
-				$session_id = uniqid() . mt_rand(100, 999);
+				if ($request->sessionId) {
+					$session_id = $request->sessionId;
+				} else {
+					$session_id = uniqid() . mt_rand(100, 999);
+				}
 				
 				$orderInfo = $request->order;
 				foreach ($orderInfo['roomObjects'] as $roomType) {
@@ -66,8 +70,11 @@ class ReservationController extends Controller
 					$orderInfo = $request->order;
 					
 					// insert reservation
-					$reservation = new Reservation();
-					$reservation->session = $session_id;
+					$reservation = Reservation::where('session', $session_id)->first();
+					if (!$reservation) {
+						$reservation = new Reservation();
+						$reservation->session = $session_id;
+					}
 					
 					$reservation->first_name = $clientInfo['firstName'];
 					$reservation->last_name = $clientInfo['lastName'];
@@ -92,6 +99,9 @@ class ReservationController extends Controller
 					
 					$reservation->save();
 					
+					// delete all previous reservation details
+					
+					ReservationDetails::where('reservation_id', $reservation->id)->delete();
 					// insert reservation Details
 					foreach ($orderInfo['roomObjects'] as $roomType) {
 						$noOfRoom = (int)$roomType['noOfRoom'];
