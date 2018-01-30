@@ -414,11 +414,11 @@
 													    style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 36px; font-weight: 300; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal;">
 														Dear, {{ $reservation->first_name }}</h1>
 													<p class="text-left heebo-font"
-													   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; padding: 0; text-align: left;">
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; padding: 0; text-align: left;">
 														Thank you for your reservation booking with Tempurong Golden Beach Resort! We look forward
 														to welcoming you to our slice of paradise.</p>
 													<p class="text-left heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+													   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3;  margin-bottom: 10px; padding: 0; text-align: left;">
 														Here is your reservation summary; if you have any changes or questions, please don't
 														hesitate to contact us.</p>
 												</th>
@@ -431,13 +431,13 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-6 columns first pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 274px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -557,11 +557,11 @@
 							</table>
 							
 							<table class="row"
-								   style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+							       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 								<tbody>
 								<tr style="padding: 0; text-align: left; vertical-align: top;">
 									<th class="small-12 large-4 columns first pt-20"
-										style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
+									    style="Margin: 0 auto; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-bottom: 8px; padding-left: 20px !important; padding-right: 20px !important; text-align: left; width: 177.33333px;">
 										<table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -887,7 +887,7 @@
 								</tr>
 								</tbody>
 							</table>
-
+							
 							@if($reservation->status == 'refunded')
 								<table class="row"
 								       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
@@ -1029,9 +1029,6 @@
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">click
 															here</a>.
 													</p>
-													<p class="text-left heebo-font"
-													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-														Tempurong Golden Beach Resort</p>
 												</th>
 												<th class="expander"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
@@ -1137,6 +1134,10 @@
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														If you choose to cancel your booking, cancellation fees will apply.  Please refer to our <a href="{{config('app.url')}}/policy" target="_blank">cancellation policy</a>.
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														If you have any requests for <a href="{{config('app.url')}}/contact"
 														                                target="_blank">airport pick-up</a>, <a
 																		href="{{config('app.url')}}/activities" target="_blank">activities</a>
@@ -1174,7 +1175,8 @@
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="{{config('app.url')}}/" target="_blank"><p class="text-left heebo-font bold">Home</p></a>
+													<a href="{{config('app.url')}}/" target="_blank"><p class="text-left heebo-font bold">Home</p>
+													</a>
 												</th>
 											</tr>
 											</tbody>
@@ -1186,7 +1188,8 @@
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="{{config('app.url')}}/faq" target="_blank"><p class="text-left heebo-font bold">FAQ</p></a>
+													<a href="{{config('app.url')}}/faq" target="_blank"><p class="text-left heebo-font bold">
+															FAQ</p></a>
 												</th>
 											</tr>
 											</tbody>
@@ -1198,7 +1201,8 @@
 											<tbody>
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: center;">
-													<a href="{{config('app.url')}}/policy" target="_blank"><p class="text-left heebo-font bold">Resort Policies</p></a>
+													<a href="{{config('app.url')}}/policy" target="_blank"><p class="text-left heebo-font bold">
+															Resort Policies</p></a>
 												</th>
 											</tr>
 											</tbody>

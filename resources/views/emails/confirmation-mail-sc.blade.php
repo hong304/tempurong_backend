@@ -365,7 +365,7 @@
 											<tr style="padding: 0; text-align: left; vertical-align: top;">
 												<th class="pt-20"
 												    style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; padding-left: 20px !important; padding-right: 20px !important; text-align: left;">
-													<img src="https://www.tempuronggoldenbeachresort.com/static/img/logo.png" alt="Tempurong"
+													<img src="{{config('app.url')}}/static/img/logo.png" alt="Tempurong"
 													     style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; max-width: 100%; outline: none; text-decoration: none; height: 40px; padding-top:16px; float:left; margin-right: 10px;">
 												</th>
 												<th class="expander"
@@ -976,9 +976,15 @@
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
 														如需更多详情请按
-														<a href="https://www.tempuronggoldenbeachresort.com/reservations/details/{{$reservation->session}}"
+														<a href="{{config('app.url')}}/reservations/details/{{$reservation->session}}"
 														   target="_blank"
 														   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">此</a>.
+													</p>
+													<p class="text-left heebo-font"
+													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
+														如果你想要进行退款，请查看我们的<a href="{{config('app.url')}}/reservations/details/{{$reservation->session}}"
+														                   target="_blank"
+														                   style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">取消政策</a>。
 													</p>
 													<p class="text-left heebo-font"
 													   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
@@ -1017,7 +1023,7 @@
 													</table>
 													<p class="text-center heebo-font small"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 10pt; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-														<a href="https://www.tempuronggoldenbeachresort.com/" target="_blank"
+														<a href="{{config('app.url')}}/" target="_blank"
 														   style="Margin: 0; color: #866809; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">www.tempuronggoldenbeachresort.com</a>
 													</p>
 													<p class="text-center heebo-font small"
