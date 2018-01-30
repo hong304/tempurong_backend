@@ -68,6 +68,21 @@ class AdminController extends Controller
 		}
 		
 		if ($reservation) {
+			if (Auth::check() && $reservation->status != 'refunded') {
+				$checkIn = Carbon::parse($reservation->check_in);
+				$now = Carbon::now();
+				
+				$dateDiff = $now->diffInDays($checkIn, false);
+				
+				if ($dateDiff >= 31) {
+					$refundAmount = $reservation->amount * 0.75;
+				} else if ($dateDiff >= 15) {
+					$refundAmount = $reservation->amount * 0.5;
+				} else {
+					$refundAmount = 0;
+				}
+				$reservation->amount_canbe_refund = $refundAmount;
+			}
 			$result = [
 				'status' => true,
 				'message' => 'Reservation Found.',
