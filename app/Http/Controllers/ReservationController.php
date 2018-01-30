@@ -412,9 +412,9 @@ class ReservationController extends Controller
 			}
 			
 			// send email
-			$reservation->total_rooms = count($reservation->reservationDetails);
-			$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
-			$reservation->notify(new ReservationPaid($reservation));
+//			$reservation->total_rooms = count($reservation->reservationDetails);
+//			$reservation->total_nights = $this->getTotalNight($reservation->check_in, $reservation->check_out);
+//			$reservation->notify(new ReservationPaid($reservation));
 			
 			return ErrorController::successMessage($request->transactionId);
 		}
