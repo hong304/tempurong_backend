@@ -174,4 +174,19 @@ class AdminController extends Controller
 		}
 		
 	}
+	
+	public function saveInternalNote(Request $request)
+	{
+		$reservation = Reservation::where('session', $request->sessionId)->first();
+		
+		$reservation->internal_note = $request->internal_note;
+		
+		$reservation->save();
+		
+		$result = [
+			'status' => true,
+			'message' => 'Internal Notes is saved.'
+		];
+		return response()->json($result, 200);
+	}
 }
