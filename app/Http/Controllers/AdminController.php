@@ -56,7 +56,7 @@ class AdminController extends Controller
 			$reservation = $reservation->where(function ($query) {
 				$query->where('status', 'completed')
 					->orWhere('status', 'refunded');
-			});
+			})->exclude(['transaction_id', 'internal_note']);
 		}
 		
 		$reservation = $reservation->first();
@@ -68,7 +68,6 @@ class AdminController extends Controller
 		}
 		
 		if ($reservation) {
-			$reservation->isAdmin = Auth::check();
 			$result = [
 				'status' => true,
 				'message' => 'Reservation Found.',
