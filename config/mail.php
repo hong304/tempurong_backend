@@ -56,7 +56,7 @@ return [
 	 */
 	
 	'from' => [
-		'address' => env('MAIL_FROM_EMAIL', 'no-reply@tempuronggoldenbeachresort.com'),
+		'address' => env('MAIL_FROM_EMAIL', 'no-reply@mail.tempuronggoldenbeachresort.com'),
 		'name' => env('MAIL_FROM_NAME', 'Tempurong Golden Beach Resort'),
 	],
 
