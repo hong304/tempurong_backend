@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-30 09:51:43 +0000
+# Generation Time: 2018-02-02 04:44:00 +0000
 # ************************************************************
 
 
@@ -300,9 +300,9 @@ LOCK TABLES `foods` WRITE;
 
 INSERT INTO `foods` (`id`, `name_en`, `name_sc`, `subtitle_en`, `subtitle_sc`, `image_path`, `description_en`, `description_sc`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'Barbeque','烧烤','Most popular for sunset dinners','最受欢迎的日落晚餐','/static/img/food/bbq.jpg','Guests love having BBQs on our Sunset Terrace, where we’re on the long flat beach with few people and Mother Nature’s glorious sunset show. You can request certain types of seafood or meats and we will do our best to accommodate!','客人喜欢在露台上享用烧烤美食，在长长平坦的海滩上，观赏宁静的大自然和色彩英辉的日落，很是美丽！。你可以要求不同种类的食材，我们可以尽量地迎合您的饮食需求！',NULL,NULL,NULL),
+	(1,'Barbeque','烧烤','Most popular for sunset dinners','最受欢迎的日落晚餐','/static/img/food/bbq.jpg','Guests love having BBQs on our Sunset Terrace, where we’re on the long flat beach with few people and Mother Nature’s glorious sunset show. You can request certain types of seafood or meat and we will do our best to accommodate!','客人喜欢在露台上享用烧烤美食，在长长平坦的海滩上，观赏宁静的大自然和色彩英辉的日落，很是美丽！。你可以要求不同种类的食材，我们可以尽量地迎合您的饮食需求！',NULL,NULL,NULL),
 	(2,'Steamboat Hotpot','海鲜火锅','Great for families and groups','非常适合家庭和团体','/static/img/food/hotpot.jpg','With all these amazing ingredients, it’s no surprise that Steamboat is one of our most requested meals. We have two different stocks (one can be a spicy option) where all kinds of meats and vegetables can be dipped and feasted on. At the very end, the most delicious soup will be ready to finish off the meal!','凭借所有这些丰富的材料，火锅成为了我们最受欢迎的餐点之一。我们有两种不同的选择（鲜味与辣味），各种肉类和蔬菜都可以放进锅里享用。最后，当所有精华鲜味都沉淀在这锅汤底，最美味可口的汤将为您结束这顿饭！',NULL,NULL,NULL),
-	(3,'Fresh Seafood','新鲜的海鲜','Sabah must-try!','来沙巴一定要吃！','/static/img/food/seafood.jpg','If you visit Kota Kinabalu, you must indulge in the seafood! We can offer large, juicy tiger prawns, skate, clams, crab and a variety of delicious fish to be served up fried, grilled, or steamed. We can create a customize menu as long as we have some notice. Yum!','来哥打京那巴鲁旅游的您必定会沉迷于这里的海鲜！我们提供又大而多汁的老虎虾，蛤蜊，螃蟹和各种美味的鱼，可以炸，烤或蒸，可口美味！若提早预订，我们可以让您自订菜单。',NULL,NULL,NULL),
+	(3,'Fresh Seafood','新鲜的海鲜','Sabah must-try!','来沙巴一定要吃！','/static/img/food/seafood.jpg','If you visit Kota Kinabalu, you must indulge in the seafood! We can offer large, juicy tiger prawns, skate, clams, crab and a variety of delicious fish to be served up fried, grilled, or steamed. We can create a customized menu as long as we have some notice. Yum!','来哥打京那巴鲁旅游的您必定会沉迷于这里的海鲜！我们提供又大而多汁的老虎虾，蛤蜊，螃蟹和各种美味的鱼，可以炸，烤或蒸，可口美味！若提早预订，我们可以让您自订菜单。',NULL,NULL,NULL),
 	(4,'Vegetarian','素食者','Organic, fresh, and locally grown','有机，新鲜，当地种植','/static/img/food/vegetable.jpg','Vegetarians rejoice, there is plenty for you to enjoy in such a plentiful region! There are lots of local and wild vegetation that aren’t found anywhere else, with great textures to enjoy. Some have delicate, flavorsome leaves, some with a nice crunch, and some that are best when just cut.','素食者在这样一个充满朝气和很多新鲜食材选择的地方，可以尽情享受美食！有许多野生植物是在其他地方很难找到的。特别是刚刚摘下来蔬菜水果；味道鲜甜特美味！',NULL,NULL,NULL),
 	(5,'Wild Chicken','放养鸡','Truly “free-range” and locally caught','真正的“自由放养”和现捕的鸡只','/static/img/food/wildchicken.jpg','Did you know that different kinds of chickens taste slightly different? Wild chickens roam around and we can catch and prepare them for you fresh. Talk about free range! Ask us about our choice in chickens.','你知道不同种类的鸡在肉质上，略有不同的味道和口感吗？待品尝了才知道箇中滋味。现捕的放养鸡别有一番風味！',NULL,NULL,NULL),
 	(6,'Western Style Breakfast','西式早餐','Comfortable and familiar','舒适而简单的早餐','/static/img/food/breakfast.jpg','If you’re craving a light breakfast, we also have the option for eggs, omelettes, sausages and toast with fresh fruit. If you would prefer something specific, please let us know so that we can stock the kitchen for your comfort!','简单滋味的美式早餐既有营养也足够提供一天的热量。若有其他需求，也不妨提前让我们知道，以便提供合适您口味的餐饮。',NULL,NULL,NULL);
@@ -321,6 +321,111 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`)
+VALUES
+	(6,'2016_06_01_000001_create_oauth_auth_codes_table',1),
+	(7,'2016_06_01_000002_create_oauth_access_tokens_table',1),
+	(8,'2016_06_01_000003_create_oauth_refresh_tokens_table',1),
+	(9,'2016_06_01_000004_create_oauth_clients_table',1),
+	(10,'2016_06_01_000005_create_oauth_personal_access_clients_table',1);
+
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_access_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_access_tokens`;
+
+CREATE TABLE `oauth_access_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `client_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_access_tokens_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_auth_codes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_auth_codes`;
+
+CREATE TABLE `oauth_auth_codes` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_clients`;
+
+CREATE TABLE `oauth_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `personal_access_client` tinyint(1) NOT NULL,
+  `password_client` tinyint(1) NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_clients_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_personal_access_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_personal_access_clients`;
+
+CREATE TABLE `oauth_personal_access_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_refresh_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_refresh_tokens`;
+
+CREATE TABLE `oauth_refresh_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
@@ -364,7 +469,7 @@ VALUES
 	(2,'Tourism Tax','旅游税','A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law. This tax is not included in the room rate and must be paid upon check-in. Guests with a valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.','马来西亚法律规定，所有外国客人必需缴付每间客房每晚MYR10的旅游税。这笔税费不包含在房价内，且必须在办理入住时支付。持有有效的马来西亚身份证或有效的永久居民身份证的客人可获得豁免。',NULL,NULL),
 	(3,'Payment for Accommodation Booking','支付住宿预订','Our website is built to handle transactions for accommodation only. You may pay by PayPal, credit card (Visa and Mastercard only). Any outstanding charges may be settled in cash on-site, PayPal or direct bank transfer.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing. If you’d like to add more people, mattresses, rooms, meals, etc. please contact us directly and we will do our best to accommodate.\n\nIf you arrive with more people and/or require more services than paid for, you will be expected to settle the correct and remaining amount in person with cash (we are unable to process credit cards on-site).','我们的网站是专为处理住宿交易而设计的。您可以通过PayPal，维萨信用卡（ Visa）或万事达卡（Mastercard）付款。任何未支付的费用可通过现场支付，PayPal或直接银行转账。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发货后5天内没有收到错误通知，金沙龙虾湾度假村不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n如果你想添加更多的人，床垫，房间，餐食等，请直接与我们联系，我们将尽我们所能安排。 如果您抵达的人数更多，并且/或者需要更多的服务，您将需要现金支付（我们无法在现场处理信用卡支付）。',NULL,NULL),
 	(4,'Deposit and Final Payment for Tours','订金和旅游配套的最终付款事项','Any additional tours or services require a non-refundable, non-transferable deposit of 25%. Note that bookings are not confirmed nor secure until TGBR receives this deposit and you receive a confirmation invoice. TGBR reserves the right to release or cancel any bookings being held where this required deposit has not been received by the deposit due date. Payment of the deposit indicates you have read and accepted these Terms and Conditions.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing.\n\nFinal payment for your booking is due 30 days prior to commencement of services. If final payment is not received by the due date, your reservation will be cancelled and TGBR will retain your full deposit. TGBR is not responsible for cancelled land and/or air reservations in the event payment is not received by the final payment date. If a booking is made within 30 days prior to arrival, full payment will be required at the time of booking.\n\nAll payments shall be made either by credit card or telegraphic transfer to the appropriate account:','任何额外的旅行或服务都需要缴付25％的押金，押金不可退款和不可转让。请注意，只有在金沙龙虾湾度假村收到这笔押金后，您才能获得确认发票。金沙龙虾湾度假村保留取消任何在存款到期日前仍未缴的押金的预订的权利。支付押金表示您已经阅读并接受这些条款及细则。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发出预订发票后5天内没有收到错误通知，金沙龙虾湾度假村将不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n您的预订的最后付款日期应在服务开始前30天。如果到期日未收到最终付款，您的预订将被取消，金沙龙虾湾度假村将沒收您的全额押金。如果在最后付款日期没有收到付款，金沙龙虾湾度假村不会负责因没有付款而被取消的服务和房间预订。如果客人在抵达前30天内预订，则需在预订时支付全额费用。\n\n所有的付款都应通过信用卡或电汇转账到度假村的账户：','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD'),
-	(5,'Cancellation By You','您取消的预订服务','If Tempurong Golden Beach Resort receives a cancellation after a booking has been made, standard cancellation fees as stated below will apply.\n','如果金沙龙虾湾度假村在您该支付余款的截止日期之前收到取消预订服务，您的押金将不会退还。标准取消费如以下所述：','If a cancellation is made :\n\n31 days or more  prior to arrival a 75% refund will apply 30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n','抵达前31天或以前取消，将退还75％的费用\r\n抵达前30  -  15天取消，将退还50％的费用\r\n将在抵达前14  -  0天取消，将不会退还任何的费用\n'),
+	(5,'Cancellation By You','您取消的预订服务','If Tempurong Golden Beach Resort receives a cancellation after a booking has been made, standard cancellation fees as stated below will apply.\n','如果金沙龙虾湾度假村在您该支付余款的截止日期之前收到取消预订服务，您的押金将不会退还。标准取消费如以下所述：','If a cancellation is made :\n\n31 days or more  prior to arrival a 75% refund will apply \n30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n','抵达前31天或以前取消，将退还75％的费用\r\n抵达前30  -  15天取消，将退还50％的费用\r\n将在抵达前14  -  0天取消，将不会退还任何的费用\n'),
 	(6,'Refund of Unused Services','未使用的服务的退款','No refunds or exchanges can be made in respect of accommodation, meals, sightseeing tours, transport or any other services that are included in the tour pieces but not utilized by the tour member.','在旅游项目中包括的未被旅游团成员使用的住宿，餐饮，观光旅游，交通或任何其他服务，将不予退款或换成任何其他服务。',NULL,NULL),
 	(7,'Force Majeure','不可抗力','If as a consequence of \'Force Majeure\' as defined below, TGBR is obliged to curtail, alter, extend or cancel the tour, the customer shall not be at liberty to maintain a claim for compensation or otherwise for any loss arising as a consequence of said curtailment, alteration, extension or cancellation of the tour. \'Force Majeure\' means Acts of God, natural disasters, adverse weather conditions, fire or other destruction of any vessel, craft or vehicle to be used in connection with a holiday, destruction or damage to holiday accommodation, riots, acts of war, civil commotion, exercise of legislative or government action, municipal or military or other authority, strikes, industrial action, requisition of equipment, mechanical breakdown, shortage of fuel, insolvency or default of any carrier or service connected with the tour, fraud perpetrated against TGBR.','如果是因为下面定义的「不可抗力」，金沙龙虾湾度假村有义务限制、更改、延长或取消旅程，而客户不可向金沙龙虾湾度假村索取赔偿，或因其他原因造成的任何损失而削减，改变，延长或取消行程。 「不可抗力」是指自然灾害，不利的天气条件，火灾或其他任何与度假有关的船只，船只或车辆的毁坏，假日住宿的破坏或损坏，骚乱，战争行为，民事行政，立法或政府行动，市政或军事或其他权力，罢工，工业行为，设备的征用，机械故障，燃料短缺，破产或任何与旅游有关的承运人或服务的拖延，对金沙龙虾湾度假村的欺诈行为。',NULL,NULL),
 	(8,'Customers with Special Needs','有特殊需求的客户','It shall be the guest’s responsibility to disclose, prior to booking, to TGBR any physical or mental condition of a member of his party that may be relevant. TGBR reserves the right to decline to provide the accommodation, services or tour for a person where, in the opinion of the company, that the mentioned would be inconsistent with the special needs of that person. No liability shall attach to TGBR for the provision of an unsuitable service, accommodation or tour for any person where that person\'s special needs have not been disclosed at the time of booking.','客人有责任在预订前向金沙龙虾湾度假村披露其自己的身体或精神状况，或任何相关可能的情况。金沙龙虾湾度假村有权拒绝为它认为所提供的住宿，服务或旅游不符合该人的特殊需要。如果您在预订时并未透露您及您的同行旅伴的特殊需求，则不应向金沙龙虾湾度假村要求提供不适当的服务，住宿或旅游的责任。',NULL,NULL),
@@ -401,6 +506,21 @@ CREATE TABLE `reservation_details` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservation_details` WRITE;
+/*!40000 ALTER TABLE `reservation_details` DISABLE KEYS */;
+
+INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `mattress`, `breakfast`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,1,1,1,262,4,NULL,0,1,'waiting_for_payment',NULL,'2018-04-14','2018-04-15',NULL,NULL,'2018-01-30 19:00:55','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(2,2,1,1,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-04-14','2018-04-15',NULL,NULL,'2018-01-30 19:00:55','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(3,3,1,2,262,4,NULL,0,1,'waiting_for_payment',NULL,'2018-04-14','2018-04-15',NULL,NULL,'2018-01-30 19:01:05','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(4,4,1,2,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-04-14','2018-04-15',NULL,NULL,'2018-01-30 19:01:05','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(5,1,1,3,262,4,NULL,0,1,'completed',NULL,'2018-04-14','2018-04-15','2018-01-30 19:11:25',NULL,'2018-01-30 19:11:21','2018-02-01 12:49:47',NULL),
+	(6,2,1,3,250,4,NULL,0,0,'completed',NULL,'2018-04-14','2018-04-15','2018-01-30 19:11:25',NULL,'2018-01-30 19:11:21','2018-02-01 12:49:47',NULL),
+	(10,1,1,4,1000,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-02','2018-02-06',NULL,NULL,'2018-02-01 12:52:16','2018-02-01 13:10:02','2018-02-01 13:10:02');
+
+/*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table reservations
@@ -436,6 +556,18 @@ CREATE TABLE `reservations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+
+INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `country_code`, `tel`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`, `refund_at`, `refund_amount`, `internal_note`)
+VALUES
+	(1,'Rigel','Mayo',NULL,'bojeqyrope@gmail.com','187','2142-4485',2,0,'2018-04-14','2018-04-15','en','Nulla nostrum eius aut voluptatibus enim','Et sunt ducimus quis quis quod officia quisquam iusto omnis aliqua Omnis reiciendis tenetur eaque',512,'paypal','2018-01-30 19:00:55','2018-01-30 19:20:01','2018-01-30 19:20:01','waiting_for_payment','5a70506782d9a925',NULL,NULL,NULL),
+	(2,'Rigel','Mayo',NULL,'bojeqyrope@gmail.com','187','2142-4485',2,0,'2018-04-14','2018-04-15','en','Nulla nostrum eius aut voluptatibus enim','Et sunt ducimus quis quis quod officia quisquam iusto omnis aliqua Omnis reiciendis tenetur eaque',512,'paypal','2018-01-30 19:01:05','2018-01-30 19:20:01','2018-01-30 19:20:01','waiting_for_payment','5a705071a6281988',NULL,NULL,NULL),
+	(3,'Rigel','Mayo',NULL,'bojeqyrope@gmail.com','187','2142-4485',2,0,'2018-04-14','2018-04-15','en','Nulla nostrum eius aut voluptatibus enim','Et sunt ducimus quis quis quod officia quisquam iusto omnis aliqua Omnis reiciendis tenetur eaque',512,'admin','2018-01-30 19:11:21','2018-01-30 19:11:25',NULL,'completed','5a7052d90e2ab719',NULL,NULL,NULL),
+	(4,'Hilton','Lam',NULL,'hong304@gmail.com','535','95232303',2,0,'2018-02-02','2018-02-06','en','.....','........',1000,'paypal','2018-02-01 12:52:16','2018-02-01 13:10:02','2018-02-01 13:10:02','waiting_for_payment','5a729d001dc99400',NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table room_images
@@ -490,7 +622,7 @@ LOCK TABLES `room_types` WRITE;
 
 INSERT INTO `room_types` (`id`, `name_en`, `name_sc`, `room_title_en`, `room_title_sc`, `room_subtitle_en`, `room_subtitle_sc`, `cover_image`, `description_en`, `description_sc`, `capacity`, `size_en`, `size_sc`, `add_bed`, `queen_bed`, `bunk_bed`, `price`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
-	(1,'sea view','海景房','8 Family Rooms','八间家庭房型',NULL,NULL,'/static/img/room_type/sea-view.jpg','Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar. \n','我们的海景房距离沙滩仅有20步之遥，能够容纳从小家庭到单身旅客的任何人，顾客可以拥有自己的理想空间。每间房都配备了两张大床，一个空调机组，一个风扇，一个带西式冲水厕所和热水淋浴的浴室。客房面向美丽的海滩，客人可以享受在吊床吹海风和看夕阳海景等。',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,2,NULL,250,NULL,NULL,NULL),
+	(1,'sea view','海景房','8 Family Rooms','八间家庭房型',NULL,NULL,'/static/img/room_type/sea-view.jpg','Just 20 steps from the sandy beach, our Sea View rooms are private lodgings capable of accommodating anyone from a small family to a single traveler who just wants a space to call their own. Each one comes complete with two queen sized beds, an air conditioning unit, a fan, mosquito nets, and a bathroom with western flushing toilets and hot water for showers. The rooms face out onto a beautiful spread of beach where guests can enjoy hammocks and our sunset bar.','我们的海景房距离沙滩仅有20步之遥，能够容纳从小家庭到单身旅客的任何人，顾客可以拥有自己的理想空间。每间房都配备了两张大床，一个空调机组，一个风扇，一个带西式冲水厕所和热水淋浴的浴室。客房面向美丽的海滩，客人可以享受在吊床吹海风和看夕阳海景等。',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,2,NULL,250,NULL,NULL,NULL),
 	(2,'river view','河景房','3 Mixed-Dormitory Rooms','3间混合房型','3 mix dormitory river view rooms with 2 double decker & 1 queen bed (6pax)','3间河景房，各有2张双层床和1张双人大床（6人房）','/static/img/room_type/river-view-large.jpg','The River View Mixed-Dormitory Rooms can accommodate up to six people with double-decker beds. Located above the main entrance and dining area, the main differences between the two types of River View rooms are the amount of beds and the maximum number of guests it allows. It is still very close to the beach, about a 15-second walk over a small bridge.','河景混合宿舍间最多可容纳6人，配有双层床。位于主入口和用餐区之上，两种河景房的主要区别在于床的数量和允许的最大客人数量。它离海滩还很近，步行15秒左右就能到达一座小桥。',6,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',0,1,2,300,NULL,NULL,NULL),
 	(3,'river view','河景房','2 Family Rooms','两间家庭式房型','2 family rooms river view rooms with 1 double decker & 1 queen bed (4pax)','2间家庭河景房，各有1张双层床位和1张双人大床（4人房）','/static/img/room_type/river-view-family.jpg','The River View Family Room accommodates four people comfortably with the option to add a single floor-mattress for a maximum of five. It is located above the dining area and is a 15-second skip over a small bridge from the beach. ','河景家庭房可容纳4人舒适地与选择增加一个唯一地板床垫最多五人。位于用餐区上方，距离海滩的小桥不到15秒。\n',4,'16 sq. ft by 15 sq ft = 240 square feet','每间房16平方英呎 X 15平方英呎= 240平方英呎',1,1,1,250,NULL,NULL,NULL);
 
