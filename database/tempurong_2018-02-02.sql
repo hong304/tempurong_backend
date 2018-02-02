@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.21-0ubuntu0.16.04.1)
 # Database: tempurong
-# Generation Time: 2018-01-30 09:51:43 +0000
+# Generation Time: 2018-02-02 04:31:53 +0000
 # ************************************************************
 
 
@@ -235,7 +235,8 @@ VALUES
 	(15,'ggg','ggkkk','gg@buildonauts.com','ggah ash jdas das dsa das','2017-12-14 07:04:05','2017-12-14 07:04:05'),
 	(16,'abc','again','test@abc.com','asdsadsadsads','2017-12-14 07:37:24','2017-12-14 07:37:24'),
 	(17,'test','asdas','test@hello.com','hsajkdhajskhdjkashdisa sad as','2017-12-14 07:41:14','2017-12-14 07:41:14'),
-	(18,'sadfg','sfdgfhg','hong304@gmail.com','sfdgf\nsgdfhf\nsgfhzdjgxf\nsrd','2018-01-10 07:42:23','2018-01-10 07:42:23');
+	(18,'sadfg','sfdgfhg','hong304@gmail.com','sfdgf\nsgdfhf\nsgfhzdjgxf\nsrd','2018-01-10 07:42:23','2018-01-10 07:42:23'),
+	(19,'Hx','Hshs','Hsh@gmail.com','Hdhd','2018-02-02 12:26:28','2018-02-02 12:26:28');
 
 /*!40000 ALTER TABLE `enquiries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -323,6 +324,160 @@ CREATE TABLE `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`)
+VALUES
+	(6,'2016_06_01_000001_create_oauth_auth_codes_table',1),
+	(7,'2016_06_01_000002_create_oauth_access_tokens_table',1),
+	(8,'2016_06_01_000003_create_oauth_refresh_tokens_table',1),
+	(9,'2016_06_01_000004_create_oauth_clients_table',1),
+	(10,'2016_06_01_000005_create_oauth_personal_access_clients_table',1);
+
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_access_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_access_tokens`;
+
+CREATE TABLE `oauth_access_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `client_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_access_tokens_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_access_tokens` WRITE;
+/*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`)
+VALUES
+	('0186593f5833a931af482f213020017c1eb5428a62ddcc406de3c3950feac0451ed4bbbf0bc434a8',1,1,'MyApp','[]',0,'2018-01-03 04:08:04','2018-01-03 04:08:04','2019-01-03 04:08:04'),
+	('0221ef689ba5476658a1788dbbd5c7d61a515694e506726191b6e83050d3250d8d04ca7cff49f954',1,1,'kay','[]',0,'2018-01-03 04:41:44','2018-01-03 04:41:44','2019-01-03 04:41:44'),
+	('1dd8f68b10485479c2170ff17fb7fbb8b5611cf9053fcd27fc4592cedf891cf459112eb5c8de51b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:16','2018-01-03 04:07:16','2019-01-03 04:07:16'),
+	('25fcf21019642406fa74584c66d6becb89f1f341a1d006afb3c8a7d71a927a317ef9568da635307f',1,1,'MyApp','[]',0,'2018-01-03 04:08:52','2018-01-03 04:08:52','2019-01-03 04:08:52'),
+	('2d77a70ba998d32bac64e7e06fcca93282c4a980b1dc172c21b0870d0a6615e9d3afa38b9a826459',1,1,'MyApp','[]',0,'2018-01-03 04:08:05','2018-01-03 04:08:05','2019-01-03 04:08:05'),
+	('36a660eedfdf27c4f458c2a92ad7676f24ae27f52585d2b8db1d2b33a314201cd680ce34fe278c3d',1,1,'MyApp','[]',0,'2018-01-03 04:07:52','2018-01-03 04:07:52','2019-01-03 04:07:52'),
+	('4bd56d90fb901edf1c5ce52bb9d439ef27ea94a69c4bd0aa25fe9bb5143209114bcc37c1e6939b61',1,1,'MyApp','[]',0,'2018-01-03 04:02:55','2018-01-03 04:02:55','2019-01-03 04:02:55'),
+	('5c09c46de549eddfe956665ef57727d680a82eaecab9c5a807c3922e0a4fa1ac201a1797addf1aa4',1,1,'MyApp','[]',0,'2018-01-03 04:07:12','2018-01-03 04:07:12','2019-01-03 04:07:12'),
+	('5dd79daa6600b633937c9da3eb266403db411453c4b4f8643258be3a0a0310f491f6a380153f71bb',1,1,'MyApp','[]',0,'2018-01-03 04:07:51','2018-01-03 04:07:51','2019-01-03 04:07:51'),
+	('62d6811a8cc178c07be3e81051cf2facf06a1b9d5602eea702bc262ce9178987a522f76d7698c494',1,1,'MyApp','[]',0,'2018-01-03 04:09:44','2018-01-03 04:09:44','2019-01-03 04:09:44'),
+	('6fd766b9136e7ff986ab185ccafba6beda963d4e7ab6000ad7c284c321279c4cb0d4bece1e4f5aa9',1,1,'kay','[]',0,'2018-01-03 04:43:51','2018-01-03 04:43:51','2019-01-03 04:43:51'),
+	('7a1ef933b6c3fc816049b0a56acb7778e37df84fe9b2380a5d5a0e355e7b00acad803e1314222be0',1,1,'kay','[]',0,'2018-01-03 07:57:56','2018-01-03 07:57:56','2019-01-03 07:57:56'),
+	('88a7a4942c41e83ac7e9dd5c8a97de353be6b0260e3a26083cecd30d7ed895ad12823be822ae3abd',1,1,'MyApp','[]',0,'2018-01-03 04:09:09','2018-01-03 04:09:09','2019-01-03 04:09:09'),
+	('9731d925138cb15fb15ae949b99d87e8eec9a14dfea74d0c23aa87a448ca846e2901796206ea2072',1,1,'kay','[]',0,'2018-01-03 04:42:03','2018-01-03 04:42:03','2019-01-03 04:42:03'),
+	('98182b24fbaf125e8d42dcb43dbbf9dd6b08b201e776b56f3c3df3e7b9ca8edb73702d8f0a993d1b',1,1,'MyApp','[]',0,'2018-01-03 04:03:06','2018-01-03 04:03:06','2019-01-03 04:03:06'),
+	('9e9dbdc8dfbc172e074821db7849d4533aca438043862604a1a9cf12b4eb08d7f94ede05d526dca9',1,1,'MyApp','[]',0,'2018-01-03 03:26:05','2018-01-03 03:26:05','2019-01-03 03:26:05'),
+	('a203eda1e89a47671d9077c0c9210ba18ab1d7d6430b55729de39cf7b9523abcbedd1183623dac3e',1,1,'MyApp','[]',0,'2018-01-03 04:08:53','2018-01-03 04:08:53','2019-01-03 04:08:53'),
+	('c8c4e18af2455550458ea4dfa3274d7cf93f15742ab1fa9b7d764f69a6da13fe8f7a60c593d1d83d',1,1,'MyApp','[]',0,'2018-01-03 04:09:42','2018-01-03 04:09:42','2019-01-03 04:09:42'),
+	('df1ae240eac66dbcad172c3d210e2ff1b62b98b004fe7b4ff8131977929c7370a001ce4615ca32be',1,1,'kay','[]',0,'2018-01-03 07:31:52','2018-01-03 07:31:52','2019-01-03 07:31:52'),
+	('e10f7eeb60fdcd8918e1a141144e9bf42c1781a34ff27ec4801499a98e5a44e131873df7694f0ead',1,1,'MyApp','[]',0,'2018-01-03 03:28:34','2018-01-03 03:28:34','2019-01-03 03:28:34'),
+	('edd57e962b334d60acdca007f78f9f42c411444e8f35ee31d21f97a1d8c5f6dba2ad51ec3152c0b4',1,1,'MyApp','[]',0,'2018-01-03 04:07:59','2018-01-03 04:07:59','2019-01-03 04:07:59'),
+	('f90568ff51f5c179a53521d38b756ac82c100bf50de7d5649d2de471e64984c8528d83939898bc6b',1,1,'MyApp','[]',0,'2018-01-03 04:07:44','2018-01-03 04:07:44','2019-01-03 04:07:44');
+
+/*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_auth_codes
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_auth_codes`;
+
+CREATE TABLE `oauth_auth_codes` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+# Dump of table oauth_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_clients`;
+
+CREATE TABLE `oauth_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `personal_access_client` tinyint(1) NOT NULL,
+  `password_client` tinyint(1) NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_clients_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`)
+VALUES
+	(1,NULL,'Laravel Personal Access Client','Cc9HjMXycxN5hVESSEyfdEDu8H6zQjhtVoT7z78q','http://localhost',1,0,0,'2018-01-03 03:02:42','2018-01-03 03:02:42'),
+	(2,NULL,'Laravel Password Grant Client','tpiYDSSeoOmMoVGHX0UrDbqCyoq8nK1BXgbf6npy','http://localhost',0,1,0,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_personal_access_clients
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_personal_access_clients`;
+
+CREATE TABLE `oauth_personal_access_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `oauth_personal_access_clients` WRITE;
+/*!40000 ALTER TABLE `oauth_personal_access_clients` DISABLE KEYS */;
+
+INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`)
+VALUES
+	(1,1,'2018-01-03 03:02:42','2018-01-03 03:02:42');
+
+/*!40000 ALTER TABLE `oauth_personal_access_clients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table oauth_refresh_tokens
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `oauth_refresh_tokens`;
+
+CREATE TABLE `oauth_refresh_tokens` (
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 
 # Dump of table password_resets
@@ -364,7 +519,7 @@ VALUES
 	(2,'Tourism Tax','旅游税','A tourist tax of RM 10 per room per night is applied to all foreign guests by federal law. This tax is not included in the room rate and must be paid upon check-in. Guests with a valid Malaysian Identity Card or valid permanent residents MY PR Card are exempted.','马来西亚法律规定，所有外国客人必需缴付每间客房每晚MYR10的旅游税。这笔税费不包含在房价内，且必须在办理入住时支付。持有有效的马来西亚身份证或有效的永久居民身份证的客人可获得豁免。',NULL,NULL),
 	(3,'Payment for Accommodation Booking','支付住宿预订','Our website is built to handle transactions for accommodation only. You may pay by PayPal, credit card (Visa and Mastercard only). Any outstanding charges may be settled in cash on-site, PayPal or direct bank transfer.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing. If you’d like to add more people, mattresses, rooms, meals, etc. please contact us directly and we will do our best to accommodate.\n\nIf you arrive with more people and/or require more services than paid for, you will be expected to settle the correct and remaining amount in person with cash (we are unable to process credit cards on-site).','我们的网站是专为处理住宿交易而设计的。您可以通过PayPal，维萨信用卡（ Visa）或万事达卡（Mastercard）付款。任何未支付的费用可通过现场支付，PayPal或直接银行转账。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发货后5天内没有收到错误通知，金沙龙虾湾度假村不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n如果你想添加更多的人，床垫，房间，餐食等，请直接与我们联系，我们将尽我们所能安排。 如果您抵达的人数更多，并且/或者需要更多的服务，您将需要现金支付（我们无法在现场处理信用卡支付）。',NULL,NULL),
 	(4,'Deposit and Final Payment for Tours','订金和旅游配套的最终付款事项','Any additional tours or services require a non-refundable, non-transferable deposit of 25%. Note that bookings are not confirmed nor secure until TGBR receives this deposit and you receive a confirmation invoice. TGBR reserves the right to release or cancel any bookings being held where this required deposit has not been received by the deposit due date. Payment of the deposit indicates you have read and accepted these Terms and Conditions.\n\nPlease review and verify your booking invoice thoroughly and contact us immediately if your invoice appears to be incorrect or incomplete, as it may not be possible to make changes later. TGBR cannot accept responsibility if we are not notified of inaccuracies within 5 days of sending out the invoice. In the case of billing errors, TGBR reserves the right to re-invoice you with correct pricing.\n\nFinal payment for your booking is due 30 days prior to commencement of services. If final payment is not received by the due date, your reservation will be cancelled and TGBR will retain your full deposit. TGBR is not responsible for cancelled land and/or air reservations in the event payment is not received by the final payment date. If a booking is made within 30 days prior to arrival, full payment will be required at the time of booking.\n\nAll payments shall be made either by credit card or telegraphic transfer to the appropriate account:','任何额外的旅行或服务都需要缴付25％的押金，押金不可退款和不可转让。请注意，只有在金沙龙虾湾度假村收到这笔押金后，您才能获得确认发票。金沙龙虾湾度假村保留取消任何在存款到期日前仍未缴的押金的预订的权利。支付押金表示您已经阅读并接受这些条款及细则。\n\n请仔细查看并验证您的预订发票，如果您的发票看起来不正确或不完整，请立即与我们联系，因为稍后可能无法进行更改。如果我们在发出预订发票后5天内没有收到错误通知，金沙龙虾湾度假村将不承担任何责任。在计费错误的情况下，金沙龙虾湾度假村保留以正确的价格重新发票的权利。\n\n您的预订的最后付款日期应在服务开始前30天。如果到期日未收到最终付款，您的预订将被取消，金沙龙虾湾度假村将沒收您的全额押金。如果在最后付款日期没有收到付款，金沙龙虾湾度假村不会负责因没有付款而被取消的服务和房间预订。如果客人在抵达前30天内预订，则需在预订时支付全额费用。\n\n所有的付款都应通过信用卡或电汇转账到度假村的账户：','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD','Account Name: THE GOLDEN BEACH RESORT\nAccount Number: 3192745920\nSWIFT code: PBBEMYKL\nBank Name: PUBLIC BANK BERHAD'),
-	(5,'Cancellation By You','您取消的预订服务','If Tempurong Golden Beach Resort receives a cancellation after a booking has been made, standard cancellation fees as stated below will apply.\n','如果金沙龙虾湾度假村在您该支付余款的截止日期之前收到取消预订服务，您的押金将不会退还。标准取消费如以下所述：','If a cancellation is made :\n\n31 days or more  prior to arrival a 75% refund will apply 30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n','抵达前31天或以前取消，将退还75％的费用\r\n抵达前30  -  15天取消，将退还50％的费用\r\n将在抵达前14  -  0天取消，将不会退还任何的费用\n'),
+	(5,'Cancellation By You','您取消的预订服务','If Tempurong Golden Beach Resort receives a cancellation after a booking has been made, standard cancellation fees as stated below will apply.\n','如果金沙龙虾湾度假村在您该支付余款的截止日期之前收到取消预订服务，您的押金将不会退还。标准取消费如以下所述：','If a cancellation is made :\n\n31 days or more  prior to arrival a 75% refund will apply \n30 - 15 days prior to arrival a 50% refund will apply\n14 - 0 days prior to arrival a 0% refund will apply\n','抵达前31天或以前取消，将退还75％的费用\r\n抵达前30  -  15天取消，将退还50％的费用\r\n将在抵达前14  -  0天取消，将不会退还任何的费用\n'),
 	(6,'Refund of Unused Services','未使用的服务的退款','No refunds or exchanges can be made in respect of accommodation, meals, sightseeing tours, transport or any other services that are included in the tour pieces but not utilized by the tour member.','在旅游项目中包括的未被旅游团成员使用的住宿，餐饮，观光旅游，交通或任何其他服务，将不予退款或换成任何其他服务。',NULL,NULL),
 	(7,'Force Majeure','不可抗力','If as a consequence of \'Force Majeure\' as defined below, TGBR is obliged to curtail, alter, extend or cancel the tour, the customer shall not be at liberty to maintain a claim for compensation or otherwise for any loss arising as a consequence of said curtailment, alteration, extension or cancellation of the tour. \'Force Majeure\' means Acts of God, natural disasters, adverse weather conditions, fire or other destruction of any vessel, craft or vehicle to be used in connection with a holiday, destruction or damage to holiday accommodation, riots, acts of war, civil commotion, exercise of legislative or government action, municipal or military or other authority, strikes, industrial action, requisition of equipment, mechanical breakdown, shortage of fuel, insolvency or default of any carrier or service connected with the tour, fraud perpetrated against TGBR.','如果是因为下面定义的「不可抗力」，金沙龙虾湾度假村有义务限制、更改、延长或取消旅程，而客户不可向金沙龙虾湾度假村索取赔偿，或因其他原因造成的任何损失而削减，改变，延长或取消行程。 「不可抗力」是指自然灾害，不利的天气条件，火灾或其他任何与度假有关的船只，船只或车辆的毁坏，假日住宿的破坏或损坏，骚乱，战争行为，民事行政，立法或政府行动，市政或军事或其他权力，罢工，工业行为，设备的征用，机械故障，燃料短缺，破产或任何与旅游有关的承运人或服务的拖延，对金沙龙虾湾度假村的欺诈行为。',NULL,NULL),
 	(8,'Customers with Special Needs','有特殊需求的客户','It shall be the guest’s responsibility to disclose, prior to booking, to TGBR any physical or mental condition of a member of his party that may be relevant. TGBR reserves the right to decline to provide the accommodation, services or tour for a person where, in the opinion of the company, that the mentioned would be inconsistent with the special needs of that person. No liability shall attach to TGBR for the provision of an unsuitable service, accommodation or tour for any person where that person\'s special needs have not been disclosed at the time of booking.','客人有责任在预订前向金沙龙虾湾度假村披露其自己的身体或精神状况，或任何相关可能的情况。金沙龙虾湾度假村有权拒绝为它认为所提供的住宿，服务或旅游不符合该人的特殊需要。如果您在预订时并未透露您及您的同行旅伴的特殊需求，则不应向金沙龙虾湾度假村要求提供不适当的服务，住宿或旅游的责任。',NULL,NULL),
@@ -401,6 +556,35 @@ CREATE TABLE `reservation_details` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservation_details` WRITE;
+/*!40000 ALTER TABLE `reservation_details` DISABLE KEYS */;
+
+INSERT INTO `reservation_details` (`id`, `room_id`, `room_type_id`, `reservation_id`, `price`, `capacity`, `no_of_people`, `mattress`, `breakfast`, `status`, `refund_status`, `start_date`, `end_date`, `status_time`, `refund_time`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,1,1,1,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-03','2018-02-04',NULL,NULL,'2018-01-30 18:55:40','2018-01-30 19:10:01','2018-01-30 19:10:01'),
+	(2,2,1,2,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-03','2018-02-04',NULL,NULL,'2018-01-30 18:56:09','2018-01-30 19:10:01','2018-01-30 19:10:01'),
+	(3,3,1,3,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-03','2018-02-04',NULL,NULL,'2018-01-30 19:01:15','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(4,4,1,4,250,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-03','2018-02-04',NULL,NULL,'2018-01-30 19:02:03','2018-01-30 19:20:01','2018-01-30 19:20:01'),
+	(5,1,1,5,250,4,NULL,0,0,'completed',NULL,'2018-02-03','2018-02-04','2018-01-30 19:07:02',NULL,'2018-01-30 19:06:38','2018-02-01 17:49:37',NULL),
+	(12,1,1,6,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-02','2018-02-05',NULL,NULL,'2018-02-01 12:56:00','2018-02-01 13:10:02','2018-02-01 13:10:02'),
+	(13,3,1,6,750,4,NULL,0,0,'waiting_for_payment',NULL,'2018-02-02','2018-02-05',NULL,NULL,'2018-02-01 12:56:00','2018-02-01 13:10:02','2018-02-01 13:10:02'),
+	(35,1,1,7,1000,4,NULL,0,0,'completed',NULL,'2018-02-09','2018-02-13','2018-02-01 17:12:45',NULL,'2018-02-01 17:12:12','2018-02-01 18:21:03',NULL),
+	(72,11,2,8,1800,6,NULL,0,0,'completed',NULL,'2018-02-03','2018-02-09','2018-02-01 17:33:46',NULL,'2018-02-01 17:32:52','2018-02-02 11:31:12',NULL),
+	(79,9,2,9,1560,6,NULL,0,1,'waiting_for_payment',NULL,'2018-02-02','2018-02-07',NULL,NULL,'2018-02-01 17:39:16','2018-02-01 17:40:11','2018-02-01 17:40:11'),
+	(80,10,2,10,1248,6,NULL,0,1,'completed',NULL,'2018-02-24','2018-02-28','2018-02-01 17:40:25',NULL,'2018-02-01 17:40:01','2018-02-02 12:31:49',NULL),
+	(81,9,2,9,1560,6,NULL,0,1,'waiting_for_payment',NULL,'2018-02-02','2018-02-07',NULL,NULL,'2018-02-01 17:40:11','2018-02-01 17:40:15','2018-02-01 17:40:15'),
+	(82,10,2,9,1560,6,NULL,0,1,'completed',NULL,'2018-02-02','2018-02-07','2018-02-01 17:40:28',NULL,'2018-02-01 17:40:15','2018-02-02 12:31:49',NULL),
+	(89,2,1,11,250,4,NULL,0,0,'completed',NULL,'2018-02-01','2018-02-02','2018-02-01 17:50:00',NULL,'2018-02-01 17:49:58','2018-02-01 18:00:41','2018-02-01 18:00:41'),
+	(105,11,2,11,1800,6,NULL,0,0,'completed',NULL,'2018-02-03','2018-02-09','2018-02-01 18:00:46',NULL,'2018-02-01 18:00:41','2018-02-02 11:27:26','2018-02-02 11:27:26'),
+	(172,3,1,11,1120,5,NULL,1,1,'completed',NULL,'2018-02-24','2018-02-28','2018-02-02 11:28:06',NULL,'2018-02-02 11:27:26','2018-02-02 12:31:49',NULL),
+	(179,12,3,12,1572,4,NULL,0,1,'waiting_for_payment',NULL,'2018-03-09','2018-03-15',NULL,NULL,'2018-02-02 11:41:12','2018-02-02 11:42:27','2018-02-02 11:42:27'),
+	(180,13,3,12,1572,4,NULL,0,1,'completed',NULL,'2018-03-09','2018-03-15','2018-02-02 11:45:26',NULL,'2018-02-02 11:42:27','2018-02-02 12:31:49',NULL),
+	(184,1,1,13,1250,4,NULL,0,0,'completed',NULL,'2018-02-23','2018-02-28','2018-02-02 12:12:49',NULL,'2018-02-02 12:12:17','2018-02-02 12:12:49',NULL),
+	(194,1,1,14,560,5,NULL,1,1,'completed',NULL,'2018-02-04','2018-02-06','2018-02-02 12:23:35',NULL,'2018-02-02 12:19:25','2018-02-02 12:24:13','2018-02-02 12:24:13'),
+	(198,1,1,14,560,5,NULL,1,1,'completed',NULL,'2018-02-04','2018-02-06','2018-02-02 12:24:35',NULL,'2018-02-02 12:24:13','2018-02-02 12:24:35',NULL);
+
+/*!40000 ALTER TABLE `reservation_details` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table reservations
@@ -436,6 +620,28 @@ CREATE TABLE `reservations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+
+INSERT INTO `reservations` (`id`, `first_name`, `last_name`, `transaction_id`, `email`, `country_code`, `tel`, `adults`, `children`, `check_in`, `check_out`, `language`, `remarks`, `addition_note`, `amount`, `payment_method`, `created_at`, `updated_at`, `deleted_at`, `status`, `session`, `refund_at`, `refund_amount`, `internal_note`)
+VALUES
+	(1,'Signe','Douglas',NULL,'syjywimohi@yahoo.com','635','3937-5590',1,0,'2018-02-03','2018-02-04','en','Nobis fugiat aliquid dolorem quam fugiat laboris eos ea in qui at accusamus corporis incididunt facilis aliquam qui dolorem','Est harum dolorum cum labore sint',250,'paypal','2018-01-30 18:55:40','2018-01-30 19:10:01','2018-01-30 19:10:01','waiting_for_payment','5a704f2c6a1cf988',NULL,NULL,NULL),
+	(2,'Signe','Douglas',NULL,'syjywimohi@yahoo.com','635','3937-5590',1,0,'2018-02-03','2018-02-04','en','Nobis fugiat aliquid dolorem quam fugiat laboris eos ea in qui at accusamus corporis incididunt facilis aliquam qui dolorem','Est harum dolorum cum labore sint',250,'paypal','2018-01-30 18:56:09','2018-01-30 19:10:01','2018-01-30 19:10:01','waiting_for_payment','5a704f48f207f211',NULL,NULL,NULL),
+	(3,'Signe','Douglas',NULL,'syjywimohi@yahoo.com','635','3937-5590',1,0,'2018-02-03','2018-02-04','en','Nobis fugiat aliquid dolorem quam fugiat laboris eos ea in qui at accusamus corporis incididunt facilis aliquam qui dolorem','Est harum dolorum cum labore sint',250,'paypal','2018-01-30 19:01:15','2018-01-30 19:20:01','2018-01-30 19:20:01','waiting_for_payment','5a70507b7b0cf555',NULL,NULL,NULL),
+	(4,'Signe','Douglas',NULL,'syjywimohi@yahoo.com','635','3937-5590',1,0,'2018-02-03','2018-02-04','en','Nobis fugiat aliquid dolorem quam fugiat laboris eos ea in qui at accusamus corporis incididunt facilis aliquam qui dolorem','Est harum dolorum cum labore sint',250,'paypal','2018-01-30 19:02:03','2018-01-30 19:20:01','2018-01-30 19:20:01','waiting_for_payment','5a7050ab0c7ac849',NULL,NULL,NULL),
+	(5,'Signe','Douglas',NULL,'syjywimohi@yahoo.com','635','3937-5590',1,0,'2018-02-03','2018-02-04','en','Nobis fugiat aliquid dolorem quam fugiat laboris eos ea in qui at accusamus corporis incididunt facilis aliquam qui dolorem','Est harum dolorum cum labore sint',250,'admin','2018-01-30 19:06:38','2018-01-30 19:07:02',NULL,'completed','5a7051bed8d4c583',NULL,NULL,NULL),
+	(6,'Hilton','Lam',NULL,'hong304@gmail.com','7667','98753425',2,0,'2018-02-02','2018-02-05','en',NULL,NULL,1500,'paypal','2018-02-01 12:56:00','2018-02-01 13:10:02','2018-02-01 13:10:02','waiting_for_payment','5a729de0bb4fb826',NULL,NULL,NULL),
+	(7,'ds','s','EC-699371019V389093U','hong304@gmail.com','43','2',2,1,'2018-02-09','2018-02-13','en',NULL,NULL,1000,'paypal','2018-02-01 17:12:12','2018-02-01 17:18:26',NULL,'completed','5a729de0bb4fb826',NULL,NULL,'Hello... are you ok?'),
+	(8,'wt','L','EC-0T624522SM095815A','wl@buildonauts.com','852','21111111',6,0,'2018-02-03','2018-02-09','en',NULL,NULL,1800,'paypal','2018-02-01 17:32:52','2018-02-01 17:33:46',NULL,'completed','5a72dec4c5325976',NULL,NULL,NULL),
+	(9,'Hilton','Lam',NULL,'hong304@gmail.com','543','7654322',2,2,'2018-02-02','2018-02-07','en',NULL,NULL,1560,'admin','2018-02-01 17:39:16','2018-02-01 17:40:28',NULL,'completed','5a72e0441de8f173',NULL,NULL,NULL),
+	(10,'w','l','EC-8UK71529WV289835A','wl@buildonauts.com','852','222222222',6,0,'2018-02-24','2018-02-28','en','omgomgomg','activites',1248,'paypal','2018-02-01 17:40:01','2018-02-01 17:40:56',NULL,'refunded','5a72e0718c410128','2018-02-01 17:40:56',624,NULL),
+	(11,'cancel','leung','EC-4MT98169BH108851R','wl@buildonauts.com','852','11111111',3,0,'2018-02-24','2018-02-28','en','playplay','play',1120,'paypal','2018-02-01 17:49:58','2018-02-02 11:28:30',NULL,'refunded','5a72e2c67c859762','2018-02-02 11:28:30',560,NULL),
+	(12,'cancel','75','EC-0S884813R8997700C','wl@buildonauts.com','852','111111111',3,0,'2018-03-09','2018-03-15','en',NULL,NULL,1572,'paypal','2018-02-02 11:41:12','2018-02-02 11:49:18',NULL,'refunded','5a73ddd89e858680','2018-02-02 11:49:18',1179,NULL),
+	(13,'chinese','leung','EC-8N274445K86491943','wl@buildonauts.com','852','11111111',2,0,'2018-02-23','2018-02-28','sc','rrr','rrrrrrrrrrrr',1250,'paypal','2018-02-02 12:12:17','2018-02-02 12:13:25',NULL,'refunded','5a73e52190d8c515','2018-02-02 12:13:25',625,NULL),
+	(14,'Thf','Hfhh','EC-2S241403V9445980M','Fjgf@gmail.con','852','97426706',5,0,'2018-02-04','2018-02-06','en','Test','Test',560,'paypal','2018-02-02 12:19:25','2018-02-02 12:24:35',NULL,'completed','5a73e6cd59fdf979',NULL,NULL,NULL);
+
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table room_images
