@@ -1062,7 +1062,7 @@
 								</tr>
 								</tbody>
 							</table>
-							@if($reservation->status !='refund')
+							@if($reservation->status !='refunded')
 								<table class="row"
 								       style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
 									<tbody>
