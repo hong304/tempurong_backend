@@ -43,6 +43,7 @@ class ReservationPaid extends Notification
 	public function toMail($notifiable)
 	{
 		if ($this->reservation->language == 'sc') {
+			
 			if ($this->reservation->status == 'refunded'){
 				return  (new MailMessage)
 					->subject("登步隆金沙湾龙虾度假村取消订单确认")
@@ -52,10 +53,11 @@ class ReservationPaid extends Notification
 				->subject("谢谢您的订单，订单已确认。")
 				->view('emails.confirmation-mail-sc', ['reservation' => $this->reservation]);
 		} else {
+			
 			if ($this->reservation->status == 'refunded'){
 				return  (new MailMessage)
 					->subject("Confirmed Cancellation Tempurong Golden Beach Resort")
-					->view('emails.confirmation-mail-sc', ['reservation' => $this->reservation]);
+					->view('emails.confirmation-mail', ['reservation' => $this->reservation]);
 			}
 			return (new MailMessage)
 				->subject("Thank you for your reservation, the reservation is confirmed.")
