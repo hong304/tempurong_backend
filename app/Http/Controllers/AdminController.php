@@ -20,7 +20,7 @@ class AdminController extends Controller
     try {
 
       if (isset($request->searchItem)) {
-        $columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session'];
+        $columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status as payment_status', 'session'];
         $query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
           ->where(function ($query) {
             $query->where('status', 'completed')
@@ -34,7 +34,7 @@ class AdminController extends Controller
         $result = $query->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
 
       } else {
-        $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
+        $result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status as payment_status', 'session', 'remarks', 'addition_note')
           ->where(function ($query) {
             $query->where('status', 'completed')
               ->orWhere('status', 'refunded');
