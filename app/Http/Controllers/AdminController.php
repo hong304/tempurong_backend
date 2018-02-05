@@ -20,25 +20,19 @@ class AdminController extends Controller
 		try {
 			
 			if (isset($request->searchItem)) {
-				$columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status as payment_status', 'session'];
+				$columns = ['id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session'];
 				$query = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note');
 				
 				foreach ($columns as $column) {
 					$query->orWhere($column, 'LIKE', '%' . $request->searchItem . '%')
-						->where(function ($query) {
-							$query->where('status', 'completed')
-								->orWhere('status', 'refunded');
-						});
+						->whereIn('status', ['completed', 'refunded', 'cancelled']);
 				}
 				
 				$result = $query->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
 				
 			} else {
-				$result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status as payment_status', 'session', 'remarks', 'addition_note')
-					->where(function ($query) {
-						$query->where('status', 'completed')
-							->orWhere('status', 'refunded');
-					})
+				$result = Reservation::select('id', 'first_name', 'last_name', 'email', 'check_in', 'check_out', 'adults', 'children', 'amount', 'created_at', 'status', 'session', 'remarks', 'addition_note')
+					->whereIn('status', ['completed', 'refunded', 'cancelled'])
 					->orderBy($request->orderBy, $asc)->skip($request->page * $request->limit)->paginate($request->limit);
 			}
 			
@@ -61,10 +55,8 @@ class AdminController extends Controller
 			->with(['reservationDetails.roomType', 'reservationDetails.images']);
 		
 		if (!Auth::check()) {
-			$reservation = $reservation->where(function ($query) {
-				$query->where('status', 'completed')
-					->orWhere('status', 'refunded');
-			})->exclude(['transaction_id', 'internal_note']);
+			$reservation = $reservation->whereIn('status', ['completed', 'refunded', 'cancelled'])
+				->exclude(['transaction_id', 'internal_note']);
 		}
 		
 		$reservation = $reservation->first();
@@ -239,7 +231,8 @@ class AdminController extends Controller
 		
 	}
 	
-	public function saveInternalNote(Request $request)
+	public
+	function saveInternalNote(Request $request)
 	{
 		$reservation = Reservation::where('session', $request->sessionId)->first();
 		
