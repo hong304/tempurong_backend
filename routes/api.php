@@ -43,7 +43,8 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('orderHistory', 'AdminController@postOrderHistory');
 	Route::get('/getEnvironment', 'ReservationController@getEnvironment');
 	Route::post('/refund', 'AdminController@refundTransaction');
-	
+	Route::post('/cancelWithoutRefund', 'AdminController@cancelWithoutRefundTransaction');
+
 	
 	// policy
 	Route::get('/faqs', 'PolicyController@getFaqs');
