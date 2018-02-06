@@ -559,7 +559,7 @@
 												<th style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
 													   style="color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
-														订单编号:</p>
+														参考编号:</p>
 												</th>
 											</tr>
 											</tbody>

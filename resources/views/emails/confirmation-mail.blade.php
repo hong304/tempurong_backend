@@ -418,9 +418,9 @@
 														   style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3; padding: 0; text-align: left;">
 															This is to confirm that your reservation below has been cancelled. We hope we will see you
 															another time!</p>
-														<p class="text-left heebo-font"
+														<a class="text-left heebo-font"
 														   style="Margin: 0; color: #0a0a0a; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: normal; line-height: 1.3;  margin-bottom: 10px; padding: 0; text-align: left;">
-															Here is your cancellation summary based on our Resort Policy. If you have any changes or
+															Here is your cancellation summary based on our <a href="{{config('app.url')}}/policy" target="_blank">Resort Policy</a>. If you have any changes or
 															questions, please don’t hesitate to contact us.</p>
 													@else
 														<p class="text-left heebo-font"
@@ -615,7 +615,7 @@
 												<th style="Margin: 0; color: #866809; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
 													<p class="text-right heebo-font bold small-text-left"
 													   style="Margin: 0; Margin-bottom: 10px; color: #866809; font-family: 'Heebo', 'Exo', sans-serif; font-size: 13px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: right; text-transform: uppercase;">
-														Transition id:</p>
+														Reference ID:</p>
 												</th>
 											</tr>
 											</tbody>
