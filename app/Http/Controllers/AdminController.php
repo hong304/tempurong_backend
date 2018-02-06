@@ -179,6 +179,7 @@ class AdminController extends Controller
         ->where('status', "completed")
         ->first();
 
+      $refund_status = true;
       if ($reservation) {
         $checkIn = Carbon::parse($reservation->check_in);
         $now = Carbon::now();
@@ -194,6 +195,7 @@ class AdminController extends Controller
         } else {
           $message = "Refund 0%.";
           $refundAmount = 0;
+          $refund_status = false;
         }
 
         if ($refundAmount > 0) {
@@ -225,6 +227,7 @@ class AdminController extends Controller
 
         $result = [
           'status' => true,
+          'refund_status' => $refund_status,
           'message' => $message,
         ];
         return response()->json($result, 200);
